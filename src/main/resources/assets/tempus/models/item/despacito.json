@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tempus:items/music_disc_strad_je1_be1"
+  }
+}

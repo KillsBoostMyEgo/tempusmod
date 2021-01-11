@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tempus:blocks/diamondlantern",
+    "up": "tempus:blocks/diamondlantern",
+    "north": "tempus:blocks/diamondlantern",
+    "east": "tempus:blocks/diamondlantern",
+    "south": "tempus:blocks/diamondlantern",
+    "west": "tempus:blocks/diamondlantern",
+    "particle": "tempus:blocks/diamondlantern"
+  }
+}

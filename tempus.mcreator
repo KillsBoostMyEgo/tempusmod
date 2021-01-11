@@ -1,0 +1,225 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Belle",
+      "type": "mob",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belle"
+    },
+    {
+      "name": "BathWater",
+      "type": "fluid",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bath_water"
+    },
+    {
+      "name": "Tempus",
+      "type": "tab",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "tempus"
+    },
+    {
+      "name": "BelleTrading",
+      "type": "gui",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belle_trading"
+    },
+    {
+      "name": "BelleBathTrade",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belle_bath_trade",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Bible",
+      "type": "tool",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bible"
+    },
+    {
+      "name": "BelleBibleTrade",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "belle_bible_trade",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BathWaterMobplayerCollidesBlock",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bath_water_mobplayer_collides_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Despacito",
+      "type": "musicdisc",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "despacito"
+    },
+    {
+      "name": "CreativeTempus",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "creative_tempus"
+    },
+    {
+      "name": "Disease",
+      "type": "potion",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "disease"
+    },
+    {
+      "name": "DiseaseOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "disease_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BibleLightning",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bible_lightning",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondLantern",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_lantern"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [
+    {
+      "name": "belleregular",
+      "files": [
+        "belle"
+      ],
+      "category": "neutral"
+    },
+    {
+      "name": "despacito",
+      "files": [
+        "despacito"
+      ],
+      "category": "record"
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "itemGroup.tabtempus": "Tempus",
+      "item.minecraft.potion.effect.disease": "Disease",
+      "entity.tempus.belle": "Belle Delphine",
+      "item.tempus.belle": "Belle Delphine Spawn Egg",
+      "effect.disease": "Disease",
+      "block.tempus.diamond_lantern": "Diamond Lantern",
+      "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
+      "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
+      "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
+      "fluid.bath_water": "BathWater",
+      "item.tempus.bath_water_bucket": "BathWater Bucket",
+      "item.minecraft.splash_potion.effect.disease": "Splash Disease",
+      "item.tempus.creative_tempus": "Creative Tempus",
+      "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
+      "item.tempus.despacito": "Despacito",
+      "item.tempus.bible": "Bible"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "tempus",
+    "modName": "Tempus",
+    "version": "1.0.0",
+    "author": "ARCADIA, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.15.2",
+    "modElementsPackage": "tempussmpmods3",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000547520
+}

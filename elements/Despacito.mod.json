@@ -1,0 +1,17 @@
+{
+  "_fv": 13,
+  "_type": "musicdisc",
+  "definition": {
+    "texture": "music_disc_strad_je1_be1",
+    "name": "Despacito",
+    "description": "Luis Fonsi - Despacito",
+    "creativeTab": {
+      "value": "CUSTOM:Tempus"
+    },
+    "music": {
+      "value": "CUSTOM:despacito"
+    },
+    "specialInfo": [],
+    "hasGlow": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 13,
+  "_type": "potion",
+  "definition": {
+    "name": "Disease",
+    "effectName": "Disease",
+    "icon": "belleskullother.png",
+    "color": {
+      "value": -6736897,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "isBad": true,
+    "isBenefitical": true,
+    "registerPotionType": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "DiseaseOnPotionActiveTick"
+    }
+  }
+}
