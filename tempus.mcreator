@@ -262,6 +262,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "mymom"
+    },
+    {
+      "name": "Uremom",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "uremom"
     }
   ],
   "variable_elements": [],
@@ -294,7 +303,6 @@
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
       "block.tempus.temponium": "Temporium Ore",
-      "item.tempus.mymom": "Mymom",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
       "fluid.bath_water": "BathWater",
