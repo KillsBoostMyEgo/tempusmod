@@ -258,7 +258,7 @@
       "name": "Mymom",
       "type": "item",
       "sortid": 22,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "mymom"
@@ -267,7 +267,7 @@
       "name": "Uremom",
       "type": "item",
       "sortid": 22,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "uremom"
