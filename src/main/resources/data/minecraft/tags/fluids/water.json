@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "tempus:bath_water",
-    "tempus:bath_water_flowing"
+    "tempus:bath_water_flowing",
+    "tempus:purified_bath_water",
+    "tempus:purified_bath_water_flowing"
   ]
 }
