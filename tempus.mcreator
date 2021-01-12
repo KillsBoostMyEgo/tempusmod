@@ -244,6 +244,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_purified_bath"
+    },
+    {
+      "name": "Temponium",
+      "type": "block",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temponium"
     }
   ],
   "variable_elements": [],
@@ -275,6 +284,7 @@
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
+      "block.tempus.temponium": "Temponium",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
       "fluid.bath_water": "BathWater",

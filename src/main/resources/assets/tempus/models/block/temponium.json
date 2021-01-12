@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tempus:blocks/tempus3",
+    "up": "tempus:blocks/tempus3",
+    "north": "tempus:blocks/tempus3",
+    "east": "tempus:blocks/tempus3",
+    "south": "tempus:blocks/tempus3",
+    "west": "tempus:blocks/tempus3",
+    "particle": "tempus:blocks/tempus3"
+  }
+}
