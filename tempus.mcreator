@@ -253,6 +253,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temponium"
+    },
+    {
+      "name": "Uremom",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "uremom"
     }
   ],
   "variable_elements": [],
@@ -275,6 +284,7 @@
   "language_map": {
     "en_us": {
       "itemGroup.tabtempus": "Tempus",
+      "item.tempus.uremom": "Uremom",
       "item.minecraft.potion.effect.disease": "Disease",
       "entity.tempus.belle": "Belle Delphine",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
