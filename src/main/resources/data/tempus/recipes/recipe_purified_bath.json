@@ -1,0 +1,16 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tempus:bible"
+    },
+    {
+      "tag": "tempus:bath_water_bucket"
+    }
+  ],
+  "result": {
+    "item": "tempus:purified_bath_water",
+    "count": 3
+  }
+}

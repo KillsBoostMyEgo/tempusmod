@@ -10,11 +10,13 @@
   "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
   "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
   "fluid.purified_bath_water": "PurifiedBathWater",
+  "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
   "fluid.bath_water": "BathWater",
   "item.tempus.bath_water_bucket": "BathWater Bucket",
   "item.minecraft.splash_potion.effect.disease": "Splash Disease",
   "item.tempus.creative_tempus": "Creative Tempus",
   "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
   "item.tempus.despacito": "Despacito",
-  "item.tempus.bible": "Bible"
+  "item.tempus.bible": "Bible",
+  "block.tempus.temponium_lantern": "Temponium Lantern"
 }

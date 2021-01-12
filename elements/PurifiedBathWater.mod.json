@@ -14,10 +14,11 @@
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "frequencyOnChunks": 5,
-    "spawnWorldTypes": [
-      "Surface"
-    ],
-    "restrictionBiomes": []
+    "frequencyOnChunks": 0,
+    "spawnWorldTypes": [],
+    "restrictionBiomes": [],
+    "onEntityCollides": {
+      "name": "PurifiedBathWaterMobplayerCollidesBlock"
+    }
   }
 }

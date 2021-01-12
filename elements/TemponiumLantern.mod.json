@@ -2,12 +2,12 @@
   "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "diamondlantern",
-    "textureTop": "diamondlantern",
-    "textureLeft": "diamondlantern",
-    "textureFront": "diamondlantern",
-    "textureRight": "diamondlantern",
-    "textureBack": "diamondlantern",
+    "texture": "temponiumlamp",
+    "textureTop": "temponiumlamp",
+    "textureLeft": "temponiumlamp",
+    "textureFront": "temponiumlamp",
+    "textureRight": "temponiumlamp",
+    "textureBack": "temponiumlamp",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -24,10 +24,10 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Diamond Lantern",
+    "name": "Temponium Lantern",
     "specialInfo": [],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 2.0,
+    "resistance": 20.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
@@ -45,7 +45,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "GLASS"
+      "value": "REDSTONE_LIGHT"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -67,7 +67,7 @@
     },
     "luminance": 1.0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 4,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -92,9 +92,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onBlockAdded": {
-      "name": "DiamondLanternBlockAdded"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
