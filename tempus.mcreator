@@ -280,6 +280,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_tempo_dust"
+    },
+    {
+      "name": "Endion",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion"
     }
   ],
   "variable_elements": [],
@@ -309,8 +318,9 @@
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "item.tempus.bath_water_bucket": "BathWater Bucket",
       "fluid.bath_water": "BathWater",
+      "item.tempus.bath_water_bucket": "BathWater Bucket",
+      "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
