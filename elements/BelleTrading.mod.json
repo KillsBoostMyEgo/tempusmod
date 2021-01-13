@@ -29,8 +29,8 @@
           "image": "bellebathwater.png",
           "use1Xscale": false,
           "name": "bellebathwater.png",
-          "x": 185,
-          "y": 52
+          "x": 177,
+          "y": 51
         }
       },
       {
@@ -87,21 +87,11 @@
       {
         "type": "image",
         "data": {
-          "image": "bathbelle.png",
-          "use1Xscale": false,
-          "name": "bathbelle.png",
-          "x": 243,
-          "y": 100
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "evennewerbible.png",
-          "use1Xscale": false,
-          "name": "evennewerbible.png",
-          "x": 243,
-          "y": 153
+          "image": "holierbible.png",
+          "use1Xscale": true,
+          "name": "holierbible.png",
+          "x": 213,
+          "y": 129
         }
       }
     ]

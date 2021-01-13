@@ -253,6 +253,33 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temponium"
+    },
+    {
+      "name": "Temporium",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium"
+    },
+    {
+      "name": "ItemTemporium",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_temporium"
+    },
+    {
+      "name": "RecipeTempoDust",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_tempo_dust"
     }
   ],
   "variable_elements": [],
@@ -275,6 +302,7 @@
   "language_map": {
     "en_us": {
       "itemGroup.tabtempus": "Tempus",
+      "subtitles.belleregular": "",
       "item.minecraft.potion.effect.disease": "Disease",
       "entity.tempus.belle": "Belle Delphine",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
