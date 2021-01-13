@@ -6,7 +6,7 @@
     "texture": "temporium_gem",
     "customModelName": "Normal",
     "name": "Temporium",
-    "rarity": "UNCOMMON",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
