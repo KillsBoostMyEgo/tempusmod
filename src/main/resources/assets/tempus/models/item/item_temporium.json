@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tempus:items/book_je2_be2"
+    "layer0": "tempus:items/temporium_dust"
   }
 }

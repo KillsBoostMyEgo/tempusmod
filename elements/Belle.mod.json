@@ -75,13 +75,13 @@
       "value": ""
     },
     "livingSound": {
-      "value": "CUSTOM:belleregular"
+      "value": ""
     },
     "hurtSound": {
       "value": "CUSTOM:belleregular"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:belleregular"
     },
     "stepSound": {
       "value": ""

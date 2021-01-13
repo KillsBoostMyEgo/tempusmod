@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "belleskull",
+    "texture": "temporium_dust",
     "customModelName": "Normal",
-    "name": "Uremom",
+    "name": "Powdered Temporium",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Tempus"
     },
     "stackSize": 64,
     "enchantability": 0,

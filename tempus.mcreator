@@ -255,63 +255,76 @@
       "registry_name": "temponium"
     },
     {
-      "name": "Mymom",
+      "name": "Temporium",
       "type": "item",
       "sortid": 22,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "mymom"
+      "registry_name": "temporium"
     },
     {
-      "name": "Uremom",
+      "name": "ItemTemporium",
       "type": "item",
       "sortid": 22,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "uremom"
+      "registry_name": "item_temporium"
+    },
+    {
+      "name": "RecipeTempoDust",
+      "type": "recipe",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_tempo_dust"
     }
   ],
   "variable_elements": [],
   "sound_elements": [
-    {
-      "name": "belleregular",
-      "files": [
-        "belle"
-      ],
-      "category": "neutral"
-    },
     {
       "name": "despacito",
       "files": [
         "despacito"
       ],
       "category": "record"
+    },
+    {
+      "name": "belleregular",
+      "files": [
+        "belle"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
-      "itemGroup.tabtempus": "Tempus",
-      "item.minecraft.potion.effect.disease": "Disease",
-      "entity.tempus.belle": "Belle Delphine",
-      "item.tempus.belle": "Belle Delphine Spawn Egg",
-      "effect.disease": "Disease",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
-      "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "fluid.bath_water": "BathWater",
       "item.tempus.bath_water_bucket": "BathWater Bucket",
-      "item.minecraft.splash_potion.effect.disease": "Splash Disease",
+      "fluid.bath_water": "BathWater",
       "item.tempus.creative_tempus": "Creative Tempus",
+      "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
+      "item.tempus.temporium": "Temporium",
+      "itemGroup.tabtempus": "Tempus",
+      "subtitles.belleregular": "",
+      "item.minecraft.potion.effect.disease": "Disease",
+      "entity.tempus.belle": "Belle Delphine",
+      "item.tempus.belle": "Belle Delphine Spawn Egg",
+      "effect.disease": "Disease",
+      "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
+      "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "item.tempus.bible": "Bible",
       "block.tempus.temponium_lantern": "Temponium Lantern"
     }
   },

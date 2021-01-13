@@ -3,12 +3,12 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "book_je2_be2",
+    "texture": "temporium_gem",
     "customModelName": "Normal",
-    "name": "Mymom",
-    "rarity": "COMMON",
+    "name": "Temporium",
+    "rarity": "UNCOMMON",
     "creativeTab": {
-      "value": "MISC"
+      "value": "CUSTOM:Tempus"
     },
     "stackSize": 64,
     "enchantability": 0,

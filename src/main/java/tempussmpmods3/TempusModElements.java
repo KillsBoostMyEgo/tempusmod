@@ -47,8 +47,8 @@ public class TempusModElements {
 	public final List<Supplier<Enchantment>> enchantments = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 	public TempusModElements() {
-		sounds.put(new ResourceLocation("tempus", "belleregular"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "belleregular")));
 		sounds.put(new ResourceLocation("tempus", "despacito"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "despacito")));
+		sounds.put(new ResourceLocation("tempus", "belleregular"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "belleregular")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tempus").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tempus:items/belleskull"
+    "layer0": "tempus:items/temporium_gem"
   }
 }

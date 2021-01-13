@@ -1,19 +1,19 @@
 {
-  "belleregular": {
-    "category": "neutral",
-    "sounds": [
-      {
-        "name": "tempus:belle",
-        "stream": false
-      }
-    ]
-  },
   "despacito": {
     "category": "record",
     "sounds": [
       {
         "name": "tempus:despacito",
         "stream": true
+      }
+    ]
+  },
+  "belleregular": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "tempus:belle",
+        "stream": false
       }
     ]
   }

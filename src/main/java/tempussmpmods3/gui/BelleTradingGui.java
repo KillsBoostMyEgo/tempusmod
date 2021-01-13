@@ -130,11 +130,9 @@ public class BelleTradingGui extends TempusModElements.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/bellebathwater.png"));
-			this.blit(this.guiLeft + 59, this.guiTop + 15, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/bathbelle.png"));
-			this.blit(this.guiLeft + 117, this.guiTop + 63, 0, 0, 256, 256, 256, 256);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/evennewerbible.png"));
-			this.blit(this.guiLeft + 117, this.guiTop + 116, 0, 0, 256, 256, 256, 256);
+			this.blit(this.guiLeft + 51, this.guiTop + 14, 0, 0, 256, 256, 256, 256);
+			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/holierbible.png"));
+			this.blit(this.guiLeft + 87, this.guiTop + 92, 0, 0, 75, 75, 75, 75);
 		}
 
 		@Override
