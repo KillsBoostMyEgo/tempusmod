@@ -253,24 +253,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temponium"
-    },
-    {
-      "name": "Mymom",
-      "type": "item",
-      "sortid": 22,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "mymom"
-    },
-    {
-      "name": "Uremom",
-      "type": "item",
-      "sortid": 22,
-      "compiles": false,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "uremom"
     }
   ],
   "variable_elements": [],
