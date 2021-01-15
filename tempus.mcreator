@@ -294,19 +294,10 @@
       "name": "BlockAncientDebrie",
       "type": "block",
       "sortid": 25,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "block_ancient_debrie"
-    },
-    {
-      "name": "Netherite",
-      "type": "block",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "netherite"
     }
   ],
   "variable_elements": [],
@@ -336,9 +327,9 @@
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "fluid.bath_water": "BathWater",
-      "item.tempus.bath_water_bucket": "BathWater Bucket",
       "block.tempus.endion": "Endion",
+      "item.tempus.bath_water_bucket": "BathWater Bucket",
+      "fluid.bath_water": "BathWater",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
