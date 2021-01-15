@@ -13,11 +13,11 @@ import net.minecraft.item.Item;
 import net.minecraft.block.BlockState;
 
 @TempusModElements.ModElement.Tag
-public class ItemTemporiumItem extends TempusModElements.ModElement {
-	@ObjectHolder("tempus:item_temporium")
+public class EndionNuggetItem extends TempusModElements.ModElement {
+	@ObjectHolder("tempus:endion_nugget")
 	public static final Item block = null;
-	public ItemTemporiumItem(TempusModElements instance) {
-		super(instance, 22);
+	public EndionNuggetItem(TempusModElements instance) {
+		super(instance, 27);
 	}
 
 	@Override
@@ -27,7 +27,7 @@ public class ItemTemporiumItem extends TempusModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(TempusItemGroup.tab).maxStackSize(64).rarity(Rarity.UNCOMMON));
-			setRegistryName("item_temporium");
+			setRegistryName("endion_nugget");
 		}
 
 		@Override

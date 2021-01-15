@@ -1,0 +1,9 @@
+{
+  "group": "tempus",
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "tempus:endion"
+  },
+  "result": "tempus:endion_nugget"
+}

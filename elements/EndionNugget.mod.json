@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "temporium_dust",
+    "texture": "newendnugget",
     "customModelName": "Normal",
-    "name": "Powdered Temporium",
+    "name": "Endion Nugget",
     "rarity": "UNCOMMON",
     "creativeTab": {
       "value": "CUSTOM:Tempus"

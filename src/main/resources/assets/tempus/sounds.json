@@ -16,5 +16,15 @@
         "stream": false
       }
     ]
+  },
+  "netheritesoundequiparmor": {
+    "category": "player",
+    "subtitle": "subtitles.netheritesoundequiparmor",
+    "sounds": [
+      {
+        "name": "tempus:netheriteequip",
+        "stream": false
+      }
+    ]
   }
 }
