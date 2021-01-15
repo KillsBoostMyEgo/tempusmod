@@ -298,6 +298,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "block_ancient_debrie"
+    },
+    {
+      "name": "Netherite",
+      "type": "block",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite"
     }
   ],
   "variable_elements": [],
@@ -340,7 +349,6 @@
       "entity.tempus.belle": "Belle Delphine",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "effect.disease": "Disease",
-      "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",

@@ -4,12 +4,12 @@ package tempussmpmods3.block;
 import net.minecraft.block.material.Material;
 
 @TempusModElements.ModElement.Tag
-public class BlockAncientDebrieBlock extends TempusModElements.ModElement {
+public class NetheriteBlock extends TempusModElements.ModElement {
 
-	@ObjectHolder("tempus:block_ancient_debrie")
+	@ObjectHolder("tempus:netherite")
 	public static final Block block = null;
 
-	public BlockAncientDebrieBlock(TempusModElements instance) {
+	public NetheriteBlock(TempusModElements instance) {
 		super(instance, 25);
 
 	}
@@ -25,9 +25,9 @@ public class BlockAncientDebrieBlock extends TempusModElements.ModElement {
 		public CustomBlock() {
 			super(
 
-					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(5f, 50f).lightValue(0));
+					Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(30f, 1200f).lightValue(0));
 
-			setRegistryName("block_ancient_debrie");
+			setRegistryName("netherite");
 		}
 
 		@Override
@@ -59,13 +59,12 @@ public class BlockAncientDebrieBlock extends TempusModElements.ModElement {
 
 					return super.place(world, generator, rand, pos, config);
 				}
-			}.withConfiguration(
-					new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("block_ancient_debrie", "block_ancient_debrie", blockAt -> {
-						boolean blockCriteria = false;
-						if (blockAt.getBlock() == Blocks.NETHERRACK.getDefaultState().getBlock())
-							blockCriteria = true;
-						return blockCriteria;
-					}), block.getDefaultState(), 2)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(3, 1, 1, 17))));
+			}.withConfiguration(new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("netherite", "netherite", blockAt -> {
+				boolean blockCriteria = false;
+				if (blockAt.getBlock() == Blocks.NETHERRACK.getDefaultState().getBlock())
+					blockCriteria = true;
+				return blockCriteria;
+			}), block.getDefaultState(), 16)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(5, 8, 8, 22))));
 		}
 	}
 
