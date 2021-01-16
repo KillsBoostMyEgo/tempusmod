@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tempus:items/netherite_boots"
+    "layer0": "tempus:items/netheriteboots"
   }
 }

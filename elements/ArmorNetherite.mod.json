@@ -3,13 +3,13 @@
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
-    "textureHelmet": "netherite_helmet",
+    "textureHelmet": "netheritehelmet",
     "enableBody": true,
-    "textureBody": "netherite_chestplate",
+    "textureBody": "netheritechestplate",
     "enableLeggings": true,
-    "textureLeggings": "netherite_leggings",
+    "textureLeggings": "netheriteleggings",
     "enableBoots": true,
-    "textureBoots": "netherite_boots",
+    "textureBoots": "netheriteboots",
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },

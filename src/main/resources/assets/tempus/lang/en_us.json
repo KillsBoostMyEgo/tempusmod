@@ -15,8 +15,10 @@
   "item.tempus.bible": "Bible",
   "item.tempus.item_temporium": "Powdered Temporium",
   "item.tempus.item_netherite_scrap": "Netherite Scrap",
+  "subtitles.pigstepdisc": "",
   "item.tempus.armor_netherite_leggings": "Netherite Leggings",
   "item.tempus.temporium": "Temporium",
+  "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
   "itemGroup.tabtempus": "Tempus",
   "subtitles.belleregular": "",
   "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
@@ -28,8 +30,10 @@
   "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
   "item.tempus.armor_netherite_helmet": "Netherite Helmet",
   "item.tempus.armor_netherite_boots": "Netherite Boots",
+  "item.tempus.item_netherite_ingot": "Netherite Ingot",
   "item.minecraft.splash_potion.effect.disease": "Splash Disease",
   "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
   "item.tempus.despacito": "Despacito",
-  "block.tempus.temponium_lantern": "Temponium Lantern"
+  "block.tempus.temponium_lantern": "Temponium Lantern",
+  "item.tempus.disc_pigstep": "Music Disc"
 }

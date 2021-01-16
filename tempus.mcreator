@@ -349,6 +349,33 @@
         "eb": true,
         "ec": true
       }
+    },
+    {
+      "name": "DiscPigstep",
+      "type": "musicdisc",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "disc_pigstep"
+    },
+    {
+      "name": "ItemNetheriteIngot",
+      "type": "item",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "item_netherite_ingot"
+    },
+    {
+      "name": "CraftingNetheriteIngot",
+      "type": "recipe",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crafting_netherite_ingot"
     }
   ],
   "variable_elements": [],
@@ -375,6 +402,14 @@
       ],
       "category": "player",
       "subtitle": "Equip sfx for netherite armor"
+    },
+    {
+      "name": "pigstepdisc",
+      "files": [
+        "pigstep"
+      ],
+      "category": "record",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -395,8 +430,10 @@
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.item_netherite_scrap": "Netherite Scrap",
+      "subtitles.pigstepdisc": "",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.temporium": "Temporium",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
@@ -408,10 +445,12 @@
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
+      "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "block.tempus.temponium_lantern": "Temponium Lantern"
+      "block.tempus.temponium_lantern": "Temponium Lantern",
+      "item.tempus.disc_pigstep": "Music Disc"
     }
   },
   "workspaceSettings": {

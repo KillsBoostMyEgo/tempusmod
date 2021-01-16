@@ -1,0 +1,42 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:item_netherite_scrap"
+    },
+    "1": {
+      "item": "tempus:item_netherite_scrap"
+    },
+    "2": {
+      "item": "tempus:item_netherite_scrap"
+    },
+    "3": {
+      "item": "tempus:item_netherite_scrap"
+    },
+    "4": {
+      "item": "minecraft:diamond"
+    },
+    "5": {
+      "item": "minecraft:gold_block"
+    },
+    "6": {
+      "item": "minecraft:gold_block"
+    },
+    "7": {
+      "item": "minecraft:gold_block"
+    },
+    "8": {
+      "item": "minecraft:gold_block"
+    }
+  },
+  "result": {
+    "item": "tempus:item_netherite_ingot",
+    "count": 1
+  }
+}

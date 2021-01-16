@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tempus:items/netheritehelmet"
+    "layer0": "tempus:items/netheriteingot"
   }
 }

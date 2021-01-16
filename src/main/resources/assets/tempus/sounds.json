@@ -26,5 +26,14 @@
         "stream": false
       }
     ]
+  },
+  "pigstepdisc": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "tempus:pigstep",
+        "stream": true
+      }
+    ]
   }
 }
