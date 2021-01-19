@@ -1,5 +1,8 @@
 {
+  "block.tempus.block_magical_lantern": "Magic Lantern",
+  "block.tempus.block_black_stone": "Block Black Stone",
   "item.tempus.endion_nugget": "Endion Nugget",
+  "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
   "block.tempus.diamond_lantern": "Diamond Lantern",
   "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
   "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
@@ -27,6 +30,7 @@
   "item.tempus.belle": "Belle Delphine Spawn Egg",
   "effect.disease": "Disease",
   "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
+  "entity.tempus.piglin": "Piglin",
   "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
   "item.tempus.armor_netherite_helmet": "Netherite Helmet",
   "item.tempus.armor_netherite_boots": "Netherite Boots",

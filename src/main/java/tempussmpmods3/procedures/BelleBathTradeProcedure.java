@@ -22,6 +22,10 @@ public class BelleBathTradeProcedure extends TempusModElements.ModElement {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
+		boolean found = false;
+		double sx = 0;
+		double sy = 0;
+		double sz = 0;
 		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.DIAMOND, (int) (1))) : false)) {
 			if (entity instanceof PlayerEntity) {
 				ItemStack _stktoremove = new ItemStack(Items.DIAMOND, (int) (1));
