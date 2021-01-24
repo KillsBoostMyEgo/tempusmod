@@ -469,6 +469,102 @@
           }
         ]
       }
+    },
+    {
+      "name": "SwordUltimate",
+      "type": "tool",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sword_ultimate"
+    },
+    {
+      "name": "UltimateSwordTemporiumAbility",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_sword_temporium_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UltSwitchAbilityOnKeyPressed",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ult_switch_ability_on_key_pressed",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "UltSwitchAbility",
+      "type": "keybind",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ult_switch_ability"
+    },
+    {
+      "name": "SwordUltimateRightClickedInAir",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sword_ultimate_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -508,8 +604,8 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_nugget": "Endion Nugget",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
@@ -534,6 +630,7 @@
       "subtitles.belleregular": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
       "item.minecraft.potion.effect.disease": "Disease",
+      "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "entity.tempus.belle": "Belle Delphine",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "effect.disease": "Disease",
@@ -541,6 +638,7 @@
       "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
+      "item.tempus.sword_ultimate": "Ultimate Sword",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
