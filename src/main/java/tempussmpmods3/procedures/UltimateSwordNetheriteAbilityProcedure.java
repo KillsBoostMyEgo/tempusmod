@@ -16,35 +16,35 @@ import java.util.Map;
 import java.util.Comparator;
 
 @TempusModElements.ModElement.Tag
-public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.ModElement {
-	public UltimateSwordTemporiumAbilityProcedure(TempusModElements instance) {
-		super(instance, 39);
+public class UltimateSwordNetheriteAbilityProcedure extends TempusModElements.ModElement {
+	public UltimateSwordNetheriteAbilityProcedure(TempusModElements instance) {
+		super(instance, 41);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure UltimateSwordTemporiumAbility!");
+				System.err.println("Failed to load dependency entity for procedure UltimateSwordNetheriteAbility!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure UltimateSwordTemporiumAbility!");
+				System.err.println("Failed to load dependency x for procedure UltimateSwordNetheriteAbility!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure UltimateSwordTemporiumAbility!");
+				System.err.println("Failed to load dependency y for procedure UltimateSwordNetheriteAbility!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure UltimateSwordTemporiumAbility!");
+				System.err.println("Failed to load dependency z for procedure UltimateSwordNetheriteAbility!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure UltimateSwordTemporiumAbility!");
+				System.err.println("Failed to load dependency world for procedure UltimateSwordNetheriteAbility!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -63,13 +63,9 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 					}
 				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (true))) {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("The inferno is growing!"), (true));
 			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 100, (int) 5, (false), (false)));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
-			}
+			entity.setFire((int) 5);
 		} else {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));

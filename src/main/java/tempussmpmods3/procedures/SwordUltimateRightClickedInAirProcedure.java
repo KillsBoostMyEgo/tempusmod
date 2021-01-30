@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModVariables;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraft.world.IWorld;
@@ -45,15 +47,8 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((new Object() {
-			int convert(String s) {
-				try {
-					return Integer.parseInt(s.trim());
-				} catch (Exception e) {
-				}
-				return 0;
-			}
-		}.convert("") == 0)) {
+		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 0)) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -63,43 +58,26 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				$_dependencies.put("world", world);
 				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
-		}
-		if ((new Object() {
-			int convert(String s) {
-				try {
-					return Integer.parseInt(s.trim());
-				} catch (Exception e) {
+		} else {
+			if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+					.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
+				{
+					Map<String, Object> $_dependencies = new HashMap<>();
+					$_dependencies.put("entity", entity);
+					$_dependencies.put("x", x);
+					$_dependencies.put("y", y);
+					$_dependencies.put("z", z);
+					$_dependencies.put("world", world);
+					UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
 				}
-				return 0;
-			}
-		}.convert("") == 1)) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
-			}
-		}
-		if ((new Object() {
-			int convert(String s) {
-				try {
-					return Integer.parseInt(s.trim());
-				} catch (Exception e) {
+			} else {
+				if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
+					{
+						Map<String, Object> $_dependencies = new HashMap<>();
+						UltimateSwordEndionProcedure.executeProcedure($_dependencies);
+					}
 				}
-				return 0;
-			}
-		}.convert("") == 2)) {
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

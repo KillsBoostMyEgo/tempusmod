@@ -94,6 +94,7 @@ public class UltSwitchAbilityKeyBinding extends TempusModElements.ModElement {
 		if (type == 0) {
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
 				UltSwitchAbilityOnKeyPressedProcedure.executeProcedure($_dependencies);
 			}
 		}
