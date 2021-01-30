@@ -521,12 +521,7 @@
       "ids": {},
       "registry_name": "ult_switch_ability_on_key_pressed",
       "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       }
     },
     {
@@ -572,6 +567,18 @@
       }
     },
     {
+      "name": "UltimateSwordEndion",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ultimate_sword_endion",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
       "name": "UltimateSwordNetheriteAbility",
       "type": "procedure",
       "sortid": 41,
@@ -603,23 +610,17 @@
           }
         ]
       }
-    },
-    {
-      "name": "UltimateSwordEndion",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ultimate_sword_endion",
-      "metadata": {
-        "dependencies": []
-      }
     }
   ],
   "variable_elements": [
     {
       "name": "ultSwordAbility",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ultimateswordability",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"

@@ -68,6 +68,7 @@ public class TempusModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("ultSwordAbility", instance.ultSwordAbility);
+			nbt.putDouble("ultimateswordability", instance.ultimateswordability);
 			return nbt;
 		}
 
@@ -75,11 +76,13 @@ public class TempusModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.ultSwordAbility = nbt.getDouble("ultSwordAbility");
+			instance.ultimateswordability = nbt.getDouble("ultimateswordability");
 		}
 	}
 
 	public static class PlayerVariables {
 		public double ultSwordAbility = 0;
+		public double ultimateswordability = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -112,6 +115,7 @@ public class TempusModVariables {
 				.orElse(new PlayerVariables()));
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.ultSwordAbility = original.ultSwordAbility;
+		clone.ultimateswordability = original.ultimateswordability;
 		if (!event.isWasDeath()) {
 		}
 	}
@@ -137,6 +141,7 @@ public class TempusModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.ultSwordAbility = message.data.ultSwordAbility;
+					variables.ultimateswordability = message.data.ultimateswordability;
 				}
 			});
 			context.setPacketHandled(true);
