@@ -10,37 +10,37 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
+        "value": "CUSTOM:ItemTemporium"
       },
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
+        "value": "CUSTOM:ItemTemporium"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "CUSTOM:ItemTemporium"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "CUSTOM:ItemTemporium"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:ItemNetheriteIngot"
+      "value": "CUSTOM:Temporium"
     },
-    "name": "crafting_netherite_ingot",
+    "name": "recipe_temporium_gem",
     "namespace": "mod"
   }
 }

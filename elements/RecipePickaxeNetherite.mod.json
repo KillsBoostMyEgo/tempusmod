@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": "CUSTOM:ItemNetheriteScrap"
       },
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
+        "value": "CUSTOM:ItemNetheriteIngot"
       },
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
-      },
-      {
-        "value": "Items.GOLD_INGOT"
+        "value": "CUSTOM:ItemNetheriteIngot"
       },
       {
         "value": ""
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": "Items.STICK"
       },
       {
-        "value": "Items.GOLD_INGOT"
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.STICK"
+      },
+      {
+        "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:ItemNetheriteIngot"
+      "value": "CUSTOM:PickaxeNetherite"
     },
-    "name": "crafting_netherite_ingot",
+    "name": "recipe_pickaxe_netherite",
     "namespace": "mod"
   }
 }

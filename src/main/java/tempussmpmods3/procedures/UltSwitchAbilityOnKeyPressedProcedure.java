@@ -30,9 +30,9 @@ public class UltSwitchAbilityOnKeyPressedProcedure extends TempusModElements.Mod
 			});
 		}
 		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) > 3)) {
+				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) > 2)) {
 			{
-				double _setval = (double) 1;
+				double _setval = (double) 0;
 				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ultSwordAbility = _setval;
 					capability.syncPlayerVariables(entity);

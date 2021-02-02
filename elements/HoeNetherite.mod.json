@@ -1,0 +1,33 @@
+{
+  "_fv": 13,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "hoenetherite",
+    "customModelName": "Normal",
+    "name": "Netherite Pickaxe",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Hoe",
+    "harvestLevel": 69420,
+    "efficiency": 6.0,
+    "attackSpeed": 4.0,
+    "enchantability": 15,
+    "damageVsEntity": 1.0,
+    "usageCount": 2031,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:ItemNetheriteIngot"
+      },
+      {
+        "value": "CUSTOM:ItemNetheriteScrap"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false
+  }
+}

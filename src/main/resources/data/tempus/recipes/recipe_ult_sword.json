@@ -1,0 +1,42 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:endion_nugget"
+    },
+    "1": {
+      "item": "tempus:item_temporium"
+    },
+    "2": {
+      "item": "tempus:temporium"
+    },
+    "3": {
+      "item": "tempus:item_netherite_ingot"
+    },
+    "4": {
+      "item": "tempus:temporium"
+    },
+    "5": {
+      "item": "tempus:item_temporium"
+    },
+    "6": {
+      "item": "tempus:item_netherite_ingot"
+    },
+    "7": {
+      "item": "tempus:item_netherite_ingot"
+    },
+    "8": {
+      "item": "tempus:endion_nugget"
+    }
+  },
+  "result": {
+    "item": "tempus:sword_ultimate",
+    "count": 1
+  }
+}

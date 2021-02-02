@@ -521,7 +521,12 @@
       "ids": {},
       "registry_name": "ult_switch_ability_on_key_pressed",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -575,7 +580,12 @@
       "ids": {},
       "registry_name": "ultimate_sword_endion",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -610,6 +620,114 @@
           }
         ]
       }
+    },
+    {
+      "name": "RecipeTemporiumGem",
+      "type": "recipe",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_temporium_gem"
+    },
+    {
+      "name": "RecipeUltSword",
+      "type": "recipe",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_ult_sword"
+    },
+    {
+      "name": "PickaxeNetherite",
+      "type": "tool",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pickaxe_netherite"
+    },
+    {
+      "name": "AxeNetherite",
+      "type": "tool",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "axe_netherite"
+    },
+    {
+      "name": "ShovelNetherite",
+      "type": "tool",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "shovel_netherite"
+    },
+    {
+      "name": "HoeNetherite",
+      "type": "tool",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hoe_netherite"
+    },
+    {
+      "name": "RecipePickaxeNetherite",
+      "type": "recipe",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_pickaxe_netherite"
+    },
+    {
+      "name": "RecipeAxeNetherite",
+      "type": "recipe",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_axe_netherite"
+    },
+    {
+      "name": "RecipeShovelNetherite",
+      "type": "recipe",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_shovel_netherite"
+    },
+    {
+      "name": "RecipeHoeNetherite",
+      "type": "recipe",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_hoe_netherite"
+    },
+    {
+      "name": "SwordNetherite",
+      "type": "tool",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sword_netherite"
+    },
+    {
+      "name": "RecipeSwordNetherite",
+      "type": "recipe",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_sword_netherite"
     }
   ],
   "variable_elements": [
@@ -663,47 +781,52 @@
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
       "block.tempus.block_black_stone": "Block Black Stone",
-      "item.tempus.endion_nugget": "Endion Nugget",
-      "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
+      "block.tempus.endion": "Endion",
+      "item.tempus.creative_tempus": "Creative Tempus",
+      "item.tempus.axe_netherite": "Netherite Pickaxe",
+      "item.tempus.item_temporium": "Powdered Temporium",
+      "item.tempus.bible": "Bible",
+      "item.tempus.armor_netherite_leggings": "Netherite Leggings",
+      "item.tempus.hoe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "itemGroup.tabtempus": "Tempus",
+      "subtitles.belleregular": "",
+      "entity.tempus.belle": "Belle Delphine",
+      "effect.disease": "Disease",
+      "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
+      "entity.tempus.piglin": "Piglin",
+      "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
+      "item.tempus.item_netherite_ingot": "Netherite Ingot",
+      "item.minecraft.splash_potion.effect.disease": "Splash Disease",
+      "item.tempus.shovel_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep": "Music Disc",
+      "item.tempus.endion_nugget": "Endion Nugget",
+      "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "fluid.bath_water": "BathWater",
+      "item.tempus.sword_netherite": "Netherite Pickaxe",
       "item.tempus.bath_water_bucket": "BathWater Bucket",
-      "block.tempus.endion": "Endion",
-      "item.tempus.creative_tempus": "Creative Tempus",
+      "fluid.bath_water": "BathWater",
       "subtitles.netheritesoundequiparmor": "Equip sfx for netherite armor",
-      "item.tempus.bible": "Bible",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.item_netherite_scrap": "Netherite Scrap",
       "subtitles.pigstepdisc": "",
-      "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.temporium": "Temporium",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
-      "itemGroup.tabtempus": "Tempus",
-      "subtitles.belleregular": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
-      "entity.tempus.belle": "Belle Delphine",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
-      "effect.disease": "Disease",
-      "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
-      "entity.tempus.piglin": "Piglin",
-      "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
       "item.tempus.sword_ultimate": "Ultimate Sword",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
-      "item.tempus.item_netherite_ingot": "Netherite Ingot",
-      "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "block.tempus.temponium_lantern": "Temponium Lantern",
-      "item.tempus.disc_pigstep": "Music Disc"
+      "block.tempus.temponium_lantern": "Temponium Lantern"
     }
   },
   "workspaceSettings": {
@@ -719,6 +842,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "tempussmpmods3",
     "lockBaseModFiles": false
   },

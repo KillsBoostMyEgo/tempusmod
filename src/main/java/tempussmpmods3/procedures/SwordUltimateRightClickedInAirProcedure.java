@@ -5,6 +5,8 @@ import tempussmpmods3.TempusModVariables;
 import tempussmpmods3.TempusModElements;
 
 import net.minecraft.world.IWorld;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -58,6 +60,9 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				$_dependencies.put("world", world);
 				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
+			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium"), (false));
+			}
 		} else {
 			if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
@@ -70,12 +75,19 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 					$_dependencies.put("world", world);
 					UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
 				}
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite"), (false));
+				}
 			} else {
 				if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
+						$_dependencies.put("entity", entity);
 						UltimateSwordEndionProcedure.executeProcedure($_dependencies);
+					}
+					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion"), (false));
 					}
 				}
 			}

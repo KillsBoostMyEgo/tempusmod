@@ -1,0 +1,22 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tempus:item_temporium"
+    },
+    {
+      "item": "tempus:item_temporium"
+    },
+    {
+      "item": "tempus:item_temporium"
+    },
+    {
+      "item": "tempus:item_temporium"
+    }
+  ],
+  "result": {
+    "item": "tempus:temporium",
+    "count": 1
+  }
+}

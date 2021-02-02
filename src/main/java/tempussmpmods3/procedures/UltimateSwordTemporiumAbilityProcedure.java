@@ -52,8 +52,6 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
 		if (((((Entity) world
 				.getEntitiesWithinAABB(PlayerEntity.class,
 						new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
@@ -75,5 +73,10 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));
 			}
 		}
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).removePotionEffect(Effects.SLOWNESS);
+		}
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
 	}
 }
