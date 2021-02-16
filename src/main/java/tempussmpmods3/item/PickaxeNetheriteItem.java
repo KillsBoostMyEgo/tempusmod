@@ -36,11 +36,11 @@ public class PickaxeNetheriteItem extends TempusModElements.ModElement {
 			}
 
 			public int getHarvestLevel() {
-				return 69420;
+				return 3;
 			}
 
 			public int getEnchantability() {
-				return 15;
+				return 10;
 			}
 
 			public Ingredient getRepairMaterial() {

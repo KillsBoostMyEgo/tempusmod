@@ -61,7 +61,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium"), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium Ability Selected"), (false));
 			}
 		} else {
 			if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -76,7 +76,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 					UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite Ability Selected"), (false));
 				}
 			} else {
 				if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -84,10 +84,11 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 					{
 						Map<String, Object> $_dependencies = new HashMap<>();
 						$_dependencies.put("entity", entity);
-						UltimateSwordEndionProcedure.executeProcedure($_dependencies);
+						$_dependencies.put("world", world);
+						EndoriumAbilityProcedure.executeProcedure($_dependencies);
 					}
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion"), (false));
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected"), (false));
 					}
 				}
 			}

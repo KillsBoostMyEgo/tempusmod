@@ -22,7 +22,7 @@ public class UltimateSwordEndionProcedure extends TempusModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("test"), (true));
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected"), (true));
 		}
 	}
 }

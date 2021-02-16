@@ -11,10 +11,10 @@
       "value": "TOOLS"
     },
     "toolType": "Pickaxe",
-    "harvestLevel": 69420,
+    "harvestLevel": 3,
     "efficiency": 6.0,
     "attackSpeed": 1.2,
-    "enchantability": 15,
+    "enchantability": 10,
     "damageVsEntity": 6.0,
     "usageCount": 2031,
     "blocksAffected": [],
