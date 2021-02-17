@@ -8,6 +8,7 @@
   "item.tempus.axe_netherite": "Netherite Pickaxe",
   "item.tempus.item_temporium": "Powdered Temporium",
   "item.tempus.bible": "Bible",
+  "block.tempus.smithing": "Smithing",
   "item.tempus.armor_netherite_leggings": "Netherite Leggings",
   "item.tempus.hoe_netherite": "Netherite Pickaxe",
   "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
@@ -46,5 +47,6 @@
   "item.tempus.armor_netherite_boots": "Netherite Boots",
   "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
   "item.tempus.despacito": "Despacito",
-  "block.tempus.temponium_lantern": "Temponium Lantern"
+  "block.tempus.temponium_lantern": "Temponium Lantern",
+  "enchantment.tempus.autosmeltench": "Mining Flames"
 }

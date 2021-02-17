@@ -676,42 +676,6 @@
       "registry_name": "hoe_netherite"
     },
     {
-      "name": "RecipePickaxeNetherite",
-      "type": "recipe",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_pickaxe_netherite"
-    },
-    {
-      "name": "RecipeAxeNetherite",
-      "type": "recipe",
-      "sortid": 50,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_axe_netherite"
-    },
-    {
-      "name": "RecipeShovelNetherite",
-      "type": "recipe",
-      "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_shovel_netherite"
-    },
-    {
-      "name": "RecipeHoeNetherite",
-      "type": "recipe",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_hoe_netherite"
-    },
-    {
       "name": "SwordNetherite",
       "type": "tool",
       "sortid": 53,
@@ -719,15 +683,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "sword_netherite"
-    },
-    {
-      "name": "RecipeSwordNetherite",
-      "type": "recipe",
-      "sortid": 54,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_sword_netherite"
     },
     {
       "name": "EndoriumAbility",
@@ -751,18 +706,6 @@
       }
     },
     {
-      "name": "Autosmelt",
-      "type": "procedure",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmelt",
-      "metadata": {
-        "dependencies": []
-      }
-    },
-    {
       "name": "SmithingTable",
       "type": "procedure",
       "sortid": 57,
@@ -775,6 +718,112 @@
           {
             "name": "entity",
             "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SmithingUpdateTick",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smithing_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondNetherite",
+      "type": "gui",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_netherite"
+    },
+    {
+      "name": "Smithing",
+      "type": "block",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smithing"
+    },
+    {
+      "name": "Autosmeltench",
+      "type": "enchantment",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmeltench"
+    },
+    {
+      "name": "Autosmelt",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AutosmeltAttacher",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelt_attacher",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -838,6 +887,7 @@
       "item.tempus.axe_netherite": "Netherite Pickaxe",
       "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
@@ -876,7 +926,8 @@
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "block.tempus.temponium_lantern": "Temponium Lantern"
+      "block.tempus.temponium_lantern": "Temponium Lantern",
+      "enchantment.tempus.autosmeltench": "Mining Flames"
     }
   },
   "workspaceSettings": {

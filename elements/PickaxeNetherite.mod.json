@@ -28,6 +28,12 @@
       }
     ],
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "AutosmeltAttacher"
+    },
+    "onBlockDestroyedWithTool": {
+      "name": "Autosmelt"
+    }
   }
 }
