@@ -1,0 +1,36 @@
+{
+  "_fv": 13,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "endersword",
+    "customModelName": "Normal",
+    "name": "Endion Sword",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "TOOLS"
+    },
+    "toolType": "Sword",
+    "harvestLevel": 3,
+    "efficiency": 9.0,
+    "attackSpeed": 1.8,
+    "enchantability": 2,
+    "damageVsEntity": 9.0,
+    "usageCount": 1769,
+    "blocksAffected": [],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "CUSTOM:EndionNugget"
+      }
+    ],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "EndoriumAbility"
+    },
+    "onRightClickedOnBlock": {
+      "name": "EndoriumAbility"
+    }
+  }
+}
