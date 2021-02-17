@@ -33,7 +33,7 @@
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
     },

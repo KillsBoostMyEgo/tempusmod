@@ -706,6 +706,18 @@
       }
     },
     {
+      "name": "Autosmelt",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelt",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
       "name": "SmithingTable",
       "type": "procedure",
       "sortid": 57,
@@ -718,6 +730,41 @@
           {
             "name": "entity",
             "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DiamondNetherite",
+      "type": "gui",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "diamond_netherite"
+    },
+    {
+      "name": "Smithing",
+      "type": "block",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smithing"
+    },
+    {
+      "name": "AutosmeltAttacher",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelt_attacher",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       }
@@ -752,24 +799,6 @@
       }
     },
     {
-      "name": "DiamondNetherite",
-      "type": "gui",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "diamond_netherite"
-    },
-    {
-      "name": "Smithing",
-      "type": "block",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smithing"
-    },
-    {
       "name": "Autosmeltench",
       "type": "enchantment",
       "sortid": 60,
@@ -779,54 +808,31 @@
       "registry_name": "autosmeltench"
     },
     {
-      "name": "Autosmelt",
-      "type": "procedure",
-      "sortid": 61,
+      "name": "EndionToolsGui",
+      "type": "gui",
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "autosmelt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
+      "registry_name": "endion_tools_gui"
     },
     {
-      "name": "AutosmeltAttacher",
-      "type": "procedure",
-      "sortid": 62,
+      "name": "Pick",
+      "type": "item",
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "autosmelt_attacher",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
+      "registry_name": "pick"
+    },
+    {
+      "name": "EndionSword",
+      "type": "tool",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion_sword"
     }
   ],
   "variable_elements": [
@@ -885,17 +891,17 @@
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
-      "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
+      "entity.tempus.belle": "Belle Delphine",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
@@ -926,8 +932,7 @@
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "block.tempus.temponium_lantern": "Temponium Lantern",
-      "enchantment.tempus.autosmeltench": "Mining Flames"
+      "block.tempus.temponium_lantern": "Temponium Lantern"
     }
   },
   "workspaceSettings": {
