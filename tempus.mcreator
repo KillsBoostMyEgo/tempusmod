@@ -761,6 +761,23 @@
       "metadata": {
         "dependencies": []
       }
+    },
+    {
+      "name": "SmithingTable",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smithing_table",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -819,16 +836,16 @@
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
+      "item.tempus.bible": "Bible",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
-      "effect.disease": "Disease",
       "entity.tempus.belle": "Belle Delphine",
+      "effect.disease": "Disease",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
