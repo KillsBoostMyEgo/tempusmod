@@ -120,11 +120,11 @@ public class DiamondNetheriteGui extends TempusModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 18, 38) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 35) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 68, 37) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 35) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 132, 37) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 133, 35) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;

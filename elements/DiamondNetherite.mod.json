@@ -20,8 +20,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 143,
-          "y": 74
+          "x": 150,
+          "y": 71
         }
       },
       {
@@ -34,8 +34,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 193,
-          "y": 73
+          "x": 204,
+          "y": 71
         }
       },
       {
@@ -45,8 +45,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 257,
-          "y": 73
+          "x": 258,
+          "y": 71
         }
       }
     ]
