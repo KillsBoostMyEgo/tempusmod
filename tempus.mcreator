@@ -714,7 +714,28 @@
       "ids": {},
       "registry_name": "autosmelt",
       "metadata": {
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
       }
     },
     {
@@ -823,7 +844,7 @@
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "pick"
+      "registry_name": "endion_multitool"
     },
     {
       "name": "EndionSword",
@@ -833,6 +854,39 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "endion_sword"
+    },
+    {
+      "name": "EndionHelmetTp",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion_armor_tp_test",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -847,6 +901,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "helmet",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "chestplate",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "leggings",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "boots",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": ""
     }
   ],
   "sound_elements": [
@@ -886,23 +964,23 @@
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
       "block.tempus.block_black_stone": "Block Black Stone",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
-      "item.tempus.pick": "Endion MultiTool",
-      "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
+      "entity.tempus.belle": "Belle Delphine",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",

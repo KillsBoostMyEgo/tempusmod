@@ -122,73 +122,73 @@ public class EndionToolsGuiGui extends TempusModElements.ModElement {
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 8) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 26) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 8) {
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 7, 44) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 8) {
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 7, 62) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 8) {
 			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 25, 8) {
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 8) {
 			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 25, 26) {
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 8) {
 			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 25, 44) {
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 8) {
 			}));
-			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 25, 62) {
+			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 8) {
 			}));
-			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 43, 8) {
+			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 8) {
 			}));
-			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 43, 26) {
+			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 7, 26) {
 			}));
-			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 43, 44) {
+			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 25, 26) {
 			}));
-			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 62) {
+			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 26) {
 			}));
-			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 8) {
+			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 26) {
 			}));
-			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 61, 26) {
+			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 79, 26) {
 			}));
-			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 61, 44) {
+			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 97, 26) {
 			}));
-			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 61, 62) {
+			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 115, 26) {
 			}));
-			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 79, 8) {
+			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 26) {
 			}));
-			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 79, 26) {
+			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 26) {
 			}));
-			this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 79, 44) {
+			this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 7, 44) {
 			}));
-			this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 79, 62) {
+			this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 25, 44) {
 			}));
-			this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 97, 8) {
+			this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 43, 44) {
 			}));
-			this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 97, 26) {
+			this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 61, 44) {
 			}));
-			this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 97, 44) {
+			this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 79, 44) {
 			}));
-			this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 97, 62) {
+			this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 97, 44) {
 			}));
-			this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 115, 8) {
+			this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 115, 44) {
 			}));
-			this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 115, 26) {
+			this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 133, 44) {
 			}));
-			this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 115, 44) {
+			this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 151, 44) {
 			}));
-			this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 115, 62) {
+			this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 7, 62) {
 			}));
-			this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 133, 8) {
+			this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 25, 62) {
 			}));
-			this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 133, 26) {
+			this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 43, 62) {
 			}));
-			this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 133, 44) {
+			this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 61, 62) {
 			}));
-			this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 133, 62) {
+			this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 79, 62) {
 			}));
-			this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 151, 8) {
+			this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 97, 62) {
 			}));
-			this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 151, 26) {
+			this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 115, 62) {
 			}));
-			this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 151, 44) {
+			this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 133, 62) {
 			}));
 			this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 151, 62) {
 			}));
@@ -545,6 +545,8 @@ public class EndionToolsGuiGui extends TempusModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+			this.font.drawString("Filter", 177, 61, -1);
+			this.font.drawString("Items", -29, 7, -1);
 		}
 
 		@Override

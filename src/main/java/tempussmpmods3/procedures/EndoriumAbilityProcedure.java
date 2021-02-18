@@ -36,13 +36,13 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 		double y = 0;
 		double z = 0;
 		x = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),
-				entity.getEyePosition(1f).add(entity.getLook(1f).x * 150, entity.getLook(1f).y * 150, entity.getLook(1f).z * 150),
+				entity.getEyePosition(1f).add(entity.getLook(1f).x * 50, entity.getLook(1f).y * 50, entity.getLook(1f).z * 50),
 				RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getX());
 		y = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),
-				entity.getEyePosition(1f).add(entity.getLook(1f).x * 150, entity.getLook(1f).y * 150, entity.getLook(1f).z * 150),
+				entity.getEyePosition(1f).add(entity.getLook(1f).x * 50, entity.getLook(1f).y * 50, entity.getLook(1f).z * 50),
 				RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getY());
 		z = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),
-				entity.getEyePosition(1f).add(entity.getLook(1f).x * 150, entity.getLook(1f).y * 150, entity.getLook(1f).z * 150),
+				entity.getEyePosition(1f).add(entity.getLook(1f).x * 50, entity.getLook(1f).y * 50, entity.getLook(1f).z * 50),
 				RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getZ());
 		if ((world.isAirBlock(new BlockPos((int) (x), (int) (y), (int) (z))))) {
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {

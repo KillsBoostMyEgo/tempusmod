@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "endionpickaxe",
+    "texture": "endionmulti",
     "customModelName": "Normal",
     "name": "Endion MultiTool",
     "rarity": "EPIC",
@@ -13,7 +13,7 @@
     "stackSize": 64,
     "enchantability": 10,
     "useDuration": 0,
-    "toolType": 4.0,
+    "toolType": 5.5,
     "damageCount": 5307,
     "recipeRemainder": {
       "value": ""
@@ -27,6 +27,6 @@
     "hasGlow": false,
     "guiBoundTo": "EndionToolsGui",
     "inventorySize": 36,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 128
   }
 }

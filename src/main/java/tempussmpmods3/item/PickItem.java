@@ -47,7 +47,7 @@ import io.netty.buffer.Unpooled;
 
 @TempusModElements.ModElement.Tag
 public class PickItem extends TempusModElements.ModElement {
-	@ObjectHolder("tempus:pick")
+	@ObjectHolder("tempus:endion_multitool")
 	public static final Item block = null;
 	public PickItem(TempusModElements instance) {
 		super(instance, 59);
@@ -71,7 +71,7 @@ public class PickItem extends TempusModElements.ModElement {
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.EPIC));
-			setRegistryName("pick");
+			setRegistryName("endion_multitool");
 		}
 
 		@Override
@@ -86,7 +86,7 @@ public class PickItem extends TempusModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 4F;
+			return 5.5F;
 		}
 
 		@Override
@@ -167,7 +167,7 @@ public class PickItem extends TempusModElements.ModElement {
 			return new ItemStackHandler(36) {
 				@Override
 				public int getSlotLimit(int slot) {
-					return 64;
+					return 128;
 				}
 
 				@Override

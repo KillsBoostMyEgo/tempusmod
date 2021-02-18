@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "tempus:items/endionpickaxe"
+    "layer0": "tempus:items/endionmulti"
   }
 }

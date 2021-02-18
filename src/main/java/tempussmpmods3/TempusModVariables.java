@@ -19,6 +19,7 @@ import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.nbt.INBT;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -69,6 +70,10 @@ public class TempusModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("ultSwordAbility", instance.ultSwordAbility);
 			nbt.putDouble("ultimateswordability", instance.ultimateswordability);
+			nbt.put("helmet", instance.helmet.write(new CompoundNBT()));
+			nbt.put("chestplate", instance.chestplate.write(new CompoundNBT()));
+			nbt.put("leggings", instance.leggings.write(new CompoundNBT()));
+			nbt.put("boots", instance.boots.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -77,12 +82,20 @@ public class TempusModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.ultSwordAbility = nbt.getDouble("ultSwordAbility");
 			instance.ultimateswordability = nbt.getDouble("ultimateswordability");
+			instance.helmet = ItemStack.read(nbt.getCompound("helmet"));
+			instance.chestplate = ItemStack.read(nbt.getCompound("chestplate"));
+			instance.leggings = ItemStack.read(nbt.getCompound("leggings"));
+			instance.boots = ItemStack.read(nbt.getCompound("boots"));
 		}
 	}
 
 	public static class PlayerVariables {
 		public double ultSwordAbility = 0;
 		public double ultimateswordability = 0;
+		public ItemStack helmet = ItemStack.EMPTY;
+		public ItemStack chestplate = ItemStack.EMPTY;
+		public ItemStack leggings = ItemStack.EMPTY;
+		public ItemStack boots = ItemStack.EMPTY;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -117,6 +130,10 @@ public class TempusModVariables {
 		clone.ultSwordAbility = original.ultSwordAbility;
 		clone.ultimateswordability = original.ultimateswordability;
 		if (!event.isWasDeath()) {
+			clone.helmet = original.helmet;
+			clone.chestplate = original.chestplate;
+			clone.leggings = original.leggings;
+			clone.boots = original.boots;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -142,6 +159,10 @@ public class TempusModVariables {
 							.orElse(new PlayerVariables()));
 					variables.ultSwordAbility = message.data.ultSwordAbility;
 					variables.ultimateswordability = message.data.ultimateswordability;
+					variables.helmet = message.data.helmet;
+					variables.chestplate = message.data.chestplate;
+					variables.leggings = message.data.leggings;
+					variables.boots = message.data.boots;
 				}
 			});
 			context.setPacketHandled(true);

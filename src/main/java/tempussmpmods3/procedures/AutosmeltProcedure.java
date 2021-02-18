@@ -26,7 +26,7 @@ import java.util.HashMap;
 @TempusModElements.ModElement.Tag
 public class AutosmeltProcedure extends TempusModElements.ModElement {
 	public AutosmeltProcedure(TempusModElements instance) {
-		super(instance, 61);
+		super(instance, 56);
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
