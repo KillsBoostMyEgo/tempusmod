@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.item.ArmorNetheriteItem;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,6 +14,8 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec2f;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
@@ -58,7 +62,15 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 20)
+		if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 20) && (((((entity instanceof PlayerEntity)
+				? ((PlayerEntity) entity).inventory.armorInventory.get((int) 3)
+				: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())
+				&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem()))
+				&& ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 1) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem())
+						&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 0) : ItemStack.EMPTY)
+								.getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem()))))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 10))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
@@ -66,7 +78,16 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 40 40 false @p");
 			}
-		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 17)
+		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 17)
+				&& (((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem())
+						&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 1) : ItemStack.EMPTY)
+								.getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem()))
+						&& ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 3) : ItemStack.EMPTY)
+								.getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())
+								^ (((entity instanceof PlayerEntity)
+										? ((PlayerEntity) entity).inventory.armorInventory.get((int) 0)
+										: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem()))))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 9))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
@@ -74,7 +95,11 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 30 30 false @p");
 			}
-		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 14)
+		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 14)
+				&& ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem())
+						&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 1) : ItemStack.EMPTY)
+								.getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem())))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 8))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
@@ -82,15 +107,19 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 15 15 false @p");
 			}
-		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 8)
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 5))) {
+		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 8)
+				&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 2) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem()))
+				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 6))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
 						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
 								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 10 10 false @p");
 			}
-		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 6)
+		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 6)
+				&& (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 1) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem()))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 4))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
@@ -98,7 +127,11 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 8 8 false @p");
 			}
-		} else if (((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 3)
+		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 3)
+				&& ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 0) : ItemStack.EMPTY)
+						.getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem())
+						|| (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.armorInventory.get((int) 3) : ItemStack.EMPTY)
+								.getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 2))) {
 			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 				world.getWorld().getServer().getCommandManager().handleCommand(
