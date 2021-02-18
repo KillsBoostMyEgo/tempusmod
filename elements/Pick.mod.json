@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "endionpickaxe",
     "customModelName": "Normal",
-    "name": "Endion Pickaxe",
+    "name": "Endion MultiTool",
     "rarity": "EPIC",
     "creativeTab": {
       "value": "TOOLS"
@@ -14,7 +14,7 @@
     "enchantability": 10,
     "useDuration": 0,
     "toolType": 4.0,
-    "damageCount": 1769,
+    "damageCount": 5307,
     "recipeRemainder": {
       "value": ""
     },

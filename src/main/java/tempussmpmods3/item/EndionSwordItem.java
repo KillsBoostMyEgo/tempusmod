@@ -1,12 +1,34 @@
 
 package tempussmpmods3.item;
 
+import tempussmpmods3.procedures.EndoriumAbilityProcedure;
+
+import tempussmpmods3.TempusModElements;
+
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Direction;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.ActionResult;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.SwordItem;
+import net.minecraft.item.ItemUseContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.Item;
+import net.minecraft.item.IItemTier;
+import net.minecraft.entity.player.PlayerEntity;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @TempusModElements.ModElement.Tag
 public class EndionSwordItem extends TempusModElements.ModElement {
-
 	@ObjectHolder("tempus:endion_sword")
 	public static final Item block = null;
-
 	public EndionSwordItem(TempusModElements instance) {
 		super(instance, 58);
 	}
@@ -38,7 +60,6 @@ public class EndionSwordItem extends TempusModElements.ModElement {
 				return Ingredient.fromStacks(new ItemStack(EndionNuggetItem.block, (int) (1)));
 			}
 		}, 3, -2.2f, new Item.Properties().group(ItemGroup.TOOLS)) {
-
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);
@@ -48,10 +69,8 @@ public class EndionSwordItem extends TempusModElements.ModElement {
 				double z = entity.getPosZ();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("world", world);
-
 					EndoriumAbilityProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
@@ -70,16 +89,12 @@ public class EndionSwordItem extends TempusModElements.ModElement {
 				ItemStack itemstack = context.getItem();
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
-
 					$_dependencies.put("entity", entity);
 					$_dependencies.put("world", world);
-
 					EndoriumAbilityProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
 			}
-
 		}.setRegistryName("endion_sword"));
 	}
-
 }

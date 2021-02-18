@@ -1,12 +1,21 @@
 
 package tempussmpmods3.enchantment;
 
+import tempussmpmods3.item.PickaxeNetheriteItem;
+
+import tempussmpmods3.TempusModElements;
+
+import net.minecraftforge.registries.ObjectHolder;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.EquipmentSlotType;
+import net.minecraft.enchantment.EnchantmentType;
+import net.minecraft.enchantment.Enchantment;
+
 @TempusModElements.ModElement.Tag
 public class AutosmeltenchEnchantment extends TempusModElements.ModElement {
-
 	@ObjectHolder("tempus:autosmeltench")
 	public static final Enchantment enchantment = null;
-
 	public AutosmeltenchEnchantment(TempusModElements instance) {
 		super(instance, 60);
 	}
@@ -15,9 +24,7 @@ public class AutosmeltenchEnchantment extends TempusModElements.ModElement {
 	public void initElements() {
 		elements.enchantments.add(() -> new CustomEnchantment(EquipmentSlotType.MAINHAND).setRegistryName("autosmeltench"));
 	}
-
 	public static class CustomEnchantment extends Enchantment {
-
 		public CustomEnchantment(EquipmentSlotType... slots) {
 			super(Enchantment.Rarity.VERY_RARE, EnchantmentType.DIGGER, slots);
 		}
@@ -53,7 +60,5 @@ public class AutosmeltenchEnchantment extends TempusModElements.ModElement {
 		public boolean isAllowedOnBooks() {
 			return false;
 		}
-
 	}
-
 }

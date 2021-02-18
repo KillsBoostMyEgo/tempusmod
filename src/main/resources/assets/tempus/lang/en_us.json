@@ -15,6 +15,7 @@
   "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
   "itemGroup.tabtempus": "Tempus",
   "subtitles.belleregular": "",
+  "item.tempus.pick": "Endion MultiTool",
   "entity.tempus.belle": "Belle Delphine",
   "effect.disease": "Disease",
   "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
@@ -42,10 +43,12 @@
   "item.minecraft.potion.effect.disease": "Disease",
   "key.mcreator.ult_switch_ability": "Ult Switch Ability",
   "item.tempus.belle": "Belle Delphine Spawn Egg",
+  "item.tempus.endion_sword": "Endion Sword",
   "item.tempus.armor_netherite_helmet": "Netherite Helmet",
   "item.tempus.sword_ultimate": "Ultimate Sword",
   "item.tempus.armor_netherite_boots": "Netherite Boots",
   "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
   "item.tempus.despacito": "Despacito",
-  "block.tempus.temponium_lantern": "Temponium Lantern"
+  "block.tempus.temponium_lantern": "Temponium Lantern",
+  "enchantment.tempus.autosmeltench": "Mining Flames"
 }

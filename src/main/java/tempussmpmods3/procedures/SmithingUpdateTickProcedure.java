@@ -1,11 +1,32 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.item.SwordNetheriteItem;
+import tempussmpmods3.item.ShovelNetheriteItem;
+import tempussmpmods3.item.PickaxeNetheriteItem;
+import tempussmpmods3.item.ItemNetheriteIngotItem;
+import tempussmpmods3.item.HoeNetheriteItem;
+import tempussmpmods3.item.AxeNetheriteItem;
+import tempussmpmods3.item.ArmorNetheriteItem;
+
+import tempussmpmods3.TempusModElements;
+
+import net.minecraftforge.items.IItemHandlerModifiable;
+import net.minecraftforge.items.CapabilityItemHandler;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Map;
+
 @TempusModElements.ModElement.Tag
 public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
-
 	public SmithingUpdateTickProcedure(TempusModElements instance) {
 		super(instance, 58);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -29,12 +50,10 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 				System.err.println("Failed to load dependency world for procedure SmithingUpdateTick!");
 			return;
 		}
-
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
@@ -737,7 +756,5 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 				}
 			}
 		}
-
 	}
-
 }
