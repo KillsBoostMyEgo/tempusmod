@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.enchantment.SmeltingEnchantment;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraft.item.ItemStack;
@@ -20,8 +22,8 @@ public class AutosmeltAttacherProcedure extends TempusModElements.ModElement {
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if ((((EnchantmentHelper.getEnchantmentLevel(AutoSmeltEnchantment.enchantment, (itemstack)) != 0)) == (false))) {
-			((itemstack)).addEnchantment(AutoSmeltEnchantment.enchantment, (int) 1);
+		if ((((EnchantmentHelper.getEnchantmentLevel(SmeltingEnchantment.enchantment, (itemstack)) != 0)) == (false))) {
+			((itemstack)).addEnchantment(SmeltingEnchantment.enchantment, (int) 1);
 		}
 	}
 }

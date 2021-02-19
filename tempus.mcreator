@@ -744,7 +744,7 @@
       "name": "AutosmeltAttacher",
       "type": "procedure",
       "sortid": 62,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "autosmelt_attacher",
@@ -910,7 +910,7 @@
       "name": "Autosmelting",
       "type": "procedure",
       "sortid": 65,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "ids": {},
       "registry_name": "autosmelting",
@@ -1041,6 +1041,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "Smelting",
+      "type": "enchantment",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelting"
     }
   ],
   "variable_elements": [
@@ -1123,21 +1132,22 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_multitool": "Endion MultiTool",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
-      "block.tempus.infinite_crate": "Infinite Crate",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
+      "block.tempus.infinite_crate": "Infinite Crate",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
+      "item.tempus.bible": "Bible",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "enchantment.tempus.smelting": "Netherite Buff",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",

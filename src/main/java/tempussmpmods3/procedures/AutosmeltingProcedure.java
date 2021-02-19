@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.enchantment.SmeltingEnchantment;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -59,7 +61,7 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((EnchantmentHelper.getEnchantmentLevel(AutoSmeltEnchantment.enchantment,
+		if ((((EnchantmentHelper.getEnchantmentLevel(SmeltingEnchantment.enchantment,
 				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0))
 				&& (world.getWorld().getRecipeManager().getRecipe(IRecipeType.SMELTING,
 						new Inventory((new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()))), world.getWorld())
