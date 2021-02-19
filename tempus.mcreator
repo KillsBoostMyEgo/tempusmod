@@ -887,6 +887,66 @@
           }
         ]
       }
+    },
+    {
+      "name": "InfiniteCrate",
+      "type": "block",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infinite_crate"
+    },
+    {
+      "name": "HugeCrate",
+      "type": "gui",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_crate"
+    },
+    {
+      "name": "Singleitem",
+      "type": "gui",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "singleitem"
+    },
+    {
+      "name": "CrateSetItem",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "crate_set_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -924,6 +984,12 @@
       "name": "boots",
       "type": "itemstack",
       "scope": "player_lifetime",
+      "value": ""
+    },
+    {
+      "name": "itemtype",
+      "type": "itemstack",
+      "scope": "map",
       "value": ""
     }
   ],
@@ -967,6 +1033,7 @@
       "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
+      "block.tempus.infinite_crate": "Infinite Crate",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
