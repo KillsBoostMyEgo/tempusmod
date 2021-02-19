@@ -545,8 +545,6 @@ public class EndionToolsGuiGui extends TempusModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Filter", 177, 61, -1);
-			this.font.drawString("Items", -29, 7, -1);
 		}
 
 		@Override

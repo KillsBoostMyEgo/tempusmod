@@ -263,32 +263,6 @@
         }
       },
       {
-        "type": "label",
-        "data": {
-          "text": "Filter",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "name": "Filter",
-          "x": 303,
-          "y": 98
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "Items",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "name": "Items",
-          "x": 96,
-          "y": 44
-        }
-      },
-      {
         "type": "inputslot",
         "data": {
           "inputLimit": {

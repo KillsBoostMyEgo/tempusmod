@@ -1,28 +1,11 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.TempusModElements;
-
-import net.minecraftforge.items.IItemHandlerModifiable;
-import net.minecraftforge.items.CapabilityItemHandler;
-
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.container.Slot;
-import net.minecraft.inventory.container.Container;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.block.Blocks;
-
-import java.util.function.Supplier;
-import java.util.Map;
-
 @TempusModElements.ModElement.Tag
 public class CrateSetItemProcedure extends TempusModElements.ModElement {
+
 	public CrateSetItemProcedure(TempusModElements instance) {
 		super(instance, 67);
+
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -51,11 +34,13 @@ public class CrateSetItemProcedure extends TempusModElements.ModElement {
 				System.err.println("Failed to load dependency world for procedure CrateSetItem!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		ItemStack item = ItemStack.EMPTY;
 		item = ((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY);
 		if (((new Object() {
@@ -87,5 +72,7 @@ public class CrateSetItemProcedure extends TempusModElements.ModElement {
 				}
 			}
 		}
+
 	}
+
 }
