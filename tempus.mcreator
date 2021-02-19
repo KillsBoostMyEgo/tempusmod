@@ -847,66 +847,6 @@
       }
     },
     {
-      "name": "HugeCrate",
-      "type": "gui",
-      "sortid": 65,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "huge_crate"
-    },
-    {
-      "name": "CrateSetItem",
-      "type": "procedure",
-      "sortid": 67,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crate_set_item",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "InfiniteCrate",
-      "type": "block",
-      "sortid": 64,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "infinite_crate"
-    },
-    {
-      "name": "Singleitem",
-      "type": "gui",
-      "sortid": 66,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "singleitem"
-    },
-    {
       "name": "Autosmelting",
       "type": "procedure",
       "sortid": 65,
@@ -1132,22 +1072,21 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.block_black_stone": "Block Black Stone",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
-      "block.tempus.infinite_crate": "Infinite Crate",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
