@@ -33,7 +33,7 @@
       "name": "AutosmeltAttacher"
     },
     "onBlockDestroyedWithTool": {
-      "name": "Autosmelt"
+      "name": "Autosmelting"
     }
   }
 }

@@ -1,6 +1,6 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.enchantment.AutosmeltenchEnchantment;
+import tempussmpmods3.enchantment.AutoSmeltEnchantment;
 
 import tempussmpmods3.TempusModElements;
 
@@ -12,7 +12,7 @@ import java.util.Map;
 @TempusModElements.ModElement.Tag
 public class AutosmeltAttacherProcedure extends TempusModElements.ModElement {
 	public AutosmeltAttacherProcedure(TempusModElements instance) {
-		super(instance, 62);
+		super(instance, 66);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -22,8 +22,8 @@ public class AutosmeltAttacherProcedure extends TempusModElements.ModElement {
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");
-		if ((((EnchantmentHelper.getEnchantmentLevel(AutosmeltenchEnchantment.enchantment, (itemstack)) != 0)) == (false))) {
-			((itemstack)).addEnchantment(AutosmeltenchEnchantment.enchantment, (int) 1);
+		if ((((EnchantmentHelper.getEnchantmentLevel(AutoSmeltEnchantment.enchantment, (itemstack)) != 0)) == (false))) {
+			((itemstack)).addEnchantment(AutoSmeltEnchantment.enchantment, (int) 1);
 		}
 	}
 }

@@ -1,0 +1,60 @@
+{
+  "_fv": 13,
+  "_type": "armor",
+  "definition": {
+    "enableHelmet": true,
+    "textureHelmet": "temporiumblackandwhite",
+    "enableBody": true,
+    "textureBody": "temporiumchestplateblackandwhite",
+    "enableLeggings": true,
+    "textureLeggings": "temporiumleggingsblackandwhite",
+    "enableBoots": true,
+    "textureBoots": "temporiumbootsblackandwhite",
+    "creativeTab": {
+      "value": "COMBAT"
+    },
+    "armorTextureFile": "_",
+    "helmetName": "Temporium Helmet",
+    "bodyName": "Temporium Chestplate",
+    "leggingsName": "Temporium Leggings",
+    "bootsName": "Temporium Boots",
+    "helmetSpecialInfo": [],
+    "bodySpecialInfo": [],
+    "leggingsSpecialInfo": [],
+    "bootsSpecialInfo": [],
+    "helmetModelName": "Default",
+    "helmetModelPart": "Helmet",
+    "helmetModelTexture": "From armor",
+    "bodyModelName": "Default",
+    "bodyModelPart": "Body",
+    "armsModelPartL": "Arms L",
+    "armsModelPartR": "Arms R",
+    "bodyModelTexture": "From armor",
+    "leggingsModelName": "Default",
+    "leggingsModelPartL": "Leggings L",
+    "leggingsModelPartR": "Leggings R",
+    "leggingsModelTexture": "From armor",
+    "bootsModelName": "Default",
+    "bootsModelPartL": "Boots L",
+    "bootsModelPartR": "Boots R",
+    "bootsModelTexture": "From armor",
+    "maxDamage": 36,
+    "damageValueHelmet": 4,
+    "damageValueBody": 9,
+    "damageValueLeggings": 7,
+    "damageValueBoots": 4,
+    "enchantability": 12,
+    "toughness": 2.5,
+    "equipSound": {
+      "value": ""
+    },
+    "repairItems": [
+      {
+        "value": "CUSTOM:ItemTemporium"
+      },
+      {
+        "value": "CUSTOM:Temporium"
+      }
+    ]
+  }
+}

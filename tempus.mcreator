@@ -706,39 +706,6 @@
       }
     },
     {
-      "name": "Autosmelt",
-      "type": "procedure",
-      "sortid": 56,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmelt",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "SmithingTable",
       "type": "procedure",
       "sortid": 57,
@@ -774,23 +741,6 @@
       "registry_name": "smithing"
     },
     {
-      "name": "AutosmeltAttacher",
-      "type": "procedure",
-      "sortid": 62,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmelt_attacher",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
       "name": "SmithingUpdateTick",
       "type": "procedure",
       "sortid": 58,
@@ -818,15 +768,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Autosmeltench",
-      "type": "enchantment",
-      "sortid": 60,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmeltench"
     },
     {
       "name": "EndionToolsGui",
@@ -887,6 +828,168 @@
           }
         ]
       }
+    },
+    {
+      "name": "AutoSmelt",
+      "type": "enchantment",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "auto_smelt"
+    },
+    {
+      "name": "Autosmelting",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelting",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "AutosmeltAttacher",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "autosmelt_attacher",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TemporiumArmor",
+      "type": "armor",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_armor",
+      "metadata": {
+        "eh": true,
+        "el": true,
+        "eb": true,
+        "ec": true
+      }
+    },
+    {
+      "name": "CHIKEN",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chiken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TemporiumArmorTransform",
+      "type": "keybind",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_armor_transform"
+    },
+    {
+      "name": "SummonChicken",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "summon_chicken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Chicken",
+      "type": "mob",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chicken"
     }
   ],
   "variable_elements": [
@@ -963,35 +1066,42 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.block_black_stone": "Block Black Stone",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
+      "enchantment.tempus.auto_smelt": "Auto Smelt",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
+      "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
-      "entity.tempus.belle": "Belle Delphine",
+      "item.tempus.temporium_armor_helmet": "Temporium Helmet",
       "effect.disease": "Disease",
+      "entity.tempus.belle": "Belle Delphine",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
+      "item.tempus.temporium_armor_boots": "Temporium Boots",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.tempus.shovel_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep": "Music Disc",
       "item.tempus.endion_nugget": "Endion Nugget",
       "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
+      "entity.tempus.chicken": "Chicken",
+      "item.tempus.temporium_armor_leggings": "Temporium Leggings",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
+      "item.tempus.chicken_spawn_egg": "Chicken Spawn Egg",
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
@@ -1009,11 +1119,11 @@
       "item.tempus.endion_sword": "Endion Sword",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
       "item.tempus.sword_ultimate": "Ultimate Sword",
+      "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
-      "block.tempus.temponium_lantern": "Temponium Lantern",
-      "enchantment.tempus.autosmeltench": "Mining Flames"
+      "block.tempus.temponium_lantern": "Temponium Lantern"
     }
   },
   "workspaceSettings": {

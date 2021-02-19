@@ -87,7 +87,7 @@ public class TemponiumBlock extends TempusModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.DIRT.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 6)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 0, 0, 13))));
+			}), block.getDefaultState(), 6)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(1, 1, 1, 13))));
 		}
 	}
 }

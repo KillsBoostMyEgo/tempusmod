@@ -1,7 +1,7 @@
 
 package tempussmpmods3.item;
 
-import tempussmpmods3.procedures.AutosmeltProcedure;
+import tempussmpmods3.procedures.AutosmeltingProcedure;
 import tempussmpmods3.procedures.AutosmeltAttacherProcedure;
 
 import tempussmpmods3.TempusModElements;
@@ -72,7 +72,7 @@ public class PickaxeNetheriteItem extends TempusModElements.ModElement {
 					$_dependencies.put("y", y);
 					$_dependencies.put("z", z);
 					$_dependencies.put("world", world);
-					AutosmeltProcedure.executeProcedure($_dependencies);
+					AutosmeltingProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
 			}
