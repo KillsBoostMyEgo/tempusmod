@@ -1,11 +1,30 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModElements;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.crafting.IRecipeType;
+import net.minecraft.item.ItemStack;
+import net.minecraft.inventory.Inventory;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.block.Blocks;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @TempusModElements.ModElement.Tag
 public class AutosmeltingProcedure extends TempusModElements.ModElement {
-
 	public AutosmeltingProcedure(TempusModElements instance) {
 		super(instance, 65);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -35,13 +54,11 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 				System.err.println("Failed to load dependency world for procedure Autosmelting!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if ((((EnchantmentHelper.getEnchantmentLevel(AutoSmeltEnchantment.enchantment,
 				((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)) != 0))
 				&& (world.getWorld().getRecipeManager().getRecipe(IRecipeType.SMELTING,
@@ -73,7 +90,6 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 				}
 			}
 		}
-
 	}
 
 	@SubscribeEvent
@@ -92,5 +108,4 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
-
 }

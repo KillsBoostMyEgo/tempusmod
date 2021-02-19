@@ -1,11 +1,20 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModElements;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.function.Function;
+import java.util.Map;
+import java.util.Comparator;
+
 @TempusModElements.ModElement.Tag
 public class CHIKENProcedure extends TempusModElements.ModElement {
-
 	public CHIKENProcedure(TempusModElements instance) {
 		super(instance, 69);
-
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
@@ -39,14 +48,12 @@ public class CHIKENProcedure extends TempusModElements.ModElement {
 				System.err.println("Failed to load dependency world for procedure CHIKEN!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		if (((sourceentity.isPassenger()) == (false))) {
 			if (((((Entity) world
 					.getEntitiesWithinAABB(PlayerEntity.class,
@@ -59,7 +66,5 @@ public class CHIKENProcedure extends TempusModElements.ModElement {
 				sourceentity.startRiding(entity);
 			}
 		}
-
 	}
-
 }

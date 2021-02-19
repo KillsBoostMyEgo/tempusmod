@@ -1,7 +1,5 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.enchantment.AutoSmeltEnchantment;
-
 import tempussmpmods3.TempusModElements;
 
 import net.minecraft.item.ItemStack;
@@ -12,7 +10,7 @@ import java.util.Map;
 @TempusModElements.ModElement.Tag
 public class AutosmeltAttacherProcedure extends TempusModElements.ModElement {
 	public AutosmeltAttacherProcedure(TempusModElements instance) {
-		super(instance, 66);
+		super(instance, 62);
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
