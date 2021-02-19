@@ -387,48 +387,6 @@
       "registry_name": "block_black_stone"
     },
     {
-      "name": "PiglinOnEntityTickUpdateBartering",
-      "type": "procedure",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "piglin_on_entity_tick_update_bartering",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Piglin",
-      "type": "mob",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "piglin"
-    },
-    {
       "name": "BlockMagicalLantern",
       "type": "block",
       "sortid": 36,
@@ -1072,21 +1030,21 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_multitool": "Endion MultiTool",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
+      "item.tempus.bible": "Bible",
       "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
@@ -1094,7 +1052,6 @@
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
-      "entity.tempus.piglin": "Piglin",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
@@ -1102,7 +1059,6 @@
       "item.tempus.shovel_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep": "Music Disc",
       "item.tempus.endion_nugget": "Endion Nugget",
-      "item.tempus.piglin_spawn_egg": "Piglin Spawn Egg",
       "entity.tempus.chicken": "Chicken",
       "item.tempus.temporium_armor_leggings": "Temporium Leggings",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
