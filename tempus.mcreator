@@ -975,6 +975,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "endion_multitool_recipe"
+    },
+    {
+      "name": "NoFire",
+      "type": "procedure",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "no_fire",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "NetheriteUpgradingStation",
+      "type": "recipe",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherite_upgrading_station"
     }
   ],
   "variable_elements": [
@@ -1057,22 +1083,22 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_multitool": "Endion MultiTool",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "block.tempus.smithing": "Smithing",
+      "item.tempus.bible": "Bible",
+      "block.tempus.smithing": "Netherite Upgrading Table",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",

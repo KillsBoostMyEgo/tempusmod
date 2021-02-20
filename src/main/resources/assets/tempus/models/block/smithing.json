@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "tempus:blocks/smithing_table_bottom",
-    "up": "tempus:blocks/smithing_table_top",
-    "north": "tempus:blocks/smithing_table_front",
-    "east": "tempus:blocks/smithing_table_side",
-    "south": "tempus:blocks/smithing_table_side",
-    "west": "tempus:blocks/smithing_table_side",
-    "particle": "tempus:blocks/smithing_table_bottom"
+    "down": "tempus:blocks/smithingbottom",
+    "up": "tempus:blocks/smithingtop",
+    "north": "tempus:blocks/smithingfront",
+    "east": "tempus:blocks/smithingside",
+    "south": "tempus:blocks/smithingside",
+    "west": "tempus:blocks/smithingside",
+    "particle": "tempus:blocks/smithingbottom"
   }
 }
