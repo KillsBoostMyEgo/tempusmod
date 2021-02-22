@@ -4,6 +4,8 @@ import tempussmpmods3.enchantment.SmeltingEnchantment;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.enchantment.EnchantmentHelper;
 
@@ -18,7 +20,7 @@ public class AutosmeltAttacherProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("itemstack") == null) {
 			if (!dependencies.containsKey("itemstack"))
-				System.err.println("Failed to load dependency itemstack for procedure AutosmeltAttacher!");
+				TempusMod.LOGGER.warn("Failed to load dependency itemstack for procedure AutosmeltAttacher!");
 			return;
 		}
 		ItemStack itemstack = (ItemStack) dependencies.get("itemstack");

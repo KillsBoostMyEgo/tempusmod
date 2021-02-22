@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.RayTraceContext;
@@ -22,12 +24,12 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure EndoriumAbility!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure EndoriumAbility!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure EndoriumAbility!");
+				TempusMod.LOGGER.warn("Failed to load dependency world for procedure EndoriumAbility!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -10,6 +10,8 @@ import tempussmpmods3.item.ArmorNetheriteItem;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
@@ -32,22 +34,22 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure SmithingUpdateTick!");
+				TempusMod.LOGGER.warn("Failed to load dependency x for procedure SmithingUpdateTick!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure SmithingUpdateTick!");
+				TempusMod.LOGGER.warn("Failed to load dependency y for procedure SmithingUpdateTick!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure SmithingUpdateTick!");
+				TempusMod.LOGGER.warn("Failed to load dependency z for procedure SmithingUpdateTick!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure SmithingUpdateTick!");
+				TempusMod.LOGGER.warn("Failed to load dependency world for procedure SmithingUpdateTick!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
@@ -79,7 +81,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -89,7 +91,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -157,7 +159,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -167,7 +169,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -235,7 +237,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -245,7 +247,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -313,7 +315,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -323,7 +325,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -391,7 +393,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -401,7 +403,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -469,7 +471,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -479,7 +481,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -547,7 +549,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -557,7 +559,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -625,7 +627,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -635,7 +637,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {
@@ -703,7 +705,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 					}
 				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
 						.getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
-							public int getAmount(BlockPos pos, int sltid) {
+							public int getAmount(IWorld world, BlockPos pos, int sltid) {
 								AtomicInteger _retval = new AtomicInteger(0);
 								TileEntity _ent = world.getTileEntity(pos);
 								if (_ent != null) {
@@ -713,7 +715,7 @@ public class SmithingUpdateTickProcedure extends TempusModElements.ModElement {
 								}
 								return _retval.get();
 							}
-						}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
+						}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (2))) == 0)))) {
 			{
 				TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (_ent != null) {

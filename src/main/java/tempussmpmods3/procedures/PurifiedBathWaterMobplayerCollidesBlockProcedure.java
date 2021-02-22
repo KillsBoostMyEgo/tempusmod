@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.LivingEntity;
@@ -18,7 +20,7 @@ public class PurifiedBathWaterMobplayerCollidesBlockProcedure extends TempusModE
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure PurifiedBathWaterMobplayerCollidesBlock!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure PurifiedBathWaterMobplayerCollidesBlock!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

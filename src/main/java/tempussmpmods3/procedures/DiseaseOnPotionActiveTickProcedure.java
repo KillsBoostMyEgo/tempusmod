@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.util.DamageSource;
 import net.minecraft.entity.Entity;
 
@@ -16,7 +18,7 @@ public class DiseaseOnPotionActiveTickProcedure extends TempusModElements.ModEle
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure DiseaseOnPotionActiveTick!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure DiseaseOnPotionActiveTick!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -62,7 +62,7 @@ public class ArmorNetheriteItem extends TempusModElements.ModElement {
 			}
 
 			public float getToughness() {
-				return 0f;
+				return 2f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(TempusItemGroup.tab)) {
