@@ -1,22 +1,20 @@
 {
-  "_fv": 15,
+  "_fv": 13,
   "_type": "block",
   "definition": {
-    "texture": "smithing_table_bottom",
-    "textureTop": "smithing_table_top",
-    "textureLeft": "smithing_table_side",
-    "textureFront": "smithing_table_front",
-    "textureRight": "smithing_table_side",
-    "textureBack": "smithing_table_side",
+    "texture": "smithingbottom",
+    "textureTop": "smithingtop",
+    "textureLeft": "smithingside",
+    "textureFront": "smithingfront",
+    "textureRight": "smithingside",
+    "textureBack": "smithingside",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "tintType": "No tint",
-    "isItemTinted": false,
     "hasTransparency": false,
     "connectedSides": false,
     "transparencyType": "SOLID",
@@ -26,7 +24,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Smithing",
+    "name": "Netherite Upgrading Table",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -35,18 +33,19 @@
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "customDrop": {
       "value": ""
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
+    "isBeaconBase": true,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "ROCK"
+      "value": "WOOD"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -64,9 +63,9 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "WOOD"
     },
-    "luminance": 0,
+    "luminance": 0.0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
     "spawnParticles": false,

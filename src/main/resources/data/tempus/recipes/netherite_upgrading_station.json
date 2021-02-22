@@ -1,0 +1,16 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tempus:item_netherite_scrap"
+    },
+    {
+      "item": "minecraft:smithing_table"
+    }
+  ],
+  "result": {
+    "item": "tempus:smithing",
+    "count": 1
+  }
+}
