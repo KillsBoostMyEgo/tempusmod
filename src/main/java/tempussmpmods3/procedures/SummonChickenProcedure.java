@@ -88,7 +88,7 @@ public class SummonChickenProcedure extends TempusModElements.ModElement {
 								: ItemStack.EMPTY).getItem() == new ItemStack(TemporiumArmorItem.boots, (int) (1)).getItem())))) {
 			if (((((Entity) world
 					.getEntitiesWithinAABB(ChickenEntity.CustomEntity.class,
-							new AxisAlignedBB(x - (4 / 2d), y - (4 / 2d), z - (4 / 2d), x + (4 / 2d), y + (4 / 2d), z + (4 / 2d)), null)
+							new AxisAlignedBB(x - (2 / 2d), y - (2 / 2d), z - (2 / 2d), x + (2 / 2d), y + (2 / 2d), z + (2 / 2d)), null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
@@ -103,10 +103,10 @@ public class SummonChickenProcedure extends TempusModElements.ModElement {
 					world.addEntity(entityToSpawn);
 				}
 				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 20000000, (int) 1, (false), (false)));
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.INVISIBILITY, (int) 372000, (int) 1, (false), (false)));
 			} else if (((((Entity) world
 					.getEntitiesWithinAABB(ChickenEntity.CustomEntity.class,
-							new AxisAlignedBB(x - (4 / 2d), y - (4 / 2d), z - (4 / 2d), x + (4 / 2d), y + (4 / 2d), z + (4 / 2d)), null)
+							new AxisAlignedBB(x - (2 / 2d), y - (2 / 2d), z - (2 / 2d), x + (2 / 2d), y + (2 / 2d), z + (2 / 2d)), null)
 					.stream().sorted(new Object() {
 						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
@@ -116,7 +116,7 @@ public class SummonChickenProcedure extends TempusModElements.ModElement {
 					world.getWorld().getServer().getCommandManager().handleCommand(
 							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
 									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-							"kill @e[type=tempus:chicken,distance=..1]");
+							"kill @e[type=tempus:chicken,distance=..2]");
 				}
 				if (entity instanceof LivingEntity) {
 					((LivingEntity) entity).removePotionEffect(Effects.INVISIBILITY);
