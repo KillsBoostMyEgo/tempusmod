@@ -4,6 +4,8 @@ import tempussmpmods3.enchantment.SmeltingEnchantment;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.world.BlockEvent;
@@ -33,27 +35,27 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure Autosmelting!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure Autosmelting!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure Autosmelting!");
+				TempusMod.LOGGER.warn("Failed to load dependency x for procedure Autosmelting!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure Autosmelting!");
+				TempusMod.LOGGER.warn("Failed to load dependency y for procedure Autosmelting!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure Autosmelting!");
+				TempusMod.LOGGER.warn("Failed to load dependency z for procedure Autosmelting!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure Autosmelting!");
+				TempusMod.LOGGER.warn("Failed to load dependency world for procedure Autosmelting!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -99,9 +101,9 @@ public class AutosmeltingProcedure extends TempusModElements.ModElement {
 		Entity entity = event.getPlayer();
 		Map<String, Object> dependencies = new HashMap<>();
 		dependencies.put("xpAmount", event.getExpToDrop());
-		dependencies.put("x", (int) event.getPos().getX());
-		dependencies.put("y", (int) event.getPos().getY());
-		dependencies.put("z", (int) event.getPos().getZ());
+		dependencies.put("x", event.getPos().getX());
+		dependencies.put("y", event.getPos().getY());
+		dependencies.put("z", event.getPos().getZ());
 		dependencies.put("px", entity.getPosX());
 		dependencies.put("py", entity.getPosY());
 		dependencies.put("pz", entity.getPosZ());

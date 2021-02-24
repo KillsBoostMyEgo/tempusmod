@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -19,7 +21,7 @@ public class SmithingTableProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure SmithingTable!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure SmithingTable!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -81,7 +81,7 @@ public class DiamondLanternExtraBlock extends TempusModElements.ModElement {
 
 		@Override
 		public boolean isReplaceable(BlockState state, BlockItemUseContext context) {
-			return true;
+			return context.getItem().getItem() != this.asItem();
 		}
 
 		@Override

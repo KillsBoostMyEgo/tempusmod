@@ -1,5 +1,5 @@
 {
-  "_fv": 13,
+  "_fv": 15,
   "_type": "tool",
   "definition": {
     "renderType": 0,
@@ -27,6 +27,7 @@
         "value": "CUSTOM:ItemNetheriteScrap"
       }
     ],
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onBlockDestroyedWithTool": {
