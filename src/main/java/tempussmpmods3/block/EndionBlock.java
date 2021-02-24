@@ -81,7 +81,7 @@ public class EndionBlock extends TempusModElements.ModElement {
 				if (blockAt.getBlock() == Blocks.END_STONE.getDefaultState().getBlock())
 					blockCriteria = true;
 				return blockCriteria;
-			}), block.getDefaultState(), 6)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(5, 0, 0, 50))));
+			}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(4, 0, 0, 50))));
 		}
 	}
 }
