@@ -2,16 +2,16 @@
   "_fv": 15,
   "_type": "block",
   "definition": {
-    "texture": "smithingbottom",
-    "textureTop": "smithingtop",
-    "textureLeft": "smithingside",
-    "textureFront": "smithingfront",
-    "textureRight": "smithingside",
-    "textureBack": "smithingside",
+    "texture": "smithing_table_bottom",
+    "textureTop": "smithing_table_top",
+    "textureLeft": "smithing_table_side",
+    "textureFront": "smithing_table_front",
+    "textureRight": "smithing_table_side",
+    "textureBack": "smithing_table_side",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
@@ -26,7 +26,7 @@
     "Mx": 1.0,
     "My": 1.0,
     "Mz": 1.0,
-    "name": "Netherite Upgrading Table",
+    "name": "Smithing",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -35,7 +35,7 @@
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "destroyTool": "axe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -46,7 +46,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "WOOD"
+      "value": "ROCK"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -64,7 +64,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "WOOD"
+      "value": "GROUND"
     },
     "luminance": 0,
     "unbreakable": false,
