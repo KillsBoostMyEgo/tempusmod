@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,32 +22,32 @@ public class CHIKENProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure CHIKEN!");
 			return;
 		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				System.err.println("Failed to load dependency sourceentity for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency sourceentity for procedure CHIKEN!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency x for procedure CHIKEN!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
 			if (!dependencies.containsKey("y"))
-				System.err.println("Failed to load dependency y for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency y for procedure CHIKEN!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency z for procedure CHIKEN!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure CHIKEN!");
+				TempusMod.LOGGER.warn("Failed to load dependency world for procedure CHIKEN!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -1,0 +1,29 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:temporium"
+    },
+    "1": {
+      "item": "tempus:temporium"
+    },
+    "2": {
+      "item": "tempus:temporium"
+    },
+    "3": {
+      "item": "tempus:temporium"
+    },
+    "5": {
+      "item": "tempus:temporium"
+    }
+  },
+  "result": {
+    "item": "tempus:temporium_armor_helmet",
+    "count": 1
+  }
+}

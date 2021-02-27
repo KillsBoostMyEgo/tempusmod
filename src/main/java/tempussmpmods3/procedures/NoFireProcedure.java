@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +26,7 @@ public class NoFireProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure NoFire!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure NoFire!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

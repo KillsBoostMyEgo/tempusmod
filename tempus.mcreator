@@ -1001,6 +1001,60 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "netherite_upgrading_station"
+    },
+    {
+      "name": "TemporiumHelmRecipe",
+      "type": "recipe",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_helm_recipe"
+    },
+    {
+      "name": "TemporiumLeggingsRecipe",
+      "type": "recipe",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_leggings_recipe"
+    },
+    {
+      "name": "TemporiumHelmRecipe1",
+      "type": "recipe",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_helm_recipe_1"
+    },
+    {
+      "name": "TemporiumChestplateRecipe",
+      "type": "recipe",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_chestplate_recipe"
+    },
+    {
+      "name": "TemporiumBootsRecipe",
+      "type": "recipe",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_boots_recipe"
+    },
+    {
+      "name": "TemporiumBootsRecipe1",
+      "type": "recipe",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_boots_recipe_1"
     }
   ],
   "variable_elements": [
@@ -1083,22 +1137,22 @@
   "language_map": {
     "en_us": {
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.block_black_stone": "Block Black Stone",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.bible": "Bible",
+      "item.tempus.item_temporium": "Powdered Temporium",
       "block.tempus.smithing": "Netherite Upgrading Table",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
+      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
@@ -1134,7 +1188,7 @@
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "item.tempus.endion_sword": "Endion Sword",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
-      "item.tempus.sword_ultimate": "Ultimate Sword",
+      "item.tempus.sword_ultimate": "Sacred slice of Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
@@ -1160,5 +1214,5 @@
     "modElementsPackage": "tempussmpmods3",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202000547520
+  "mcreatorVersion": 202100103117
 }

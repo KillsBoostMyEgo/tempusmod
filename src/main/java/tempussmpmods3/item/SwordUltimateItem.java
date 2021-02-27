@@ -42,7 +42,7 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 			}
 
 			public float getAttackDamage() {
-				return 13f;
+				return 18f;
 			}
 
 			public int getHarvestLevel() {
@@ -50,13 +50,13 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 			}
 
 			public int getEnchantability() {
-				return 2;
+				return 20;
 			}
 
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -3f, new Item.Properties().group(TempusItemGroup.tab)) {
+		}, 3, -2.25f, new Item.Properties().group(TempusItemGroup.tab)) {
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);

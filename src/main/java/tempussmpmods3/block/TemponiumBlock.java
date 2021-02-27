@@ -49,7 +49,7 @@ public class TemponiumBlock extends TempusModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(2).harvestLevel(3)
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(1).harvestLevel(3)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("temponium");
 		}

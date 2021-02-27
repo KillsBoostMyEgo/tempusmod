@@ -2,6 +2,8 @@ package tempussmpmods3.procedures;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -15,7 +17,7 @@ public class BibleLightningProcedure extends TempusModElements.ModElement {
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			if (!dependencies.containsKey("entity"))
-				System.err.println("Failed to load dependency entity for procedure BibleLightning!");
+				TempusMod.LOGGER.warn("Failed to load dependency entity for procedure BibleLightning!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");

@@ -1,0 +1,39 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:temporium"
+    },
+    "2": {
+      "item": "tempus:temporium"
+    },
+    "3": {
+      "item": "tempus:temporium"
+    },
+    "4": {
+      "item": "tempus:temporium"
+    },
+    "5": {
+      "item": "tempus:temporium"
+    },
+    "6": {
+      "item": "tempus:temporium"
+    },
+    "7": {
+      "item": "tempus:temporium"
+    },
+    "8": {
+      "item": "tempus:temporium"
+    }
+  },
+  "result": {
+    "item": "tempus:temporium_armor_chestplate",
+    "count": 1
+  }
+}

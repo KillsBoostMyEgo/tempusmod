@@ -4,6 +4,8 @@ import tempussmpmods3.block.DiamondLanternExtraBlock;
 
 import tempussmpmods3.TempusModElements;
 
+import tempussmpmods3.TempusMod;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 
@@ -18,17 +20,17 @@ public class DiamondLanternBlockAddedProcedure extends TempusModElements.ModElem
 	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			if (!dependencies.containsKey("x"))
-				System.err.println("Failed to load dependency x for procedure DiamondLanternBlockAdded!");
+				TempusMod.LOGGER.warn("Failed to load dependency x for procedure DiamondLanternBlockAdded!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
 			if (!dependencies.containsKey("z"))
-				System.err.println("Failed to load dependency z for procedure DiamondLanternBlockAdded!");
+				TempusMod.LOGGER.warn("Failed to load dependency z for procedure DiamondLanternBlockAdded!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
 			if (!dependencies.containsKey("world"))
-				System.err.println("Failed to load dependency world for procedure DiamondLanternBlockAdded!");
+				TempusMod.LOGGER.warn("Failed to load dependency world for procedure DiamondLanternBlockAdded!");
 			return;
 		}
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");

@@ -1,0 +1,36 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "3 5",
+    "6 8"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:temporium"
+    },
+    "1": {
+      "item": "tempus:temporium"
+    },
+    "2": {
+      "item": "tempus:temporium"
+    },
+    "3": {
+      "item": "tempus:temporium"
+    },
+    "5": {
+      "item": "tempus:temporium"
+    },
+    "6": {
+      "item": "tempus:item_temporium"
+    },
+    "8": {
+      "item": "tempus:temporium"
+    }
+  },
+  "result": {
+    "item": "tempus:temporium_armor_leggings",
+    "count": 1
+  }
+}
