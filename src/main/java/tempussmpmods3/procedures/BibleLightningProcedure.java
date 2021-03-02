@@ -1,9 +1,12 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModVariables;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -21,12 +24,23 @@ public class BibleLightningProcedure extends TempusModElements.ModElement {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		{
-			Entity _ent = entity;
-			if (!_ent.world.isRemote && _ent.world.getServer() != null) {
-				_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
-						"/summon lightning_bolt ^ ^ ^5");
+		if (0) {
+			{
+				Entity _ent = entity;
+				if (!_ent.world.isRemote && _ent.world.getServer() != null) {
+					_ent.world.getServer().getCommandManager().handleCommand(_ent.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
+							"/summon lightning_bolt ^ ^ ^5");
+				}
 			}
+			{
+				double _setval = (double) 5;
+				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.abilityTimerSec = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 		}
 	}
 }

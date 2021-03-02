@@ -6,8 +6,13 @@ import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
@@ -63,7 +68,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
 			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium Ability Selected"), (false));
+				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium Ability Selected"), (true));
 			}
 		} else {
 			if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -78,7 +83,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 					UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite Ability Selected"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite Ability Selected"), (true));
 				}
 			} else {
 				if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
@@ -90,10 +95,19 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 						EndoriumAbilityProcedure.executeProcedure($_dependencies);
 					}
 					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected"), (false));
+						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected"), (true));
 					}
 				}
 			}
+		}
+		if (!world.getWorld().isRemote) {
+			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.pling")),
+					SoundCategory.NEUTRAL, (float) 1, (float) 1);
+		} else {
+			world.getWorld().playSound(x, y, z,
+					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.pling")),
+					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}
 	}
 }

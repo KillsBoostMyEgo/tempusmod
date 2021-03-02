@@ -145,7 +145,7 @@
       "name": "BibleLightning",
       "type": "procedure",
       "sortid": 13,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "ids": {},
       "registry_name": "bible_lightning",
@@ -1064,6 +1064,95 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temporium_sword_recipe"
+    },
+    {
+      "name": "RecipeMagicLantern",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_magic_lantern"
+    },
+    {
+      "name": "BlockTemporiumBlock",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_temporium_block"
+    },
+    {
+      "name": "BlockNetheriteBlock",
+      "type": "block",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_netherite_block"
+    },
+    {
+      "name": "BlockEndionBlocjk",
+      "type": "block",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_endion_blocjk"
+    },
+    {
+      "name": "EntityClark",
+      "type": "mob",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_clark"
+    },
+    {
+      "name": "FoodCumSandwichFoodEaten",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "food_cum_sandwich_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodCumSandwich",
+      "type": "food",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "food_cum_sandwich"
+    },
+    {
+      "name": "RecipeTemporiumBlock",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_temporium_block"
+    },
+    {
+      "name": "RecipeNetheriteBlock",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_netherite_block"
     }
   ],
   "variable_elements": [
@@ -1108,6 +1197,12 @@
       "type": "itemstack",
       "scope": "map",
       "value": ""
+    },
+    {
+      "name": "abilityTimerSec",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1141,36 +1236,64 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "helloclark",
+      "files": [
+        "helloclark"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "owclark",
+      "files": [
+        "clarkhit"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "clarkdie",
+      "files": [
+        "clarkdeath"
+      ],
+      "category": "master",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
+      "block.tempus.block_temporium_block": "Temporium Block",
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_multitool": "Endion MultiTool",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "block.tempus.smithing": "Netherite Upgrading Table",
+      "item.tempus.bible": "Bible",
+      "block.tempus.smithing": "Smithing",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
+      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
       "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
+      "item.tempus.entity_clark_spawn_egg": "Clark Spawn Egg",
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
+      "subtitles.clarkdie": "",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
+      "subtitles.owclark": "",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.tempus.shovel_netherite": "Netherite Pickaxe",
@@ -1180,26 +1303,31 @@
       "item.tempus.temporium_armor_leggings": "Temporium Leggings",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
+      "block.tempus.block_netherite_block": "Netherite Block",
       "item.tempus.chicken_spawn_egg": "Chicken Spawn Egg",
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "item.tempus.sword_netherite": "Netherite Pickaxe",
+      "item.tempus.sword_netherite": "Netherite Sword",
       "item.tempus.bath_water_bucket": "BathWater Bucket",
       "fluid.bath_water": "BathWater",
+      "entity.tempus.entity_clark": "Clark",
       "subtitles.netheritesoundequiparmor": "Equip sfx for netherite armor",
       "item.tempus.item_netherite_scrap": "Netherite Scrap",
+      "block.tempus.block_endion_blocjk": "Endion Block",
       "subtitles.pigstepdisc": "",
       "item.tempus.temporium": "Temporium",
+      "subtitles.helloclark": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "item.tempus.endion_sword": "Endion Sword",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
-      "item.tempus.sword_ultimate": "Sacred slice of Tempus",
+      "item.tempus.sword_ultimate": "Ultima Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
+      "item.tempus.food_cum_sandwich": "Food Cum Sandwich",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
       "block.tempus.temponium_lantern": "Temponium Lantern",
@@ -1212,6 +1340,7 @@
     "version": "1.0.0",
     "author": "ARCADIA, MCreator",
     "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],

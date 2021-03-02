@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModVariables;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -54,31 +56,41 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((((Entity) world
-				.getEntitiesWithinAABB(PlayerEntity.class,
-						new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-				.stream().sorted(new Object() {
-					Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-						return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-					}
-				}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (true))) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
+		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new TempusModVariables.PlayerVariables())).abilityTimerSec) == 0)) {
+			if (((((Entity) world
+					.getEntitiesWithinAABB(PlayerEntity.class,
+							new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
+					.stream().sorted(new Object() {
+						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+						}
+					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (true))) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
+				}
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 100, (int) 5, (false), (false)));
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
+				}
+			} else {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));
+				}
+			}
+			if (entity instanceof LivingEntity) {
+				((LivingEntity) entity).removePotionEffect(Effects.SLOWNESS);
 			}
 			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 100, (int) 5, (false), (false)));
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
-			}
-		} else {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));
+				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
+			{
+				double _setval = (double) 15;
+				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.abilityTimerSec = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
-		if (entity instanceof LivingEntity) {
-			((LivingEntity) entity).removePotionEffect(Effects.SLOWNESS);
-		}
-		if (entity instanceof LivingEntity)
-			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
 	}
 }
