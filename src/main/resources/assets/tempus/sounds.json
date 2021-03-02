@@ -35,5 +35,32 @@
         "stream": true
       }
     ]
+  },
+  "owclark": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "tempus:clarkhit",
+        "stream": false
+      }
+    ]
+  },
+  "helloclark": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "tempus:helloclark",
+        "stream": false
+      }
+    ]
+  },
+  "clarkdie": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "tempus:clarkdeath",
+        "stream": false
+      }
+    ]
   }
 }

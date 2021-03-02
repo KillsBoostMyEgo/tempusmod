@@ -208,6 +208,7 @@ public class TempusModVariables {
 			nbt.put("chestplate", instance.chestplate.write(new CompoundNBT()));
 			nbt.put("leggings", instance.leggings.write(new CompoundNBT()));
 			nbt.put("boots", instance.boots.write(new CompoundNBT()));
+			nbt.putDouble("abilityTimerSec", instance.abilityTimerSec);
 			return nbt;
 		}
 
@@ -220,6 +221,7 @@ public class TempusModVariables {
 			instance.chestplate = ItemStack.read(nbt.getCompound("chestplate"));
 			instance.leggings = ItemStack.read(nbt.getCompound("leggings"));
 			instance.boots = ItemStack.read(nbt.getCompound("boots"));
+			instance.abilityTimerSec = nbt.getDouble("abilityTimerSec");
 		}
 	}
 
@@ -230,6 +232,7 @@ public class TempusModVariables {
 		public ItemStack chestplate = ItemStack.EMPTY;
 		public ItemStack leggings = ItemStack.EMPTY;
 		public ItemStack boots = ItemStack.EMPTY;
+		public double abilityTimerSec = 0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -263,6 +266,7 @@ public class TempusModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.ultSwordAbility = original.ultSwordAbility;
 		clone.ultimateswordability = original.ultimateswordability;
+		clone.abilityTimerSec = original.abilityTimerSec;
 		if (!event.isWasDeath()) {
 			clone.helmet = original.helmet;
 			clone.chestplate = original.chestplate;
@@ -297,6 +301,7 @@ public class TempusModVariables {
 					variables.chestplate = message.data.chestplate;
 					variables.leggings = message.data.leggings;
 					variables.boots = message.data.boots;
+					variables.abilityTimerSec = message.data.abilityTimerSec;
 				}
 			});
 			context.setPacketHandled(true);

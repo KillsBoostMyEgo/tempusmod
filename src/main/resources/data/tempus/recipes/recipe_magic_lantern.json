@@ -1,0 +1,42 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "1": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "2": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "3": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "4": {
+      "item": "tempus:item_temporium"
+    },
+    "5": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "6": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "7": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "8": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "result": {
+    "item": "tempus:block_magical_lantern",
+    "count": 1
+  }
+}

@@ -1064,6 +1064,95 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temporium_sword_recipe"
+    },
+    {
+      "name": "FoodCumSandwichFoodEaten",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "food_cum_sandwich_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FoodCumSandwich",
+      "type": "food",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "food_cum_sandwich"
+    },
+    {
+      "name": "BlockTemporiumBlock",
+      "type": "block",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_temporium_block"
+    },
+    {
+      "name": "BlockNetheriteBlock",
+      "type": "block",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_netherite_block"
+    },
+    {
+      "name": "BlockEndionBlocjk",
+      "type": "block",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_endion_blocjk"
+    },
+    {
+      "name": "RecipeMagicLantern",
+      "type": "recipe",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_magic_lantern"
+    },
+    {
+      "name": "RecipeNetheriteBlock",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_netherite_block"
+    },
+    {
+      "name": "RecipeTemporiumBlock",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recipe_temporium_block"
+    },
+    {
+      "name": "EntityClark",
+      "type": "mob",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_clark"
     }
   ],
   "variable_elements": [
@@ -1108,6 +1197,12 @@
       "type": "itemstack",
       "scope": "map",
       "value": ""
+    },
+    {
+      "name": "abilityTimerSec",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1141,6 +1236,30 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "owclark",
+      "files": [
+        "clarkhit"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "helloclark",
+      "files": [
+        "helloclark"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "clarkdie",
+      "files": [
+        "clarkdeath"
+      ],
+      "category": "master",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -1169,8 +1288,10 @@
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
       "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
+      "subtitles.clarkdie": "",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
+      "subtitles.owclark": "",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.tempus.shovel_netherite": "Netherite Pickaxe",
@@ -1191,6 +1312,7 @@
       "item.tempus.item_netherite_scrap": "Netherite Scrap",
       "subtitles.pigstepdisc": "",
       "item.tempus.temporium": "Temporium",
+      "subtitles.helloclark": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",

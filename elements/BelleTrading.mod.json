@@ -61,27 +61,14 @@
       {
         "type": "label",
         "data": {
-          "text": "64 Diamonds",
+          "text": "1 Temporium Each",
           "color": {
-            "value": -16711681,
+            "value": -10092442,
             "falpha": 0.0
           },
-          "name": "64 Diamonds",
+          "name": "1 Temporium Each",
           "x": 146,
           "y": 102
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "32 Diamonds",
-          "color": {
-            "value": -16711681,
-            "falpha": 0.0
-          },
-          "name": "32 Diamonds",
-          "x": 146,
-          "y": 153
         }
       },
       {

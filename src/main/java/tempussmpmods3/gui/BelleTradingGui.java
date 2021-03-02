@@ -152,8 +152,7 @@ public class BelleTradingGui extends TempusModElements.ModElement {
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
 			this.font.drawString("Belle Delphine Store", 33, 5, -65281);
-			this.font.drawString("64 Diamonds", 20, 65, -16711681);
-			this.font.drawString("32 Diamonds", 20, 116, -16711681);
+			this.font.drawString("1 Temporium Each", 20, 65, -10092442);
 		}
 
 		@Override

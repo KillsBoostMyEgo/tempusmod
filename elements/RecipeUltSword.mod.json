@@ -10,31 +10,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "CUSTOM:EndionNugget"
+        "value": "CUSTOM:BlockEndionBlocjk"
       },
       {
-        "value": "CUSTOM:ItemTemporium"
+        "value": "CUSTOM:BlockTemporiumBlock"
       },
       {
-        "value": "CUSTOM:Temporium"
+        "value": "CUSTOM:TemporiumSword"
       },
       {
-        "value": "CUSTOM:ItemNetheriteIngot"
+        "value": "CUSTOM:BlockNetheriteBlock"
       },
       {
-        "value": "CUSTOM:Temporium"
+        "value": "CUSTOM:EndionSword"
       },
       {
-        "value": "CUSTOM:ItemTemporium"
+        "value": "CUSTOM:BlockTemporiumBlock"
       },
       {
-        "value": "CUSTOM:ItemNetheriteIngot"
+        "value": "CUSTOM:SwordNetherite"
       },
       {
-        "value": "CUSTOM:ItemNetheriteIngot"
+        "value": "CUSTOM:BlockNetheriteBlock"
       },
       {
-        "value": "CUSTOM:EndionNugget"
+        "value": "CUSTOM:BlockEndionBlocjk"
       }
     ],
     "recipeReturnStack": {
