@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "ultimate_sword",
     "customModelName": "Normal",
-    "name": "Ultima Tempus",
+    "name": "Sacred Slice of Tempus",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Tempus"
@@ -13,10 +13,10 @@
     "toolType": "Sword",
     "harvestLevel": 1,
     "efficiency": 4.0,
-    "attackSpeed": 1.0,
-    "enchantability": 20,
+    "attackSpeed": 2.0,
+    "enchantability": 24,
     "damageVsEntity": 30.0,
-    "usageCount": 2500,
+    "usageCount": 3000,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],

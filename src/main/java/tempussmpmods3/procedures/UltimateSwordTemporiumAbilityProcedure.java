@@ -1,7 +1,5 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.TempusModVariables;
-
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -56,8 +54,9 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new TempusModVariables.PlayerVariables())).abilityTimerSec) == 0)) {
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 2)) {
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 			if (((((Entity) world
 					.getEntitiesWithinAABB(PlayerEntity.class,
 							new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
@@ -84,13 +83,6 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
-			{
-				double _setval = (double) 15;
-				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.abilityTimerSec = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		}
 	}
 }

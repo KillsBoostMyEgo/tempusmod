@@ -232,7 +232,7 @@ public class TempusModVariables {
 		public ItemStack chestplate = ItemStack.EMPTY;
 		public ItemStack leggings = ItemStack.EMPTY;
 		public ItemStack boots = ItemStack.EMPTY;
-		public double abilityTimerSec = 0;
+		public double abilityTimerSec = 1.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -266,12 +266,12 @@ public class TempusModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.ultSwordAbility = original.ultSwordAbility;
 		clone.ultimateswordability = original.ultimateswordability;
-		clone.abilityTimerSec = original.abilityTimerSec;
 		if (!event.isWasDeath()) {
 			clone.helmet = original.helmet;
 			clone.chestplate = original.chestplate;
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
+			clone.abilityTimerSec = original.abilityTimerSec;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {

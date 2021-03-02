@@ -1,0 +1,42 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "tempus:endion_nugget"
+    },
+    "1": {
+      "item": "tempus:endion_nugget"
+    },
+    "2": {
+      "item": "tempus:endion_nugget"
+    },
+    "3": {
+      "item": "tempus:endion_nugget"
+    },
+    "4": {
+      "item": "tempus:endion_nugget"
+    },
+    "5": {
+      "item": "tempus:endion_nugget"
+    },
+    "6": {
+      "item": "tempus:endion_nugget"
+    },
+    "7": {
+      "item": "tempus:endion_nugget"
+    },
+    "8": {
+      "item": "tempus:endion_nugget"
+    }
+  },
+  "result": {
+    "item": "tempus:block_endion_blocjk",
+    "count": 1
+  }
+}

@@ -1,7 +1,5 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.TempusModVariables;
-
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -39,8 +37,10 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 		double x = 0;
 		double y = 0;
 		double z = 0;
-		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new TempusModVariables.PlayerVariables())).abilityTimerSec) == 0)) {
+		double wait = 0;
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 2)) {
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 			x = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),
 					entity.getEyePosition(1f).add(entity.getLook(1f).x * 50, entity.getLook(1f).y * 50, entity.getLook(1f).z * 50),
 					RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getX());
@@ -50,11 +50,7 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 			z = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),
 					entity.getEyePosition(1f).add(entity.getLook(1f).x * 50, entity.getLook(1f).y * 50, entity.getLook(1f).z * 50),
 					RayTraceContext.BlockMode.OUTLINE, RayTraceContext.FluidMode.NONE, entity)).getPos().getZ());
-			if ((world.isAirBlock(new BlockPos((int) (x), (int) (y), (int) (z))))) {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You can't teleport to air"), (true));
-				}
-			} else {
+			if (((world.isAirBlock(new BlockPos((int) (x), (int) (y), (int) (z)))) == (false))) {
 				{
 					Entity _ent = entity;
 					_ent.setPositionAndUpdate(((((x) - (entity.getPosX())) - 1) + (entity.getPosX())),
@@ -65,13 +61,10 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 								_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 					}
 				}
-			}
-			{
-				double _setval = (double) 15;
-				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.abilityTimerSec = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			} else if ((world.isAirBlock(new BlockPos((int) (x), (int) (y), (int) (z))))) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Can't teleport to air dumbass!"), (true));
+				}
 			}
 		}
 	}

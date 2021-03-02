@@ -24,7 +24,7 @@ public class BibleLightningProcedure extends TempusModElements.ModElement {
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (0) {
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) == 2)) {
 			{
 				Entity _ent = entity;
 				if (!_ent.world.isRemote && _ent.world.getServer() != null) {

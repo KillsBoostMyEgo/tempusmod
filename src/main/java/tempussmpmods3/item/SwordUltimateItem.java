@@ -34,7 +34,7 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 2500;
+				return 3000;
 			}
 
 			public float getEfficiency() {
@@ -50,13 +50,13 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 			}
 
 			public int getEnchantability() {
-				return 20;
+				return 24;
 			}
 
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -3f, new Item.Properties().group(TempusItemGroup.tab)) {
+		}, 3, -2f, new Item.Properties().group(TempusItemGroup.tab)) {
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);

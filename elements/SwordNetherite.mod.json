@@ -29,6 +29,12 @@
     ],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
-    "damageOnCrafting": false
+    "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "UltimateSwordNetheriteAbility"
+    },
+    "onRightClickedOnBlock": {
+      "name": "UltimateSwordNetheriteAbility"
+    }
   }
 }

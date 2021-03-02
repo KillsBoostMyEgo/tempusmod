@@ -1,7 +1,5 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.TempusModVariables;
-
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -56,8 +54,9 @@ public class UltimateSwordNetheriteAbilityProcedure extends TempusModElements.Mo
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new TempusModVariables.PlayerVariables())).abilityTimerSec) == 0)) {
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 2)) {
+			if (entity instanceof PlayerEntity)
+				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, (int) 100, (int) 4, (false), (false)));
 			if (((((Entity) world
@@ -72,13 +71,6 @@ public class UltimateSwordNetheriteAbilityProcedure extends TempusModElements.Mo
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("The inferno is growing!"), (true));
 				}
 				entity.setFire((int) 5);
-				{
-					double _setval = (double) 15;
-					entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.abilityTimerSec = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));
