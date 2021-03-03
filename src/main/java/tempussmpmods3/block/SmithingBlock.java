@@ -144,7 +144,7 @@ public class SmithingBlock extends TempusModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Smithing");
+						return new StringTextComponent("Upgrading Table");
 					}
 
 					@Override
@@ -276,7 +276,7 @@ public class SmithingBlock extends TempusModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Smithing");
+			return new StringTextComponent("Upgrading Table");
 		}
 
 		@Override

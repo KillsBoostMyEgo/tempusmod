@@ -1,0 +1,13 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "tempus:block_netherite_block"
+    }
+  ],
+  "result": {
+    "item": "tempus:item_netherite_ingot",
+    "count": 9
+  }
+}
