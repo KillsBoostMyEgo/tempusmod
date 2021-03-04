@@ -38,7 +38,7 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 		double y = 0;
 		double z = 0;
 		double wait = 0;
-		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 2)) {
+		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 1.5)) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 			x = (double) (entity.world.rayTraceBlocks(new RayTraceContext(entity.getEyePosition(1f),

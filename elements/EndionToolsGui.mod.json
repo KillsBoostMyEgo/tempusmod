@@ -19,6 +19,9 @@
           "id": 0,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #0",
           "x": 132,
           "y": 44
@@ -33,6 +36,9 @@
           "id": 1,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #1",
           "x": 150,
           "y": 44
@@ -47,6 +53,9 @@
           "id": 2,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #2",
           "x": 168,
           "y": 44
@@ -61,6 +70,9 @@
           "id": 3,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #3",
           "x": 186,
           "y": 44
@@ -75,6 +87,9 @@
           "id": 4,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #4",
           "x": 204,
           "y": 44
@@ -89,6 +104,9 @@
           "id": 5,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #5",
           "x": 222,
           "y": 44
@@ -103,6 +121,9 @@
           "id": 6,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #6",
           "x": 240,
           "y": 44
@@ -117,6 +138,9 @@
           "id": 7,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #7",
           "x": 258,
           "y": 44
@@ -131,6 +155,9 @@
           "id": 8,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #8",
           "x": 276,
           "y": 44
@@ -145,6 +172,9 @@
           "id": 9,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #9",
           "x": 132,
           "y": 62
@@ -159,6 +189,9 @@
           "id": 10,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #10",
           "x": 150,
           "y": 62
@@ -173,6 +206,9 @@
           "id": 11,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #11",
           "x": 168,
           "y": 62
@@ -187,6 +223,9 @@
           "id": 12,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #12",
           "x": 186,
           "y": 62
@@ -201,6 +240,9 @@
           "id": 13,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #13",
           "x": 204,
           "y": 62
@@ -215,6 +257,9 @@
           "id": 14,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #14",
           "x": 222,
           "y": 62
@@ -229,6 +274,9 @@
           "id": 15,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #15",
           "x": 240,
           "y": 62
@@ -243,6 +291,9 @@
           "id": 16,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #16",
           "x": 258,
           "y": 62
@@ -257,6 +308,9 @@
           "id": 17,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #17",
           "x": 276,
           "y": 62
@@ -271,6 +325,9 @@
           "id": 18,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #18",
           "x": 132,
           "y": 80
@@ -285,6 +342,9 @@
           "id": 19,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #19",
           "x": 150,
           "y": 80
@@ -299,6 +359,9 @@
           "id": 20,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #20",
           "x": 168,
           "y": 80
@@ -313,6 +376,9 @@
           "id": 21,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #21",
           "x": 186,
           "y": 80
@@ -327,6 +393,9 @@
           "id": 22,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #22",
           "x": 204,
           "y": 80
@@ -341,6 +410,9 @@
           "id": 23,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #23",
           "x": 222,
           "y": 80
@@ -355,6 +427,9 @@
           "id": 24,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #24",
           "x": 240,
           "y": 80
@@ -369,6 +444,9 @@
           "id": 25,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #25",
           "x": 258,
           "y": 80
@@ -383,6 +461,9 @@
           "id": 26,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #26",
           "x": 276,
           "y": 80
@@ -397,6 +478,9 @@
           "id": 27,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #27",
           "x": 132,
           "y": 98
@@ -411,6 +495,9 @@
           "id": 28,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #28",
           "x": 150,
           "y": 98
@@ -425,6 +512,9 @@
           "id": 29,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #29",
           "x": 168,
           "y": 98
@@ -439,6 +529,9 @@
           "id": 30,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #30",
           "x": 186,
           "y": 98
@@ -453,6 +546,9 @@
           "id": 31,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #31",
           "x": 204,
           "y": 98
@@ -467,6 +563,9 @@
           "id": 32,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #32",
           "x": 222,
           "y": 98
@@ -481,6 +580,9 @@
           "id": 33,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #33",
           "x": 240,
           "y": 98
@@ -495,6 +597,9 @@
           "id": 34,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #34",
           "x": 258,
           "y": 98
@@ -509,6 +614,9 @@
           "id": 35,
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": false,
+          "onSlotChanged": {
+            "name": "EndionShitNBT"
+          },
           "name": "Slot #35",
           "x": 276,
           "y": 98

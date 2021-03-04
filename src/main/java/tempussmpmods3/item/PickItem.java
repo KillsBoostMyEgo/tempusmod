@@ -86,7 +86,7 @@ public class PickItem extends TempusModElements.ModElement {
 
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-			return 5.5F;
+			return 7F;
 		}
 
 		@Override

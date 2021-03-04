@@ -1189,6 +1189,35 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "temporium_block_uncraft"
+    },
+    {
+      "name": "EndionShitNBT",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion_shit_nbt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1302,8 +1331,8 @@
     "en_us": {
       "block.tempus.block_temporium_block": "Temporium Block",
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "item.tempus.endion_multitool": "Endion MultiTool",
+      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",

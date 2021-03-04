@@ -1,6 +1,8 @@
 
 package tempussmpmods3.gui;
 
+import tempussmpmods3.procedures.EndionShitNBTProcedure;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -121,76 +123,256 @@ public class EndionToolsGuiGui extends TempusModElements.ModElement {
 				}
 			}
 			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(0, 0, 0);
+				}
 			}));
 			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(1, 0, 0);
+				}
 			}));
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(2, 0, 0);
+				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(3, 0, 0);
+				}
 			}));
 			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(4, 0, 0);
+				}
 			}));
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(5, 0, 0);
+				}
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(6, 0, 0);
+				}
 			}));
 			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(7, 0, 0);
+				}
 			}));
 			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 8) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(8, 0, 0);
+				}
 			}));
 			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 7, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(9, 0, 0);
+				}
 			}));
 			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 25, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(10, 0, 0);
+				}
 			}));
 			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(11, 0, 0);
+				}
 			}));
 			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(12, 0, 0);
+				}
 			}));
 			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 79, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(13, 0, 0);
+				}
 			}));
 			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 97, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(14, 0, 0);
+				}
 			}));
 			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 115, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(15, 0, 0);
+				}
 			}));
 			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(16, 0, 0);
+				}
 			}));
 			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 26) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(17, 0, 0);
+				}
 			}));
 			this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 7, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(18, 0, 0);
+				}
 			}));
 			this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 25, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(19, 0, 0);
+				}
 			}));
 			this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 43, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(20, 0, 0);
+				}
 			}));
 			this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 61, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(21, 0, 0);
+				}
 			}));
 			this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 79, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(22, 0, 0);
+				}
 			}));
 			this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 97, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(23, 0, 0);
+				}
 			}));
 			this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 115, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(24, 0, 0);
+				}
 			}));
 			this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 133, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(25, 0, 0);
+				}
 			}));
 			this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 151, 44) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(26, 0, 0);
+				}
 			}));
 			this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 7, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(27, 0, 0);
+				}
 			}));
 			this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 25, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(28, 0, 0);
+				}
 			}));
 			this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 43, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(29, 0, 0);
+				}
 			}));
 			this.customSlots.put(30, this.addSlot(new SlotItemHandler(internal, 30, 61, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(30, 0, 0);
+				}
 			}));
 			this.customSlots.put(31, this.addSlot(new SlotItemHandler(internal, 31, 79, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(31, 0, 0);
+				}
 			}));
 			this.customSlots.put(32, this.addSlot(new SlotItemHandler(internal, 32, 97, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(32, 0, 0);
+				}
 			}));
 			this.customSlots.put(33, this.addSlot(new SlotItemHandler(internal, 33, 115, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(33, 0, 0);
+				}
 			}));
 			this.customSlots.put(34, this.addSlot(new SlotItemHandler(internal, 34, 133, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(34, 0, 0);
+				}
 			}));
 			this.customSlots.put(35, this.addSlot(new SlotItemHandler(internal, 35, 151, 62) {
+				@Override
+				public void onSlotChanged() {
+					super.onSlotChanged();
+					GuiContainerMod.this.slotChanged(35, 0, 0);
+				}
 			}));
 			int si;
 			int sj;
@@ -653,5 +835,365 @@ public class EndionToolsGuiGui extends TempusModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (slotID == 0 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 1 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 2 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 3 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 4 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 5 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 6 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 7 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 8 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 9 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 10 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 11 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 12 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 13 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 14 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 15 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 16 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 17 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 18 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 19 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 20 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 21 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 22 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 23 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 24 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 25 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 26 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 27 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 28 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 29 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 30 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 31 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 32 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 33 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 34 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (slotID == 35 && changeType == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				EndionShitNBTProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 }

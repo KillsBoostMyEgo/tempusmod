@@ -10,10 +10,10 @@
     "creativeTab": {
       "value": "TOOLS"
     },
-    "stackSize": 64,
+    "stackSize": 1,
     "enchantability": 10,
     "useDuration": 0,
-    "toolType": 5.5,
+    "toolType": 7.0,
     "damageCount": 5307,
     "recipeRemainder": {
       "value": ""
