@@ -44,7 +44,7 @@ public class TemporiumArmorItem extends TempusModElements.ModElement {
 			}
 
 			public int getEnchantability() {
-				return 12;
+				return 17;
 			}
 
 			public net.minecraft.util.SoundEvent getSoundEvent() {
@@ -61,7 +61,7 @@ public class TemporiumArmorItem extends TempusModElements.ModElement {
 			}
 
 			public float getToughness() {
-				return 2.5f;
+				return 3.5f;
 			}
 		};
 		elements.items.add(() -> new ArmorItem(armormaterial, EquipmentSlotType.HEAD, new Item.Properties().group(ItemGroup.COMBAT)) {
