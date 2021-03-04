@@ -3,6 +3,8 @@ package tempussmpmods3.entity;
 
 import tempussmpmods3.itemgroup.TempusItemGroup;
 
+import tempussmpmods3.item.FoodCumSandwichItem;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,6 +25,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.DamageSource;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
@@ -112,6 +115,11 @@ public class EntityClarkEntity extends TempusModElements.ModElement {
 		@Override
 		public CreatureAttribute getCreatureAttribute() {
 			return CreatureAttribute.UNDEFINED;
+		}
+
+		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
+			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(FoodCumSandwichItem.block, (int) (1)));
 		}
 
 		@Override

@@ -72,7 +72,7 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "mobDrop": {
-      "value": ""
+      "value": "CUSTOM:FoodCumSandwich"
     },
     "livingSound": {
       "value": "CUSTOM:helloclark"
