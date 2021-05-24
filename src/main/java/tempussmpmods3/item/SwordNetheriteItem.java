@@ -57,8 +57,7 @@ public class SwordNetheriteItem extends TempusModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(ItemNetheriteIngotItem.block, (int) (1)),
-						new ItemStack(ItemNetheriteScrapItem.block, (int) (1)));
+				return Ingredient.fromStacks(new ItemStack(ItemNetheriteIngotItem.block, (int) (1)));
 			}
 		}, 3, -2.4f, new Item.Properties().group(ItemGroup.TOOLS)) {
 			@Override

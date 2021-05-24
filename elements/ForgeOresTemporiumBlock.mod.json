@@ -1,0 +1,17 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Temponium"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "ores/temporium",
+    "namespace": "forge"
+  }
+}

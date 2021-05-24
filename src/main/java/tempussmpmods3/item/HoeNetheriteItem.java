@@ -53,8 +53,7 @@ public class HoeNetheriteItem extends TempusModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(ItemNetheriteIngotItem.block, (int) (1)),
-						new ItemStack(ItemNetheriteScrapItem.block, (int) (1)));
+				return Ingredient.fromStacks(new ItemStack(ItemNetheriteIngotItem.block, (int) (1)));
 			}
 		}, 0f, new Item.Properties().group(ItemGroup.TOOLS)) {
 			@Override

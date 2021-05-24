@@ -41,7 +41,7 @@ public class UltSwitchAbilityKeyBinding extends TempusModElements.ModElement {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.ult_switch_ability", GLFW.GLFW_KEY_Z, "key.categories.multiplayer");
+		keys = new KeyBinding("key.tempus.ult_switch_ability", GLFW.GLFW_KEY_Z, "key.categories.multiplayer");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

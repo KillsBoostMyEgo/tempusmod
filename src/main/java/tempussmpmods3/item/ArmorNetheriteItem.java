@@ -53,7 +53,7 @@ public class ArmorNetheriteItem extends TempusModElements.ModElement {
 			}
 
 			public Ingredient getRepairMaterial() {
-				return Ingredient.fromStacks(new ItemStack(ItemNetheriteScrapItem.block, (int) (1)));
+				return Ingredient.fromStacks(new ItemStack(ItemNetheriteIngotItem.block, (int) (1)));
 			}
 
 			@OnlyIn(Dist.CLIENT)

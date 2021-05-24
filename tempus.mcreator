@@ -664,23 +664,6 @@
       }
     },
     {
-      "name": "SmithingTable",
-      "type": "procedure",
-      "sortid": 57,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smithing_table",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "DiamondNetherite",
       "type": "gui",
       "sortid": 59,
@@ -688,15 +671,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "diamond_netherite"
-    },
-    {
-      "name": "Smithing",
-      "type": "block",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smithing"
     },
     {
       "name": "AutosmeltAttacher",
@@ -711,35 +685,6 @@
           {
             "name": "itemstack",
             "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
-      "name": "SmithingUpdateTick",
-      "type": "procedure",
-      "sortid": 58,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smithing_update_tick",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -869,15 +814,6 @@
           }
         ]
       }
-    },
-    {
-      "name": "Chicken",
-      "type": "mob",
-      "sortid": 72,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "chicken"
     },
     {
       "name": "TemporiumArmorTransform",
@@ -1218,6 +1154,87 @@
           }
         ]
       }
+    },
+    {
+      "name": "SmithingNetheritePickaxe",
+      "type": "recipe",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smithing_netherite_pickaxe"
+    },
+    {
+      "name": "ForgeOres",
+      "type": "tag",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_ores"
+    },
+    {
+      "name": "Chicken",
+      "type": "mob",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "chicken"
+    },
+    {
+      "name": "ForgeEndion",
+      "type": "tag",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_endion"
+    },
+    {
+      "name": "TemporiumForgeThing",
+      "type": "tag",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "temporium_forge_thing"
+    },
+    {
+      "name": "ForgeIngots",
+      "type": "tag",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_ingots"
+    },
+    {
+      "name": "ForgeOresTag",
+      "type": "tag",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_ores_tag"
+    },
+    {
+      "name": "ForgeOresTemporiumBlock",
+      "type": "tag",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_ores_temporium_block"
+    },
+    {
+      "name": "ForgeOresItem",
+      "type": "tag",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forge_ores_item"
     }
   ],
   "variable_elements": [
@@ -1341,7 +1358,6 @@
       "item.tempus.axe_netherite": "Netherite Pickaxe",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "block.tempus.smithing": "Upgrading Table",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
       "item.tempus.hoe_netherite": "Netherite Pickaxe",
       "enchantment.tempus.smelting": "Netherite Buff",
@@ -1351,6 +1367,7 @@
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
+      "key.tempus.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.entity_clark_spawn_egg": "Clark Spawn Egg",
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
@@ -1391,6 +1408,7 @@
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
       "item.tempus.sword_ultimate": "Sacred Slice of Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
+      "key.tempus.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.tempus.food_cum_sandwich": "Food Cum Sandwich",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
@@ -1398,6 +1416,10 @@
       "block.tempus.temponium_lantern": "Temponium Lantern",
       "enchantment.tempus.autosmeltench": "Mining Flames"
     }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
   },
   "workspaceSettings": {
     "modid": "tempus",
@@ -1416,5 +1438,5 @@
     "modElementsPackage": "tempussmpmods3",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202100103117
+  "mcreatorVersion": 202100118117
 }

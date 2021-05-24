@@ -41,7 +41,7 @@ public class TemporiumArmorTransformKeyBinding extends TempusModElements.ModElem
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		keys = new KeyBinding("key.mcreator.temporium_armor_transform", GLFW.GLFW_KEY_X, "key.categories.misc");
+		keys = new KeyBinding("key.tempus.temporium_armor_transform", GLFW.GLFW_KEY_X, "key.categories.misc");
 		ClientRegistry.registerKeyBinding(keys);
 		MinecraftForge.EVENT_BUS.register(this);
 	}

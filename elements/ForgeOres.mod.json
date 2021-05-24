@@ -1,0 +1,23 @@
+{
+  "_fv": 18,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Endion"
+      },
+      {
+        "value": "CUSTOM:Temponium"
+      },
+      {
+        "value": "CUSTOM:BlockAncientDebrie"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "ores",
+    "namespace": "forge"
+  }
+}

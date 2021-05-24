@@ -1,5 +1,5 @@
 {
-  "_fv": 15,
+  "_fv": 18,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -51,7 +51,7 @@
     },
     "repairItems": [
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
+        "value": "CUSTOM:ItemNetheriteIngot"
       }
     ]
   }

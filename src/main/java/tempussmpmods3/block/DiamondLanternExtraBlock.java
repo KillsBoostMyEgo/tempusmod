@@ -15,7 +15,6 @@ import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
@@ -75,8 +74,7 @@ public class DiamondLanternExtraBlock extends TempusModElements.ModElement {
 
 		@Override
 		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			Vec3d offset = state.getOffset(world, pos);
-			return VoxelShapes.create(0D, 0D, 0D, 0D, 0D, 0D).withOffset(offset.x, offset.y, offset.z);
+			return VoxelShapes.empty();
 		}
 
 		@Override
