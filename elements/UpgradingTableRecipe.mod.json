@@ -10,19 +10,19 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": "CUSTOM:ItemNetheriteScrap"
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
-        "value": ""
-      },
-      {
         "value": "Blocks.SMITHING_TABLE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Smithing"
+      "value": "CUSTOM:UpgradingTable"
     },
-    "name": "netherite_upgrading_station",
+    "name": "upgrading_table_recipe",
     "namespace": "mod"
   }
 }

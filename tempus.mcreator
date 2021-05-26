@@ -291,15 +291,6 @@
       "registry_name": "endion"
     },
     {
-      "name": "BlockAncientDebrie",
-      "type": "block",
-      "sortid": 25,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_ancient_debrie"
-    },
-    {
       "name": "ItemNetheriteScrap",
       "type": "item",
       "sortid": 26,
@@ -530,23 +521,6 @@
       }
     },
     {
-      "name": "UltimateSwordEndion",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ultimate_sword_endion",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "UltimateSwordNetheriteAbility",
       "type": "procedure",
       "sortid": 41,
@@ -587,15 +561,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_temporium_gem"
-    },
-    {
-      "name": "RecipeUltSword",
-      "type": "recipe",
-      "sortid": 44,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_ult_sword"
     },
     {
       "name": "PickaxeNetherite",
@@ -930,15 +895,6 @@
       }
     },
     {
-      "name": "NetheriteUpgradingStation",
-      "type": "recipe",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "netherite_upgrading_station"
-    },
-    {
       "name": "TemporiumHelmRecipe",
       "type": "recipe",
       "sortid": 79,
@@ -1235,6 +1191,68 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "forge_ores_item"
+    },
+    {
+      "name": "BlockANcientDebris",
+      "type": "block",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_a_ncient_debris"
+    },
+    {
+      "name": "UpgradingTable",
+      "type": "block",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrading_table"
+    },
+    {
+      "name": "UpgradingTableRecipe",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "upgrading_table_recipe"
+    },
+    {
+      "name": "InfusionStation",
+      "type": "block",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infusion_station"
+    },
+    {
+      "name": "Infusion",
+      "type": "gui",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infusion"
+    },
+    {
+      "name": "InfusionStationUpdateTick",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infusion_station_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1353,9 +1371,11 @@
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
+      "block.tempus.upgrading_table": "Upgrading Table",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
+      "block.tempus.block_a_ncient_debris": "Block Ancient Debris",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
@@ -1371,7 +1391,6 @@
       "item.tempus.entity_clark_spawn_egg": "Clark Spawn Egg",
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
-      "block.tempus.block_ancient_debrie": "Block Ancient Debrie",
       "subtitles.clarkdie": "",
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
@@ -1385,6 +1404,7 @@
       "item.tempus.temporium_armor_leggings": "Temporium Leggings",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
+      "block.tempus.infusion_station": "Infusion Station",
       "block.tempus.block_netherite_block": "Netherite Block",
       "item.tempus.chicken_spawn_egg": "Chicken Spawn Egg",
       "block.tempus.temponium": "Temporium Ore",

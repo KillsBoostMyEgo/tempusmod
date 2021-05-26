@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "tempus:blocks/smithingbottom",
+    "up": "tempus:blocks/smithingtop",
+    "north": "tempus:blocks/smithingside",
+    "east": "tempus:blocks/smithingfront",
+    "south": "tempus:blocks/smithingfront",
+    "west": "tempus:blocks/smithingfront",
+    "particle": "tempus:blocks/smithingbottom"
+  }
+}

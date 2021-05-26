@@ -25,6 +25,9 @@
     "damageOnCrafting": false,
     "onRightClickedInAir": {
       "name": "SwordUltimateRightClickedInAir"
+    },
+    "onRightClickedOnBlock": {
+      "name": "SwordUltimateRightClickedInAir"
     }
   }
 }

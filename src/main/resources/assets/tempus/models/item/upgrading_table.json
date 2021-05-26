@@ -1,5 +1,5 @@
 {
-  "parent": "tempus:block/block_ancient_debrie",
+  "parent": "tempus:block/upgrading_table",
   "display": {
     "thirdperson": {
       "rotation": [

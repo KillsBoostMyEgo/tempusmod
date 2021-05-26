@@ -9,11 +9,9 @@ import tempussmpmods3.TempusMod;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.IWorld;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -67,37 +65,24 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				$_dependencies.put("world", world);
 				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
 			}
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium Ability Selected"), (true));
+		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
 			}
-		} else {
-			if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-					.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("entity", entity);
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
-				}
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite Ability Selected"), (true));
-				}
-			} else {
-				if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
-					{
-						Map<String, Object> $_dependencies = new HashMap<>();
-						$_dependencies.put("entity", entity);
-						$_dependencies.put("world", world);
-						EndoriumAbilityProcedure.executeProcedure($_dependencies);
-					}
-					if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-						((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected"), (true));
-					}
-				}
+		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("world", world);
+				EndoriumAbilityProcedure.executeProcedure($_dependencies);
 			}
 		}
 		if (!world.getWorld().isRemote) {

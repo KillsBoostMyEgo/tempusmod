@@ -1,0 +1,198 @@
+{
+  "_fv": 18,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 182,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 9,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "tempsword.png",
+          "use1Xscale": true,
+          "name": "tempsword.png",
+          "x": 177,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endisword.png",
+          "use1Xscale": true,
+          "name": "endisword.png",
+          "x": 231,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "nethsword.png",
+          "use1Xscale": true,
+          "name": "nethsword.png",
+          "x": 204,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "neth.png",
+          "use1Xscale": true,
+          "name": "neth.png",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "temp.png",
+          "use1Xscale": true,
+          "name": "temp.png",
+          "x": 177,
+          "y": 89
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "endi.png",
+          "use1Xscale": true,
+          "name": "endi.png",
+          "x": 231,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 204,
+          "y": 71
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:Temporium"
+          },
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 177,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:ItemNetheriteIngot"
+          },
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:EndionNugget"
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 231,
+          "y": 89
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:TemporiumSword"
+          },
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 177,
+          "y": 53
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:SwordNetherite"
+          },
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #5",
+          "x": 204,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:EndionSword"
+          },
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #6",
+          "x": 231,
+          "y": 53
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Infuse",
+          "onClick": {
+            "name": "InfusionStationUpdateTick"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "Infuse",
+          "x": 137,
+          "y": 70
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Infuse",
+          "onClick": {
+            "name": "InfusionStationUpdateTick"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "Infuse",
+          "x": 259,
+          "y": 70
+        }
+      }
+    ]
+  }
+}
