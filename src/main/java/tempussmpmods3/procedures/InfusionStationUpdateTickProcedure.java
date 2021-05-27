@@ -64,7 +64,7 @@ public class InfusionStationUpdateTickProcedure extends TempusModElements.ModEle
 				}
 				return 0;
 			}
-		}.getAmount((int) (3))) == 3)) && ((((new Object() {
+		}.getAmount((int) (3))) == 4)) && ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -93,7 +93,7 @@ public class InfusionStationUpdateTickProcedure extends TempusModElements.ModEle
 				}
 				return 0;
 			}
-		}.getAmount((int) (2))) == 3)) && ((((new Object() {
+		}.getAmount((int) (2))) == 4)) && ((((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {
@@ -122,7 +122,7 @@ public class InfusionStationUpdateTickProcedure extends TempusModElements.ModEle
 				}
 				return 0;
 			}
-		}.getAmount((int) (1))) == 3)) && (((new Object() {
+		}.getAmount((int) (1))) == 4)) && (((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {

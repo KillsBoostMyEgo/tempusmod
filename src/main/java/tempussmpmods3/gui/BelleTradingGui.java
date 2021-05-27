@@ -1,6 +1,7 @@
 
 package tempussmpmods3.gui;
 
+import tempussmpmods3.procedures.BelleBibleTradeProcedure;
 import tempussmpmods3.procedures.BelleBathTradeProcedure;
 
 import tempussmpmods3.TempusModElements;
@@ -132,9 +133,9 @@ public class BelleTradingGui extends TempusModElements.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/bellebathwater.png"));
-			this.blit(this.guiLeft + 51, this.guiTop + 14, 0, 0, 256, 256, 256, 256);
+			this.blit(this.guiLeft + 15, this.guiTop + 16, 0, 0, 256, 256, 256, 256);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/holierbible.png"));
-			this.blit(this.guiLeft + 87, this.guiTop + 92, 0, 0, 75, 75, 75, 75);
+			this.blit(this.guiLeft + 87, this.guiTop + 79, 0, 0, 75, 75, 75, 75);
 			RenderSystem.disableBlend();
 		}
 
@@ -274,6 +275,13 @@ public class BelleTradingGui extends TempusModElements.ModElement {
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
 				BelleBathTradeProcedure.executeProcedure($_dependencies);
+			}
+		}
+		if (buttonID == 1) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				BelleBibleTradeProcedure.executeProcedure($_dependencies);
 			}
 		}
 	}

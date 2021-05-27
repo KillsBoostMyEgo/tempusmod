@@ -11,6 +11,8 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -46,6 +48,11 @@ public class BlockTemporiumBlockBlock extends TempusModElements.ModElement {
 		@Override
 		public boolean isEmissiveRendering(BlockState blockState) {
 			return true;
+		}
+
+		@Override
+		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
+			return new float[]{0f, 1f, 1f};
 		}
 
 		@Override

@@ -4,9 +4,9 @@
   "definition": {
     "type": 1,
     "width": 176,
-    "height": 182,
+    "height": 200,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 9,
+    "inventoryOffsetY": 20,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
@@ -17,7 +17,7 @@
           "use1Xscale": true,
           "name": "tempsword.png",
           "x": 177,
-          "y": 53
+          "y": 71
         }
       },
       {
@@ -27,7 +27,7 @@
           "use1Xscale": true,
           "name": "endisword.png",
           "x": 231,
-          "y": 53
+          "y": 71
         }
       },
       {
@@ -37,7 +37,7 @@
           "use1Xscale": true,
           "name": "nethsword.png",
           "x": 204,
-          "y": 44
+          "y": 62
         }
       },
       {
@@ -47,7 +47,7 @@
           "use1Xscale": true,
           "name": "neth.png",
           "x": 204,
-          "y": 98
+          "y": 116
         }
       },
       {
@@ -57,7 +57,7 @@
           "use1Xscale": true,
           "name": "temp.png",
           "x": 177,
-          "y": 89
+          "y": 107
         }
       },
       {
@@ -67,7 +67,7 @@
           "use1Xscale": true,
           "name": "endi.png",
           "x": 231,
-          "y": 89
+          "y": 107
         }
       },
       {
@@ -78,7 +78,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
           "x": 204,
-          "y": 71
+          "y": 89
         }
       },
       {
@@ -92,7 +92,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
           "x": 177,
-          "y": 89
+          "y": 107
         }
       },
       {
@@ -106,7 +106,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
           "x": 204,
-          "y": 98
+          "y": 116
         }
       },
       {
@@ -120,7 +120,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #3",
           "x": 231,
-          "y": 89
+          "y": 107
         }
       },
       {
@@ -134,7 +134,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #4",
           "x": 177,
-          "y": 53
+          "y": 71
         }
       },
       {
@@ -148,7 +148,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #5",
           "x": 204,
-          "y": 44
+          "y": 62
         }
       },
       {
@@ -162,7 +162,7 @@
           "dropItemsWhenNotBound": true,
           "name": "Slot #6",
           "x": 231,
-          "y": 53
+          "y": 71
         }
       },
       {
@@ -176,7 +176,7 @@
           "height": 20,
           "name": "Infuse",
           "x": 137,
-          "y": 70
+          "y": 88
         }
       },
       {
@@ -190,7 +190,33 @@
           "height": 20,
           "name": "Infuse",
           "x": 259,
-          "y": 70
+          "y": 88
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Note: You'll need 1 of each sword",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "Note: You'll need 1 of each sword",
+          "x": 129,
+          "y": 33
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "and 4 of each material",
+          "color": {
+            "value": -16777216,
+            "falpha": 0.0
+          },
+          "name": "and 4 of each material",
+          "x": 150,
+          "y": 44
         }
       }
     ]

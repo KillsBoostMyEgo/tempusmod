@@ -1,10 +1,11 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.item.TemporiumItem;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -28,10 +29,12 @@ public class BelleBathTradeProcedure extends TempusModElements.ModElement {
 		double sx = 0;
 		double sy = 0;
 		double sz = 0;
-		if (((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(Items.DIAMOND, (int) (1))) : false)) {
+		if (((entity instanceof PlayerEntity)
+				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TemporiumItem.block, (int) (1)))
+				: false)) {
 			if (entity instanceof PlayerEntity) {
-				ItemStack _stktoremove = new ItemStack(Items.DIAMOND, (int) (1));
-				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 64);
+				ItemStack _stktoremove = new ItemStack(TemporiumItem.block, (int) (1));
+				((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
 			}
 			{
 				Entity _ent = entity;

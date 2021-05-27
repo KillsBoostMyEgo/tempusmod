@@ -1,6 +1,8 @@
 
 package tempussmpmods3.entity;
 
+import tempussmpmods3.procedures.RideProcedure;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,6 +26,7 @@ import net.minecraft.network.IPacket;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.ai.goal.SwimGoal;
 import net.minecraft.entity.ai.goal.LookRandomlyGoal;
@@ -36,6 +39,9 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.client.renderer.entity.model.ChickenModel;
 import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.block.BlockState;
+
+import java.util.Map;
+import java.util.HashMap;
 
 @TempusModElements.ModElement.Tag
 public class ChickenEntity extends TempusModElements.ModElement {
@@ -120,6 +126,21 @@ public class ChickenEntity extends TempusModElements.ModElement {
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.chicken.death"));
+		}
+
+		@Override
+		public void onCollideWithPlayer(PlayerEntity sourceentity) {
+			super.onCollideWithPlayer(sourceentity);
+			Entity entity = this;
+			double x = this.getPosX();
+			double y = this.getPosY();
+			double z = this.getPosZ();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				$_dependencies.put("sourceentity", sourceentity);
+				RideProcedure.executeProcedure($_dependencies);
+			}
 		}
 
 		@Override

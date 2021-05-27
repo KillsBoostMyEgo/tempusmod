@@ -130,43 +130,43 @@ public class InfusionGui extends TempusModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 79, 43) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 79, 70) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 52, 61) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 52, 88) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(TemporiumItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 70) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 97) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 106, 61) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 106, 88) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(EndionNuggetItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 52, 25) {
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 52, 52) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(TemporiumSwordItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 79, 16) {
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 79, 43) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(SwordNetheriteItem.block, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 106, 25) {
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 106, 52) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return (new ItemStack(EndionSwordItem.block, (int) (1)).getItem() == stack.getItem());
@@ -176,9 +176,9 @@ public class InfusionGui extends TempusModElements.ModElement {
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 17 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 37 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 17 + 142));
+				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 37 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -346,7 +346,7 @@ public class InfusionGui extends TempusModElements.ModElement {
 			this.z = container.z;
 			this.entity = container.entity;
 			this.xSize = 176;
-			this.ySize = 182;
+			this.ySize = 200;
 		}
 		private static final ResourceLocation texture = new ResourceLocation("tempus:textures/infusion.png");
 		@Override
@@ -366,17 +366,17 @@ public class InfusionGui extends TempusModElements.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/tempsword.png"));
-			this.blit(this.guiLeft + 51, this.guiTop + 24, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 51, this.guiTop + 51, 0, 0, 18, 18, 18, 18);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/endisword.png"));
-			this.blit(this.guiLeft + 105, this.guiTop + 24, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 105, this.guiTop + 51, 0, 0, 18, 18, 18, 18);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/nethsword.png"));
-			this.blit(this.guiLeft + 78, this.guiTop + 15, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 78, this.guiTop + 42, 0, 0, 18, 18, 18, 18);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/neth.png"));
-			this.blit(this.guiLeft + 78, this.guiTop + 69, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 78, this.guiTop + 96, 0, 0, 18, 18, 18, 18);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/temp.png"));
-			this.blit(this.guiLeft + 51, this.guiTop + 60, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 51, this.guiTop + 87, 0, 0, 18, 18, 18, 18);
 			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/endi.png"));
-			this.blit(this.guiLeft + 105, this.guiTop + 60, 0, 0, 18, 18, 18, 18);
+			this.blit(this.guiLeft + 105, this.guiTop + 87, 0, 0, 18, 18, 18, 18);
 			RenderSystem.disableBlend();
 		}
 
@@ -396,6 +396,8 @@ public class InfusionGui extends TempusModElements.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
+			this.font.drawString("Note: You'll need 1 of each sword", 3, 13, -16777216);
+			this.font.drawString("and 4 of each material", 24, 24, -16777216);
 		}
 
 		@Override
@@ -408,13 +410,13 @@ public class InfusionGui extends TempusModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 11, this.guiTop + 41, 30, 20, "Infuse", e -> {
+			this.addButton(new Button(this.guiLeft + 11, this.guiTop + 68, 30, 20, "Infuse", e -> {
 				if (true) {
 					TempusMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
 					handleButtonAction(entity, 0, x, y, z);
 				}
 			}));
-			this.addButton(new Button(this.guiLeft + 133, this.guiTop + 41, 30, 20, "Infuse", e -> {
+			this.addButton(new Button(this.guiLeft + 133, this.guiTop + 68, 30, 20, "Infuse", e -> {
 				if (true) {
 					TempusMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
 					handleButtonAction(entity, 1, x, y, z);

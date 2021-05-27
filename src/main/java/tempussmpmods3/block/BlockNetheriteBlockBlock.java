@@ -9,6 +9,8 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.storage.loot.LootContext;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -38,6 +40,11 @@ public class BlockNetheriteBlockBlock extends TempusModElements.ModElement {
 			super(Block.Properties.create(Material.IRON).sound(SoundType.METAL).hardnessAndResistance(2f, 50f).lightValue(0).harvestLevel(4)
 					.harvestTool(ToolType.PICKAXE));
 			setRegistryName("block_netherite_block");
+		}
+
+		@Override
+		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
+			return new float[]{0f, 0f, 0f};
 		}
 
 		@Override

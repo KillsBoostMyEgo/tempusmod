@@ -29,8 +29,8 @@
           "image": "bellebathwater.png",
           "use1Xscale": false,
           "name": "bellebathwater.png",
-          "x": 177,
-          "y": 51
+          "x": 141,
+          "y": 53
         }
       },
       {
@@ -51,6 +51,9 @@
         "type": "button",
         "data": {
           "text": "Buy",
+          "onClick": {
+            "name": "BelleBibleTrade"
+          },
           "width": 30,
           "height": 20,
           "name": "Buy",
@@ -78,7 +81,7 @@
           "use1Xscale": true,
           "name": "holierbible.png",
           "x": 213,
-          "y": 129
+          "y": 116
         }
       }
     ]

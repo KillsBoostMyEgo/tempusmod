@@ -1,10 +1,11 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.item.TemporiumItem;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
-import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
@@ -25,8 +26,8 @@ public class BelleBibleTradeProcedure extends TempusModElements.ModElement {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity instanceof PlayerEntity) {
-			ItemStack _stktoremove = new ItemStack(Items.DIAMOND, (int) (1));
-			((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 32);
+			ItemStack _stktoremove = new ItemStack(TemporiumItem.block, (int) (1));
+			((PlayerEntity) entity).inventory.clearMatchingItems(p -> _stktoremove.getItem() == p.getItem(), (int) 1);
 		}
 		{
 			Entity _ent = entity;

@@ -1,6 +1,10 @@
 
 package tempussmpmods3.gui;
 
+import tempussmpmods3.procedures.NetheriteSmithingProcedure;
+
+import tempussmpmods3.item.ItemNetheriteIngotItem;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
@@ -32,6 +36,7 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.Minecraft;
@@ -120,11 +125,15 @@ public class DiamondNetheriteGui extends TempusModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 35) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 25, 26) {
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 35) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 79, 26) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem() == stack.getItem());
+				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 133, 35) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 133, 26) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -354,6 +363,12 @@ public class DiamondNetheriteGui extends TempusModElements.ModElement {
 		public void init(Minecraft minecraft, int width, int height) {
 			super.init(minecraft, width, height);
 			minecraft.keyboardListener.enableRepeatEvents(true);
+			this.addButton(new Button(this.guiLeft + 114, this.guiTop + 61, 50, 20, "Smith", e -> {
+				if (true) {
+					TempusMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
+					handleButtonAction(entity, 0, x, y, z);
+				}
+			}));
 		}
 	}
 
@@ -443,6 +458,13 @@ public class DiamondNetheriteGui extends TempusModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("entity", entity);
+				NetheriteSmithingProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {
