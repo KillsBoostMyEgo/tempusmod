@@ -1121,15 +1121,6 @@
       "registry_name": "smithing_netherite_pickaxe"
     },
     {
-      "name": "ForgeOres",
-      "type": "tag",
-      "sortid": 101,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_ores"
-    },
-    {
       "name": "Chicken",
       "type": "mob",
       "sortid": 102,
@@ -1137,60 +1128,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "chicken"
-    },
-    {
-      "name": "ForgeEndion",
-      "type": "tag",
-      "sortid": 104,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_endion"
-    },
-    {
-      "name": "TemporiumForgeThing",
-      "type": "tag",
-      "sortid": 105,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "temporium_forge_thing"
-    },
-    {
-      "name": "ForgeIngots",
-      "type": "tag",
-      "sortid": 106,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_ingots"
-    },
-    {
-      "name": "ForgeOresTag",
-      "type": "tag",
-      "sortid": 107,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_ores_tag"
-    },
-    {
-      "name": "ForgeOresTemporiumBlock",
-      "type": "tag",
-      "sortid": 108,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_ores_temporium_block"
-    },
-    {
-      "name": "ForgeOresItem",
-      "type": "tag",
-      "sortid": 109,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "forge_ores_item"
     },
     {
       "name": "BlockANcientDebris",
