@@ -1245,6 +1245,70 @@
           }
         ]
       }
+    },
+    {
+      "name": "ZAWARUDOPotionOnPotionActiveTick",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zawarudo_potion_on_potion_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZAWARUDOPotion",
+      "type": "potion",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zawarudo_potion"
+    },
+    {
+      "name": "ZAWARUDOPotionPotionExpires",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "zawarudo_potion_potion_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZaWarudo",
+      "type": "overlay",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "za_warudo"
     }
   ],
   "variable_elements": [
@@ -1295,6 +1359,30 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "1.0"
+    },
+    {
+      "name": "warudox",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "warudoy",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "warudoz",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "WarudoTimer",
+      "type": "number",
+      "scope": "global",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -1358,12 +1446,12 @@
     "en_us": {
       "block.tempus.block_temporium_block": "Temporium Block",
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.block_black_stone": "Block Black Stone",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
-      "item.tempus.temporium_sword": "Temporium Sword",
       "block.tempus.upgrading_table": "Upgrading Table",
+      "item.tempus.temporium_sword": "Temporium Sword",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
@@ -1387,6 +1475,7 @@
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
       "subtitles.owclark": "",
+      "item.minecraft.tipped_arrow.effect.zawarudo_potion": "Arrow of ZAWARUDO",
       "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.tempus.shovel_netherite": "Netherite Pickaxe",
@@ -1394,6 +1483,8 @@
       "item.tempus.endion_nugget": "Endion Nugget",
       "entity.tempus.chicken": "Chicken",
       "item.tempus.temporium_armor_leggings": "Temporium Leggings",
+      "item.minecraft.potion.effect.zawarudo_potion": "ZAWARUDO",
+      "effect.zawarudo_potion": "ZAWARUDO",
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
       "block.tempus.infusion_station": "Infusion Station",
@@ -1411,12 +1502,14 @@
       "block.tempus.block_endion_blocjk": "Endion Block",
       "subtitles.pigstepdisc": "",
       "item.tempus.temporium": "Temporium",
+      "item.minecraft.lingering_potion.effect.zawarudo_potion": "Lingering ZAWARUDO",
       "subtitles.helloclark": "",
       "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "item.tempus.endion_sword": "Endion Sword",
+      "item.minecraft.splash_potion.effect.zawarudo_potion": "Splash ZAWARUDO",
       "item.tempus.armor_netherite_helmet": "Netherite Helmet",
       "item.tempus.sword_ultimate": "Sacred Slice of Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",

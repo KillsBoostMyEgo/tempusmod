@@ -1,0 +1,25 @@
+{
+  "_fv": 18,
+  "_type": "potion",
+  "definition": {
+    "name": "ZAWARUDO",
+    "effectName": "ZAWARUDO",
+    "icon": "belle.png",
+    "color": {
+      "value": -256,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "registerPotionType": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "ZAWARUDOPotionOnPotionActiveTick"
+    },
+    "onExpired": {
+      "name": "ZAWARUDOPotionPotionExpires"
+    }
+  }
+}

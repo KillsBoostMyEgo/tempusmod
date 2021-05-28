@@ -1,21 +1,29 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModVariables;
+
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Vec2f;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
+import net.minecraft.command.ICommandSource;
+import net.minecraft.command.CommandSource;
 
-import java.util.function.Function;
 import java.util.Map;
-import java.util.Comparator;
 
 @TempusModElements.ModElement.Tag
 public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.ModElement {
@@ -57,32 +65,90 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 		if ((((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0) >= 2)) {
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
-			if (((((Entity) world
-					.getEntitiesWithinAABB(PlayerEntity.class,
-							new AxisAlignedBB(x - (5 / 2d), y - (5 / 2d), z - (5 / 2d), x + (5 / 2d), y + (5 / 2d), z + (5 / 2d)), null)
-					.stream().sorted(new Object() {
-						Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-							return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
-						}
-					}.compareDistOf(x, y, z)).findFirst().orElse(null)) != null) == (true))) {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
-				}
-				if (entity instanceof LivingEntity)
-					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 100, (int) 5, (false), (false)));
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
-				}
-			} else {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("There are no players nearby"), (true));
-				}
-			}
-			if (entity instanceof LivingEntity) {
-				((LivingEntity) entity).removePotionEffect(Effects.SLOWNESS);
-			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 100, (int) 4, (false), (false)));
 		}
+		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
+		}
+		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+			world.getWorld().getServer().getCommandManager()
+					.handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+							"/effect give @e[type=player] tempus:zawarudo_potion");
+		}
+		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
+		}
+		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+			world.getWorld().getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO,
+					(ServerWorld) world, 4, "", new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+					"effect clear @p");
+		}
+		if (entity instanceof LivingEntity)
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SPEED, (int) 200, (int) 4, (false), (false)));
+		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+			world.getWorld().getServer().getCommandManager().handleCommand(
+					new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""),
+							world.getWorld().getServer(), null).withFeedbackDisabled(),
+					"/execute as @e[type=!player] run data merge entity @s {NoAI:1}");
+		}
+		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+			world.getWorld().getServer().getCommandManager().handleCommand(
+					new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""),
+							world.getWorld().getServer(), null).withFeedbackDisabled(),
+					"/effect give @e[type=!player] minecraft:slow_falling 10 255 true");
+		}
+		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+			world.getWorld().getServer().getCommandManager()
+					.handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+							"/gamerule doMobSpawning false");
+		}
+		for (int index0 = 0; index0 < (int) (10); index0++) {
+			TempusModVariables.WarudoTimer = (double) ((TempusModVariables.WarudoTimer) + 1);
+		}
+		new Object() {
+			private int ticks = 0;
+			private float waitTicks;
+			private IWorld world;
+			public void start(IWorld world, int waitTicks) {
+				this.waitTicks = waitTicks;
+				MinecraftForge.EVENT_BUS.register(this);
+				this.world = world;
+			}
+
+			@SubscribeEvent
+			public void tick(TickEvent.ServerTickEvent event) {
+				if (event.phase == TickEvent.Phase.END) {
+					this.ticks += 1;
+					if (this.ticks >= this.waitTicks)
+						run();
+				}
+			}
+
+			private void run() {
+				if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+					world.getWorld().getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+							"/execute as @e[type=!player] run data merge entity @s {NoAI:0}");
+				}
+				if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+					world.getWorld().getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+							"/effect clear @e[type=!player]");
+				}
+				if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
+					world.getWorld().getServer().getCommandManager().handleCommand(
+							new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
+									new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+							"/gamerule doMobSpawning true");
+				}
+				TempusModVariables.WarudoTimer = (double) 0;
+				MinecraftForge.EVENT_BUS.unregister(this);
+			}
+		}.start(world, (int) 200);
 	}
 }

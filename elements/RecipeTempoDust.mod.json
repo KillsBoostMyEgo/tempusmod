@@ -2,16 +2,16 @@
   "_fv": 18,
   "_type": "recipe",
   "definition": {
-    "recipeType": "Blasting",
+    "recipeType": "Smelting",
     "xpReward": 1.0,
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": false,
-    "blastingInputStack": {
+    "smeltingInputStack": {
       "value": "CUSTOM:Temponium"
     },
-    "blastingReturnStack": {
+    "smeltingReturnStack": {
       "value": "CUSTOM:ItemTemporium"
     },
     "name": "recipe_tempo_dust",

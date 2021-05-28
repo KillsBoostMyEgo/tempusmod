@@ -1,0 +1,23 @@
+{
+  "_fv": 18,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "SECONDS: <VAR:integer:WarudoTimer>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "SECONDS: <VAR:integer:WarudoTimer>",
+          "x": 8,
+          "y": 8
+        }
+      }
+    ],
+    "baseTexture": ""
+  }
+}

@@ -43,7 +43,7 @@ public class TempusModVariables {
 	private void init(FMLCommonSetupEvent event) {
 		CapabilityManager.INSTANCE.register(PlayerVariables.class, new PlayerVariablesStorage(), PlayerVariables::new);
 	}
-
+	public static double WarudoTimer = 0.0;
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.getPlayer().world.isRemote) {
@@ -209,6 +209,9 @@ public class TempusModVariables {
 			nbt.put("leggings", instance.leggings.write(new CompoundNBT()));
 			nbt.put("boots", instance.boots.write(new CompoundNBT()));
 			nbt.putDouble("abilityTimerSec", instance.abilityTimerSec);
+			nbt.putDouble("warudox", instance.warudox);
+			nbt.putDouble("warudoy", instance.warudoy);
+			nbt.putDouble("warudoz", instance.warudoz);
 			return nbt;
 		}
 
@@ -222,6 +225,9 @@ public class TempusModVariables {
 			instance.leggings = ItemStack.read(nbt.getCompound("leggings"));
 			instance.boots = ItemStack.read(nbt.getCompound("boots"));
 			instance.abilityTimerSec = nbt.getDouble("abilityTimerSec");
+			instance.warudox = nbt.getDouble("warudox");
+			instance.warudoy = nbt.getDouble("warudoy");
+			instance.warudoz = nbt.getDouble("warudoz");
 		}
 	}
 
@@ -233,6 +239,9 @@ public class TempusModVariables {
 		public ItemStack leggings = ItemStack.EMPTY;
 		public ItemStack boots = ItemStack.EMPTY;
 		public double abilityTimerSec = 1.0;
+		public double warudox = 0;
+		public double warudoy = 0;
+		public double warudoz = 0.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -272,6 +281,9 @@ public class TempusModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.abilityTimerSec = original.abilityTimerSec;
+			clone.warudox = original.warudox;
+			clone.warudoy = original.warudoy;
+			clone.warudoz = original.warudoz;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -302,6 +314,9 @@ public class TempusModVariables {
 					variables.leggings = message.data.leggings;
 					variables.boots = message.data.boots;
 					variables.abilityTimerSec = message.data.abilityTimerSec;
+					variables.warudox = message.data.warudox;
+					variables.warudoy = message.data.warudoy;
+					variables.warudoz = message.data.warudoz;
 				}
 			});
 			context.setPacketHandled(true);
