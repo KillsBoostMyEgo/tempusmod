@@ -1303,12 +1303,36 @@
     },
     {
       "name": "ZaWarudo",
-      "type": "overlay",
+      "type": "procedure",
       "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "za_warudo"
+      "registry_name": "za_warudo",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1376,12 +1400,6 @@
       "name": "warudoz",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "WarudoTimer",
-      "type": "number",
-      "scope": "global",
       "value": "0.0"
     }
   ],

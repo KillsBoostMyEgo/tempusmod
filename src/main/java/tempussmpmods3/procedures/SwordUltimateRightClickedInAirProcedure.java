@@ -63,7 +63,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				UltimateSwordTemporiumAbilityProcedure.executeProcedure($_dependencies);
+				ZaWarudoProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
