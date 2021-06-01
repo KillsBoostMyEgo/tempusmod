@@ -1,0 +1,36 @@
+{
+  "group": "tempus",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:smooth_quartz_slab"
+    },
+    "1": {
+      "item": "minecraft:smooth_quartz_slab"
+    },
+    "2": {
+      "item": "minecraft:smooth_quartz_slab"
+    },
+    "4": {
+      "item": "minecraft:diamond_ore"
+    },
+    "6": {
+      "item": "minecraft:smooth_quartz_stairs"
+    },
+    "7": {
+      "item": "minecraft:smooth_quartz_stairs"
+    },
+    "8": {
+      "item": "minecraft:smooth_quartz_stairs"
+    }
+  },
+  "result": {
+    "item": "tempus:infusion_station",
+    "count": 1
+  }
+}

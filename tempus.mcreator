@@ -1333,6 +1333,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "InfusionCrafting",
+      "type": "recipe",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "infusion_crafting"
     }
   ],
   "variable_elements": [

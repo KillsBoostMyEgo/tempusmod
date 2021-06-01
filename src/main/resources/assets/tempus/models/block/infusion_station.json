@@ -1,8 +1,8 @@
 {
   "parent": "tempus:custom/modelinfusion",
   "textures": {
-    "all": "tempus:blocks/bottominfusion",
-    "particle": "tempus:blocks/bottominfusion",
+    "all": "tempus:blocks/infusionitem",
+    "particle": "tempus:blocks/infusionitem",
     "0": "tempus:blocks/texture"
   }
 }
