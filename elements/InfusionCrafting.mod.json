@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_SLAB"
+      },
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_SLAB"
+      },
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_SLAB"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.DIAMOND_ORE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_STAIRS"
+      },
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_STAIRS"
+      },
+      {
+        "value": "Blocks.SMOOTH_QUARTZ_STAIRS"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:InfusionStation"
+    },
+    "name": "infusion_crafting",
+    "namespace": "mod"
+  }
+}
