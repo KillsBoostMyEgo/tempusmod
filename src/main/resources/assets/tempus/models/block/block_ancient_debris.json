@@ -4,9 +4,9 @@
     "down": "tempus:blocks/ancient_debris_top",
     "up": "tempus:blocks/ancient_debris_top",
     "north": "tempus:blocks/ancient_debris_side",
-    "east": "tempus:blocks/ancient_debris_side",
-    "south": "tempus:blocks/ancient_debris_side",
-    "west": "tempus:blocks/ancient_debris_side",
+    "east": "tempus:blocks/75f14e567f14471",
+    "south": "tempus:blocks/75f14e567f14471",
+    "west": "tempus:blocks/75f14e567f14471",
     "particle": "tempus:blocks/ancient_debris_top"
   }
 }

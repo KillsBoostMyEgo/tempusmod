@@ -4,10 +4,10 @@
   "definition": {
     "texture": "ancient_debris_top",
     "textureTop": "ancient_debris_top",
-    "textureLeft": "ancient_debris_side",
+    "textureLeft": "75f14e567f14471",
     "textureFront": "ancient_debris_side",
-    "textureRight": "ancient_debris_side",
-    "textureBack": "ancient_debris_side",
+    "textureRight": "75f14e567f14471",
+    "textureBack": "75f14e567f14471",
     "renderType": 10,
     "customModelName": "Normal",
     "rotationMode": 0,
@@ -34,14 +34,14 @@
     ],
     "name": "Block Ancient Debris",
     "specialInfo": [],
-    "hardness": 1.0,
-    "resistance": 10.0,
+    "hardness": 30.0,
+    "resistance": 1200.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -69,14 +69,14 @@
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
-    "reactionToPushing": "BLOCK",
+    "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
       "value": "STONE"
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 4,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -110,9 +110,9 @@
         "value": "Blocks.NETHERRACK"
       }
     ],
-    "frequencyPerChunks": 2,
-    "frequencyOnChunk": 2,
+    "frequencyPerChunks": 7,
+    "frequencyOnChunk": 3,
     "minGenerateHeight": 0,
-    "maxGenerateHeight": 17
+    "maxGenerateHeight": 32
   }
 }

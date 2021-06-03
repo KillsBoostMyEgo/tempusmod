@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:BlockEndionBlocjk"
+      "value": "CUSTOM:BlockEndion"
     },
     "name": "endion_block_recipe",
     "namespace": "mod"

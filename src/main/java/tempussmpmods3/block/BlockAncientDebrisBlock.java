@@ -8,7 +8,6 @@ import tempussmpmods3.TempusModElements;
 import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.gen.placement.Placement;
@@ -24,7 +23,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
-import net.minecraft.block.material.PushReaction;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.Blocks;
@@ -36,11 +34,11 @@ import java.util.List;
 import java.util.Collections;
 
 @TempusModElements.ModElement.Tag
-public class BlockANcientDebrisBlock extends TempusModElements.ModElement {
-	@ObjectHolder("tempus:block_a_ncient_debris")
+public class BlockAncientDebrisBlock extends TempusModElements.ModElement {
+	@ObjectHolder("tempus:block_ancient_debris")
 	public static final Block block = null;
-	public BlockANcientDebrisBlock(TempusModElements instance) {
-		super(instance, 110);
+	public BlockAncientDebrisBlock(TempusModElements instance) {
+		super(instance, 122);
 	}
 
 	@Override
@@ -50,14 +48,8 @@ public class BlockANcientDebrisBlock extends TempusModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(1f, 10f).lightValue(0).harvestLevel(4)
-					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("block_a_ncient_debris");
-		}
-
-		@Override
-		public PushReaction getPushReaction(BlockState state) {
-			return PushReaction.BLOCK;
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.STONE).hardnessAndResistance(30f, 1200f).lightValue(0));
+			setRegistryName("block_ancient_debris");
 		}
 
 		@Override
@@ -83,12 +75,12 @@ public class BlockANcientDebrisBlock extends TempusModElements.ModElement {
 					return super.place(world, generator, rand, pos, config);
 				}
 			}.withConfiguration(
-					new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("block_a_ncient_debris", "block_a_ncient_debris", blockAt -> {
+					new OreFeatureConfig(OreFeatureConfig.FillerBlockType.create("block_ancient_debris", "block_ancient_debris", blockAt -> {
 						boolean blockCriteria = false;
 						if (blockAt.getBlock() == Blocks.NETHERRACK.getDefaultState().getBlock())
 							blockCriteria = true;
 						return blockCriteria;
-					}), block.getDefaultState(), 2)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(2, 0, 0, 17))));
+					}), block.getDefaultState(), 3)).withPlacement(Placement.COUNT_RANGE.configure(new CountRangeConfig(7, 0, 0, 32))));
 		}
 	}
 }

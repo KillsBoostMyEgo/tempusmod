@@ -1002,15 +1002,6 @@
       "registry_name": "block_netherite_block"
     },
     {
-      "name": "BlockEndionBlocjk",
-      "type": "block",
-      "sortid": 90,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_endion_blocjk"
-    },
-    {
       "name": "RecipeMagicLantern",
       "type": "recipe",
       "sortid": 86,
@@ -1128,15 +1119,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "chicken"
-    },
-    {
-      "name": "BlockANcientDebris",
-      "type": "block",
-      "sortid": 110,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_a_ncient_debris"
     },
     {
       "name": "UpgradingTable",
@@ -1333,6 +1315,57 @@
           }
         ]
       }
+    },
+    {
+      "name": "BlockAncientDebris",
+      "type": "block",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_ancient_debris"
+    },
+    {
+      "name": "BlockEndion",
+      "type": "block",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_endion"
+    },
+    {
+      "name": "Transformshitbackp",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "transformshitbackp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1473,7 +1506,6 @@
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
       "item.tempus.axe_netherite": "Netherite Pickaxe",
-      "block.tempus.block_a_ncient_debris": "Block Ancient Debris",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
       "item.tempus.armor_netherite_leggings": "Netherite Leggings",
@@ -1486,6 +1518,7 @@
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
       "key.tempus.ult_switch_ability": "Ult Switch Ability",
+      "block.tempus.block_ancient_debris": "Block Ancient Debris",
       "item.tempus.entity_clark_spawn_egg": "Clark Spawn Egg",
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
@@ -1517,7 +1550,6 @@
       "entity.tempus.entity_clark": "Clark",
       "subtitles.netheritesoundequiparmor": "Equip sfx for netherite armor",
       "item.tempus.item_netherite_scrap": "Netherite Scrap",
-      "block.tempus.block_endion_blocjk": "Endion Block",
       "subtitles.pigstepdisc": "",
       "item.tempus.temporium": "Temporium",
       "item.minecraft.lingering_potion.effect.zawarudo_potion": "Lingering ZAWARUDO",
@@ -1534,6 +1566,7 @@
       "key.tempus.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.tempus.food_cum_sandwich": "Food Cum Sandwich",
+      "block.tempus.block_endion": "Block Endion",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
       "block.tempus.temponium_lantern": "Temponium Lantern",
@@ -1550,6 +1583,7 @@
     "version": "1.0.0",
     "author": "ARCADIA, MCreator",
     "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],

@@ -6,11 +6,8 @@ import tempussmpmods3.itemgroup.TempusItemGroup;
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.common.ToolType;
 
 import net.minecraft.world.storage.loot.LootContext;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItem;
@@ -23,11 +20,11 @@ import java.util.List;
 import java.util.Collections;
 
 @TempusModElements.ModElement.Tag
-public class BlockEndionBlocjkBlock extends TempusModElements.ModElement {
-	@ObjectHolder("tempus:block_endion_blocjk")
+public class BlockEndionBlock extends TempusModElements.ModElement {
+	@ObjectHolder("tempus:block_endion")
 	public static final Block block = null;
-	public BlockEndionBlocjkBlock(TempusModElements instance) {
-		super(instance, 90);
+	public BlockEndionBlock(TempusModElements instance) {
+		super(instance, 123);
 	}
 
 	@Override
@@ -37,14 +34,8 @@ public class BlockEndionBlocjkBlock extends TempusModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.IRON).sound(SoundType.CLOTH).hardnessAndResistance(2f, 50f).lightValue(0).harvestLevel(1)
-					.harvestTool(ToolType.PICKAXE));
-			setRegistryName("block_endion_blocjk");
-		}
-
-		@Override
-		public float[] getBeaconColorMultiplier(BlockState state, IWorldReader world, BlockPos pos, BlockPos beaconPos) {
-			return new float[]{0f, 0.4f, 0f};
+			super(Block.Properties.create(Material.ROCK).sound(SoundType.GROUND).hardnessAndResistance(30f, 200f).lightValue(0));
+			setRegistryName("block_endion");
 		}
 
 		@Override

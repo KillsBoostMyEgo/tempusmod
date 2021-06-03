@@ -32,16 +32,16 @@
         "subtract": false
       }
     ],
-    "name": "Endion Block",
+    "name": "Block Endion",
     "specialInfo": [],
-    "hardness": 2.0,
-    "resistance": 50.0,
+    "hardness": 30.0,
+    "resistance": 200.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
@@ -52,7 +52,7 @@
     "canProvidePower": false,
     "lightOpacity": 255,
     "material": {
-      "value": "IRON"
+      "value": "ROCK"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -63,10 +63,6 @@
     },
     "offsetType": "NONE",
     "aiPathNodeType": "DEFAULT",
-    "beaconColorModifier": {
-      "value": -16751104,
-      "falpha": 0.0
-    },
     "flammability": 0,
     "fireSpreadSpeed": 0,
     "isLadder": false,
@@ -76,7 +72,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "CLOTH"
+      "value": "GROUND"
     },
     "luminance": 0,
     "unbreakable": false,
