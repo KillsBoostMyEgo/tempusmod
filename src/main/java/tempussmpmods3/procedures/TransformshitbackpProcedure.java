@@ -1,11 +1,29 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.TempusModElements;
+
+import tempussmpmods3.TempusMod;
+
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.common.MinecraftForge;
+
+import net.minecraft.world.IWorld;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.item.Items;
+import net.minecraft.item.ItemStack;
+import net.minecraft.entity.item.ItemEntity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.Entity;
+
+import java.util.Map;
+import java.util.HashMap;
+
 @TempusModElements.ModElement.Tag
 public class TransformshitbackpProcedure extends TempusModElements.ModElement {
-
 	public TransformshitbackpProcedure(TempusModElements instance) {
 		super(instance, 124);
-
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -35,13 +53,11 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 				TempusMod.LOGGER.warn("Failed to load dependency world for procedure Transformshitbackp!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-
 		ItemStack block = ItemStack.EMPTY;
 		String tag = "";
 		String intag = "";
@@ -65,7 +81,6 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 				}
 			}
 		}
-
 	}
 
 	@SubscribeEvent
@@ -84,5 +99,4 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);
 	}
-
 }

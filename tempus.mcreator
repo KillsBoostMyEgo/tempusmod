@@ -1317,15 +1317,6 @@
       }
     },
     {
-      "name": "BlockAncientDebris",
-      "type": "block",
-      "sortid": 122,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_ancient_debris"
-    },
-    {
       "name": "BlockEndion",
       "type": "block",
       "sortid": 123,
@@ -1375,6 +1366,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "infusion_crafting"
+    },
+    {
+      "name": "BlockAncientDebris",
+      "type": "block",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "block_ancient_debris"
     }
   ],
   "variable_elements": [
@@ -1577,6 +1577,7 @@
       "key.tempus.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.armor_netherite_boots": "Netherite Boots",
       "item.tempus.food_cum_sandwich": "Food Cum Sandwich",
+      "block.tempus.block_endion": "Block Endion",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
       "block.tempus.temponium_lantern": "Temponium Lantern",
