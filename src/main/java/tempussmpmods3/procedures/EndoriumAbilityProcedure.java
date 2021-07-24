@@ -62,7 +62,7 @@ public class EndoriumAbilityProcedure extends TempusModElements.ModElement {
 					}
 				}
 			} else if ((world.isAirBlock(new BlockPos((int) (x), (int) (y), (int) (z))))) {
-				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+				if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Can't teleport to air dumbass!"), (true));
 				}
 			}

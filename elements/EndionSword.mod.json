@@ -3,12 +3,12 @@
   "_type": "tool",
   "definition": {
     "renderType": 0,
-    "texture": "endersword",
+    "texture": "endion",
     "customModelName": "Normal",
     "name": "Endion Sword",
     "specialInfo": [],
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "CUSTOM:Tempus"
     },
     "toolType": "Sword",
     "harvestLevel": 3,

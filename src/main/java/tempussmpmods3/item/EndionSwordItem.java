@@ -3,6 +3,8 @@ package tempussmpmods3.item;
 
 import tempussmpmods3.procedures.EndoriumAbilityProcedure;
 
+import tempussmpmods3.itemgroup.TempusItemGroup;
+
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -17,7 +19,6 @@ import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.SwordItem;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.player.PlayerEntity;
@@ -59,7 +60,7 @@ public class EndionSwordItem extends TempusModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.fromStacks(new ItemStack(EndionNuggetItem.block, (int) (1)));
 			}
-		}, 3, -2.2f, new Item.Properties().group(ItemGroup.TOOLS)) {
+		}, 3, -2.2f, new Item.Properties().group(TempusItemGroup.tab)) {
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);

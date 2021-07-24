@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.common.MinecraftForge;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.Items;
@@ -59,15 +60,13 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		ItemStack block = ItemStack.EMPTY;
-		String tag = "";
-		String intag = "";
 		if (((((entity.getDisplayName().getString())).equals("RetiredTeenager"))
 				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(Items.ENDER_EYE, (int) (1)).getItem()))) {
 			block = (new ItemStack((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock()));
 			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-			if (!world.getWorld().isRemote) {
-				ItemEntity entityToSpawn = new ItemEntity(world.getWorld(), x, y, z, (block));
+			if (world instanceof World && !world.isRemote()) {
+				ItemEntity entityToSpawn = new ItemEntity((World) world, x, y, z, (block));
 				entityToSpawn.setPickupDelay((int) 10);
 				entityToSpawn.setNoDespawn();
 				world.addEntity(entityToSpawn);
@@ -86,6 +85,7 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 	@SubscribeEvent
 	public void onBlockBreak(BlockEvent.BreakEvent event) {
 		Entity entity = event.getPlayer();
+		IWorld world = event.getWorld();
 		Map<String, Object> dependencies = new HashMap<>();
 		dependencies.put("xpAmount", event.getExpToDrop());
 		dependencies.put("x", event.getPos().getX());
@@ -94,7 +94,7 @@ public class TransformshitbackpProcedure extends TempusModElements.ModElement {
 		dependencies.put("px", entity.getPosX());
 		dependencies.put("py", entity.getPosY());
 		dependencies.put("pz", entity.getPosZ());
-		dependencies.put("world", event.getWorld().getWorld());
+		dependencies.put("world", world);
 		dependencies.put("entity", entity);
 		dependencies.put("event", event);
 		this.executeProcedure(dependencies);

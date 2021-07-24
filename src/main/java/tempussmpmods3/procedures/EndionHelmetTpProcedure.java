@@ -1,12 +1,15 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.item.ArmorNetheriteItem;
+import tempussmpmods3.item.EndionBootsItem;
+
+import tempussmpmods3.TempusModVariables;
 
 import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.common.MinecraftForge;
 
@@ -14,8 +17,8 @@ import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.LivingEntity;
@@ -64,100 +67,32 @@ public class EndionHelmetTpProcedure extends TempusModElements.ModElement {
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 20) && (((((entity instanceof LivingEntity)
-				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-				: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())
-				&& (((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem()))
-				&& ((((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem())
-						&& (((entity instanceof LivingEntity)
-								? ((LivingEntity) entity)
-										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-								: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem()))))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 10))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+		if (((((entity instanceof LivingEntity)
+				? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
+				: ItemStack.EMPTY).getItem() == new ItemStack(EndionBootsItem.boots, (int) (1)).getItem())
+				&& ((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 5)
+						&& (((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+								.orElse(new TempusModVariables.PlayerVariables())).EndionTimer) == 600)))) {
+			if (world instanceof ServerWorld) {
+				((World) world).getServer().getCommandManager().handleCommand(
+						new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z), Vector2f.ZERO, (ServerWorld) world, 4, "",
+								new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 						"spreadplayers ~ ~ 40 40 false @p");
 			}
-		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 17)
-				&& (((((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem())
-						&& (((entity instanceof LivingEntity)
-								? ((LivingEntity) entity)
-										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-								: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem()))
-						&& ((((entity instanceof LivingEntity)
-								? ((LivingEntity) entity)
-										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-								: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())
-								^ (((entity instanceof LivingEntity)
-										? ((LivingEntity) entity)
-												.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-										: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem()))))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 9))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-						"spreadplayers ~ ~ 30 30 false @p");
+			if (dependencies.get("event") != null) {
+				Object _obj = dependencies.get("event");
+				if (_obj instanceof Event) {
+					Event _evt = (Event) _obj;
+					if (_evt.isCancelable())
+						_evt.setCanceled(true);
+				}
 			}
-		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 14)
-				&& ((((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem())
-						&& (((entity instanceof LivingEntity)
-								? ((LivingEntity) entity)
-										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-								: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem())))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 8))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-						"spreadplayers ~ ~ 15 15 false @p");
-			}
-		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 8)
-				&& (((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 2))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.body, (int) (1)).getItem()))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 6))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-						"spreadplayers ~ ~ 10 10 false @p");
-			}
-		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 6)
-				&& (((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 1))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.legs, (int) (1)).getItem()))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 4))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-						"spreadplayers ~ ~ 8 8 false @p");
-			}
-		} else if ((((((entity instanceof LivingEntity) ? ((LivingEntity) entity).getTotalArmorValue() : 0) == 3)
-				&& ((((entity instanceof LivingEntity)
-						? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 0))
-						: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.boots, (int) (1)).getItem())
-						|| (((entity instanceof LivingEntity)
-								? ((LivingEntity) entity)
-										.getItemStackFromSlot(EquipmentSlotType.fromSlotTypeAndIndex(EquipmentSlotType.Group.ARMOR, (int) 3))
-								: ItemStack.EMPTY).getItem() == new ItemStack(ArmorNetheriteItem.helmet, (int) (1)).getItem())))
-				&& (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) <= 2))) {
-			if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-				world.getWorld().getServer().getCommandManager().handleCommand(
-						new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO, (ServerWorld) world, 4, "",
-								new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
-						"spreadplayers ~ ~ 4 4 false @p");
+			{
+				double _setval = (double) 0;
+				entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.EndionTimer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

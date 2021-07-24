@@ -11,7 +11,7 @@
     "enableBoots": true,
     "textureBoots": "temporiumbootsblackandwhite",
     "creativeTab": {
-      "value": "COMBAT"
+      "value": "CUSTOM:Tempus"
     },
     "armorTextureFile": "_",
     "helmetName": "Temporium Helmet",
@@ -24,20 +24,20 @@
     "bootsSpecialInfo": [],
     "helmetModelName": "Default",
     "helmetModelPart": "Helmet",
-    "helmetModelTexture": "From armor",
+    "helmetModelTexture": "invisble.png",
     "bodyModelName": "Default",
     "bodyModelPart": "Body",
     "armsModelPartL": "Arms L",
     "armsModelPartR": "Arms R",
-    "bodyModelTexture": "From armor",
+    "bodyModelTexture": "invisble.png",
     "leggingsModelName": "Default",
     "leggingsModelPartL": "Leggings L",
     "leggingsModelPartR": "Leggings R",
-    "leggingsModelTexture": "From armor",
+    "leggingsModelTexture": "invisble.png",
     "bootsModelName": "Default",
     "bootsModelPartL": "Boots L",
     "bootsModelPartR": "Boots R",
-    "bootsModelTexture": "From armor",
+    "bootsModelTexture": "invisble.png",
     "maxDamage": 66,
     "damageValueHelmet": 4,
     "damageValueBody": 9,
@@ -47,7 +47,7 @@
     "toughness": 3.5,
     "knockbackResistance": 0.30000000000000004,
     "equipSound": {
-      "value": ""
+      "value": "item.armor.equip_diamond"
     },
     "repairItems": [
       {

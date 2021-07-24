@@ -16,8 +16,9 @@ import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.storage.WorldSavedData;
 import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.dimension.DimensionType;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
+import net.minecraft.world.IServerWorld;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
@@ -46,7 +47,7 @@ public class TempusModVariables {
 
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote) {
+		if (!event.getPlayer().world.isRemote()) {
 			WorldSavedData mapdata = MapVariables.get(event.getPlayer().world);
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (mapdata != null)
@@ -60,7 +61,7 @@ public class TempusModVariables {
 
 	@SubscribeEvent
 	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote) {
+		if (!event.getPlayer().world.isRemote()) {
 			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
 			if (worlddata != null)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
@@ -88,14 +89,14 @@ public class TempusModVariables {
 
 		public void syncData(IWorld world) {
 			this.markDirty();
-			if (!world.getWorld().isRemote)
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(world.getWorld().dimension::getType),
+			if (world instanceof World && !world.isRemote())
+				TempusMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
 						new WorldSavedDataSyncMessage(1, this));
 		}
 		static WorldVariables clientSide = new WorldVariables();
 		public static WorldVariables get(IWorld world) {
-			if (world.getWorld() instanceof ServerWorld) {
-				return ((ServerWorld) world.getWorld()).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
+			if (world instanceof ServerWorld) {
+				return ((ServerWorld) world).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -126,13 +127,14 @@ public class TempusModVariables {
 
 		public void syncData(IWorld world) {
 			this.markDirty();
-			if (!world.getWorld().isRemote)
+			if (world instanceof World && !world.isRemote())
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
 		}
 		static MapVariables clientSide = new MapVariables();
 		public static MapVariables get(IWorld world) {
-			if (world.getWorld() instanceof ServerWorld) {
-				return world.getWorld().getServer().getWorld(DimensionType.OVERWORLD).getSavedData().getOrCreate(MapVariables::new, DATA_NAME);
+			if (world instanceof IServerWorld) {
+				return ((IServerWorld) world).getWorld().getServer().getWorld(World.OVERWORLD).getSavedData().getOrCreate(MapVariables::new,
+						DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -212,6 +214,7 @@ public class TempusModVariables {
 			nbt.putDouble("warudox", instance.warudox);
 			nbt.putDouble("warudoy", instance.warudoy);
 			nbt.putDouble("warudoz", instance.warudoz);
+			nbt.putDouble("EndionTimer", instance.EndionTimer);
 			return nbt;
 		}
 
@@ -228,6 +231,7 @@ public class TempusModVariables {
 			instance.warudox = nbt.getDouble("warudox");
 			instance.warudoy = nbt.getDouble("warudoy");
 			instance.warudoz = nbt.getDouble("warudoz");
+			instance.EndionTimer = nbt.getDouble("EndionTimer");
 		}
 	}
 
@@ -242,6 +246,7 @@ public class TempusModVariables {
 		public double warudox = 0;
 		public double warudoy = 0;
 		public double warudoz = 0.0;
+		public double EndionTimer = 600.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -249,21 +254,21 @@ public class TempusModVariables {
 	}
 	@SubscribeEvent
 	public void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
 
 	@SubscribeEvent
 	public void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote)
+		if (!event.getPlayer().world.isRemote())
 			((PlayerVariables) event.getPlayer().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()))
 					.syncPlayerVariables(event.getPlayer());
 	}
@@ -284,6 +289,7 @@ public class TempusModVariables {
 			clone.warudox = original.warudox;
 			clone.warudoy = original.warudoy;
 			clone.warudoz = original.warudoz;
+			clone.EndionTimer = original.EndionTimer;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -317,6 +323,7 @@ public class TempusModVariables {
 					variables.warudox = message.data.warudox;
 					variables.warudoy = message.data.warudoy;
 					variables.warudoz = message.data.warudoz;
+					variables.EndionTimer = message.data.EndionTimer;
 				}
 			});
 			context.setPacketHandled(true);

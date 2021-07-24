@@ -1,8 +1,6 @@
 
 package tempussmpmods3.block;
 
-import tempussmpmods3.itemgroup.TempusItemGroup;
-
 import tempussmpmods3.TempusModElements;
 
 import net.minecraftforge.registries.ObjectHolder;
@@ -10,12 +8,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.storage.loot.LootContext;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.loot.LootContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.BlockItemUseContext;
@@ -41,7 +39,7 @@ public class DiamondLanternExtraBlock extends TempusModElements.ModElement {
 	@Override
 	public void initElements() {
 		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(TempusItemGroup.tab)).setRegistryName(block.getRegistryName()));
+		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
@@ -51,20 +49,10 @@ public class DiamondLanternExtraBlock extends TempusModElements.ModElement {
 	}
 	public static class CustomBlock extends Block {
 		public CustomBlock() {
-			super(Block.Properties.create(Material.BUBBLE_COLUMN).sound(SoundType.BAMBOO_SAPLING).hardnessAndResistance(0f, 0f).lightValue(15)
-					.doesNotBlockMovement().notSolid());
+			super(Block.Properties.create(Material.BUBBLE_COLUMN).sound(SoundType.BAMBOO_SAPLING).hardnessAndResistance(0f, 0f).setLightLevel(s -> 15)
+					.doesNotBlockMovement().notSolid().setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true)
+					.setOpaque((bs, br, bp) -> false));
 			setRegistryName("diamond_lantern_extra");
-		}
-
-		@OnlyIn(Dist.CLIENT)
-		@Override
-		public boolean isEmissiveRendering(BlockState blockState) {
-			return true;
-		}
-
-		@Override
-		public boolean isNormalCube(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return false;
 		}
 
 		@Override

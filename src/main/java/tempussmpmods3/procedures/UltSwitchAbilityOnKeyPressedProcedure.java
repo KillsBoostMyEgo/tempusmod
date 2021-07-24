@@ -45,17 +45,17 @@ public class UltSwitchAbilityOnKeyPressedProcedure extends TempusModElements.Mod
 		}
 		if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 0)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Temporium Ability Selected!"), (true));
 			}
 		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 1)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Netherite Ability Selected!"), (true));
 			}
 		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
-			if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+			if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 				((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Endion Ability Selected!"), (true));
 			}
 		}

@@ -154,6 +154,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -237,15 +241,6 @@
       "registry_name": "temponium_lantern"
     },
     {
-      "name": "RecipePurifiedBath",
-      "type": "recipe",
-      "sortid": 20,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_purified_bath"
-    },
-    {
       "name": "Temponium",
       "type": "block",
       "sortid": 21,
@@ -291,15 +286,6 @@
       "registry_name": "endion"
     },
     {
-      "name": "ItemNetheriteScrap",
-      "type": "item",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "item_netherite_scrap"
-    },
-    {
       "name": "EndionNugget",
       "type": "item",
       "sortid": 27,
@@ -309,15 +295,6 @@
       "registry_name": "endion_nugget"
     },
     {
-      "name": "RecipeScrapOfNether",
-      "type": "recipe",
-      "sortid": 28,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_scrap_of_nether"
-    },
-    {
       "name": "RecipeEndionNugget",
       "type": "recipe",
       "sortid": 29,
@@ -325,57 +302,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_endion_nugget"
-    },
-    {
-      "name": "ArmorNetherite",
-      "type": "armor",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "armor_netherite",
-      "metadata": {
-        "eh": true,
-        "el": true,
-        "eb": true,
-        "ec": true
-      }
-    },
-    {
-      "name": "DiscPigstep",
-      "type": "musicdisc",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "disc_pigstep"
-    },
-    {
-      "name": "ItemNetheriteIngot",
-      "type": "item",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "item_netherite_ingot"
-    },
-    {
-      "name": "CraftingNetheriteIngot",
-      "type": "recipe",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "crafting_netherite_ingot"
-    },
-    {
-      "name": "BlockBlackStone",
-      "type": "block",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_black_stone"
     },
     {
       "name": "BlockMagicalLantern",
@@ -521,39 +447,6 @@
       }
     },
     {
-      "name": "UltimateSwordNetheriteAbility",
-      "type": "procedure",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "ultimate_sword_netherite_ability",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "RecipeTemporiumGem",
       "type": "recipe",
       "sortid": 43,
@@ -561,51 +454,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_temporium_gem"
-    },
-    {
-      "name": "PickaxeNetherite",
-      "type": "tool",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "pickaxe_netherite"
-    },
-    {
-      "name": "AxeNetherite",
-      "type": "tool",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "axe_netherite"
-    },
-    {
-      "name": "ShovelNetherite",
-      "type": "tool",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "shovel_netherite"
-    },
-    {
-      "name": "HoeNetherite",
-      "type": "tool",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "hoe_netherite"
-    },
-    {
-      "name": "SwordNetherite",
-      "type": "tool",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "sword_netherite"
     },
     {
       "name": "EndoriumAbility",
@@ -624,32 +472,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "DiamondNetherite",
-      "type": "gui",
-      "sortid": 59,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "diamond_netherite"
-    },
-    {
-      "name": "AutosmeltAttacher",
-      "type": "procedure",
-      "sortid": 62,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmelt_attacher",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
           }
         ]
       }
@@ -689,39 +511,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "endion_armor_tp_test",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Autosmelting",
-      "type": "procedure",
-      "sortid": 65,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "autosmelting",
       "metadata": {
         "dependencies": [
           {
@@ -842,15 +631,6 @@
       }
     },
     {
-      "name": "Smelting",
-      "type": "enchantment",
-      "sortid": 73,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smelting"
-    },
-    {
       "name": "TemporiumSword",
       "type": "tool",
       "sortid": 74,
@@ -876,23 +656,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "endion_multitool_recipe"
-    },
-    {
-      "name": "NoFire",
-      "type": "procedure",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "no_fire",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
     },
     {
       "name": "TemporiumHelmRecipe",
@@ -993,15 +756,6 @@
       "registry_name": "block_temporium_block"
     },
     {
-      "name": "BlockNetheriteBlock",
-      "type": "block",
-      "sortid": 89,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "block_netherite_block"
-    },
-    {
       "name": "RecipeMagicLantern",
       "type": "recipe",
       "sortid": 86,
@@ -1009,15 +763,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "recipe_magic_lantern"
-    },
-    {
-      "name": "RecipeNetheriteBlock",
-      "type": "recipe",
-      "sortid": 94,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "recipe_netherite_block"
     },
     {
       "name": "RecipeTemporiumBlock",
@@ -1054,15 +799,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "endion_block_uncraft"
-    },
-    {
-      "name": "NetheriteBlockUncraft",
-      "type": "recipe",
-      "sortid": 97,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "netherite_block_uncraft"
     },
     {
       "name": "TemporiumBlockUncraft",
@@ -1103,15 +839,6 @@
       }
     },
     {
-      "name": "SmithingNetheritePickaxe",
-      "type": "recipe",
-      "sortid": 100,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "smithing_netherite_pickaxe"
-    },
-    {
       "name": "Chicken",
       "type": "mob",
       "sortid": 102,
@@ -1119,24 +846,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "chicken"
-    },
-    {
-      "name": "UpgradingTable",
-      "type": "block",
-      "sortid": 111,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "upgrading_table"
-    },
-    {
-      "name": "UpgradingTableRecipe",
-      "type": "recipe",
-      "sortid": 112,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "upgrading_table_recipe"
     },
     {
       "name": "InfusionStation",
@@ -1189,40 +898,6 @@
           },
           {
             "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "NoFireDie",
-      "type": "procedure",
-      "sortid": 117,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "no_fire_die",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "NetheriteSmithing",
-      "type": "procedure",
-      "sortid": 118,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "netherite_smithing",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
             "type": "entity"
           }
         ]
@@ -1368,13 +1043,86 @@
       "registry_name": "infusion_crafting"
     },
     {
-      "name": "BlockAncientDebris",
-      "type": "block",
+      "name": "NetheriteAbility",
+      "type": "procedure",
       "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "block_ancient_debris"
+      "registry_name": "netherite_ability",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EndionBoots",
+      "type": "armor",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion_boots",
+      "metadata": {
+        "eh": false,
+        "el": false,
+        "eb": true,
+        "ec": false
+      }
+    },
+    {
+      "name": "EndionTimer",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "endion_timer",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimerResetEndion",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "timer_reset_endion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1443,6 +1191,12 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0.0"
+    },
+    {
+      "name": "EndionTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "600.0"
     }
   ],
   "sound_elements": [
@@ -1506,29 +1260,21 @@
     "en_us": {
       "block.tempus.block_temporium_block": "Temporium Block",
       "block.tempus.block_magical_lantern": "Magic Lantern",
+      "item.tempus.endion_boots_helmet": "Endion Boots Helmet",
       "item.tempus.endion_multitool": "Endion MultiTool",
-      "block.tempus.block_black_stone": "Block Black Stone",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
-      "block.tempus.upgrading_table": "Upgrading Table",
       "block.tempus.endion": "Endion",
       "item.tempus.creative_tempus": "Creative Tempus",
-      "item.tempus.axe_netherite": "Netherite Pickaxe",
       "block.tempus.block_a_ncient_debris": "Block Ancient Debris",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "item.tempus.armor_netherite_leggings": "Netherite Leggings",
-      "item.tempus.hoe_netherite": "Netherite Pickaxe",
-      "enchantment.tempus.smelting": "Netherite Buff",
-      "item.tempus.pickaxe_netherite": "Netherite Pickaxe",
-      "item.tempus.disc_pigstep.desc": "Lena Raine - Pigstep",
-      "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
+      "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
       "key.tempus.ult_switch_ability": "Ult Switch Ability",
-      "block.tempus.block_ancient_debris": "Block Ancient Debris",
       "item.tempus.entity_clark_spawn_egg": "Clark Spawn Egg",
       "entity.tempus.belle": "Belle Delphine",
       "effect.disease": "Disease",
@@ -1537,10 +1283,8 @@
       "item.tempus.temporium_armor_boots": "Temporium Boots",
       "subtitles.owclark": "",
       "item.minecraft.tipped_arrow.effect.zawarudo_potion": "Arrow of ZAWARUDO",
-      "item.tempus.item_netherite_ingot": "Netherite Ingot",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
-      "item.tempus.shovel_netherite": "Netherite Pickaxe",
-      "item.tempus.disc_pigstep": "Music Disc",
+      "item.tempus.endion_boots_boots": "Endion Boots",
       "item.tempus.endion_nugget": "Endion Nugget",
       "entity.tempus.chicken": "Chicken",
       "item.tempus.temporium_armor_leggings": "Temporium Leggings",
@@ -1549,34 +1293,30 @@
       "item.minecraft.lingering_potion.effect.disease": "Lingering Disease",
       "item.tempus.purified_bath_water_bucket": "PurifiedBathWater Bucket",
       "block.tempus.infusion_station": "Infusion Station",
-      "block.tempus.block_netherite_block": "Netherite Block",
       "item.tempus.chicken_spawn_egg": "Chicken Spawn Egg",
       "block.tempus.temponium": "Temporium Ore",
       "fluid.purified_bath_water": "PurifiedBathWater",
       "block.tempus.diamond_lantern_extra": "Diamond Lantern Extra",
-      "item.tempus.sword_netherite": "Netherite Sword",
       "item.tempus.bath_water_bucket": "BathWater Bucket",
       "fluid.bath_water": "BathWater",
       "entity.tempus.entity_clark": "Clark",
       "subtitles.netheritesoundequiparmor": "Equip sfx for netherite armor",
-      "item.tempus.item_netherite_scrap": "Netherite Scrap",
       "block.tempus.block_endion_blocjk": "Endion Block",
       "subtitles.pigstepdisc": "",
       "item.tempus.temporium": "Temporium",
       "item.minecraft.lingering_potion.effect.zawarudo_potion": "Lingering ZAWARUDO",
       "subtitles.helloclark": "",
-      "item.tempus.armor_netherite_chestplate": "Netherite Chestplate",
+      "item.tempus.endion_boots_chestplate": "Endion Boots Body",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
       "item.tempus.endion_sword": "Endion Sword",
+      "item.tempus.endion_boots_leggings": "Endion Boots Leggings",
       "item.minecraft.splash_potion.effect.zawarudo_potion": "Splash ZAWARUDO",
-      "item.tempus.armor_netherite_helmet": "Netherite Helmet",
-      "item.tempus.sword_ultimate": "Sacred Slice of Tempus",
+      "item.tempus.sword_ultimate": "Ultima Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
       "key.tempus.temporium_armor_transform": "Temporium Armor Transform",
-      "item.tempus.armor_netherite_boots": "Netherite Boots",
-      "item.tempus.food_cum_sandwich": "Food Cum Sandwich",
+      "item.tempus.food_cum_sandwich": "Mayo Sandwich",
       "block.tempus.block_endion": "Block Endion",
       "item.minecraft.tipped_arrow.effect.disease": "Arrow of Disease",
       "item.tempus.despacito": "Despacito",
@@ -1594,13 +1334,14 @@
     "version": "1.0.0",
     "author": "ARCADIA, MCreator",
     "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.15.2",
+    "currentGenerator": "forge-1.16.5",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "tempussmpmods3",
     "lockBaseModFiles": false

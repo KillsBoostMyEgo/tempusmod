@@ -135,7 +135,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "GROUND"
+      "value": "STONE"
     },
     "luminance": 0,
     "unbreakable": false,
@@ -151,10 +151,12 @@
     "guiBoundTo": "Infusion",
     "openGUIOnRightClick": true,
     "inventorySize": 7,
-    "inventoryStackSize": 3,
+    "inventoryStackSize": 4,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": false,
-    "inventoryOutSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      0
+    ],
     "inventoryInSlotIDs": [],
     "hasEnergyStorage": false,
     "energyInitial": 0,

@@ -3,8 +3,6 @@ package tempussmpmods3.procedures;
 import tempussmpmods3.item.TemporiumSwordItem;
 import tempussmpmods3.item.TemporiumItem;
 import tempussmpmods3.item.SwordUltimateItem;
-import tempussmpmods3.item.SwordNetheriteItem;
-import tempussmpmods3.item.ItemNetheriteIngotItem;
 import tempussmpmods3.item.EndionSwordItem;
 import tempussmpmods3.item.EndionNuggetItem;
 
@@ -12,6 +10,7 @@ import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.Container;
@@ -78,7 +77,7 @@ public class InfusionStationUpdateTickProcedure extends TempusModElements.ModEle
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (2))).getItem() == new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem()) && ((new Object() {
+		}.getItemStack((int) (2))).getItem() == new ItemStack(Items.NETHERITE_INGOT, (int) (1)).getItem()) && ((new Object() {
 			public int getAmount(int sltid) {
 				if (entity instanceof ServerPlayerEntity) {
 					Container _current = ((ServerPlayerEntity) entity).openContainer;
@@ -150,7 +149,7 @@ public class InfusionStationUpdateTickProcedure extends TempusModElements.ModEle
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack((int) (5))).getItem() == new ItemStack(SwordNetheriteItem.block, (int) (1)).getItem()) && ((new Object() {
+		}.getItemStack((int) (5))).getItem() == new ItemStack(Items.NETHERITE_SWORD, (int) (1)).getItem()) && ((new Object() {
 			public ItemStack getItemStack(int sltid) {
 				Entity _ent = entity;
 				if (_ent instanceof ServerPlayerEntity) {

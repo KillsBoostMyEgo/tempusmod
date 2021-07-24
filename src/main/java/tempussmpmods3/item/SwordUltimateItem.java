@@ -60,7 +60,7 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 			public Ingredient getRepairMaterial() {
 				return Ingredient.EMPTY;
 			}
-		}, 3, -2f, new Item.Properties().group(TempusItemGroup.tab)) {
+		}, 3, -2f, new Item.Properties().group(TempusItemGroup.tab).isImmuneToFire()) {
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);

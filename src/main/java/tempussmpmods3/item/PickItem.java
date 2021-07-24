@@ -1,6 +1,9 @@
 
 package tempussmpmods3.item;
 
+import tempussmpmods3.itemgroup.TempusItemGroup;
+
+import tempussmpmods3.gui.EndionToolsGuiGuiWindow;
 import tempussmpmods3.gui.EndionToolsGuiGui;
 
 import tempussmpmods3.TempusModElements;
@@ -30,7 +33,6 @@ import net.minecraft.network.PacketBuffer;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.item.Rarity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
@@ -58,7 +60,7 @@ public class PickItem extends TempusModElements.ModElement {
 	@OnlyIn(Dist.CLIENT)
 	public void onItemDropped(ItemTossEvent event) {
 		if (event.getEntityItem().getItem().getItem() == block) {
-			if (Minecraft.getInstance().currentScreen instanceof EndionToolsGuiGui.GuiWindow) {
+			if (Minecraft.getInstance().currentScreen instanceof EndionToolsGuiGuiWindow) {
 				Minecraft.getInstance().player.closeScreen();
 			}
 		}
@@ -70,7 +72,7 @@ public class PickItem extends TempusModElements.ModElement {
 	}
 	public static class ItemCustom extends Item {
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.TOOLS).maxStackSize(1).rarity(Rarity.EPIC));
+			super(new Item.Properties().group(TempusItemGroup.tab).maxStackSize(1).rarity(Rarity.EPIC));
 			setRegistryName("endion_multitool");
 		}
 

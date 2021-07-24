@@ -99,7 +99,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:ItemNetheriteIngot"
+            "value": "Items.NETHERITE_INGOT"
           },
           "id": 2,
           "disableStackInteraction": false,
@@ -141,7 +141,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "CUSTOM:SwordNetherite"
+            "value": "Items.NETHERITE_SWORD"
           },
           "id": 5,
           "disableStackInteraction": false,

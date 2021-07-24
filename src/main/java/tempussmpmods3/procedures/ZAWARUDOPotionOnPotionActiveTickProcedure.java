@@ -6,7 +6,7 @@ import tempussmpmods3.TempusModElements;
 
 import tempussmpmods3.TempusMod;
 
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.Entity;
 
@@ -68,7 +68,7 @@ public class ZAWARUDOPotionOnPotionActiveTickProcedure extends TempusModElements
 							_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
 				}
 			}
-			entity.setMotionMultiplier(null, new Vec3d(0.25D, (double) 0.05F, 0.25D));
+			entity.setMotionMultiplier(null, new Vector3d(0.25D, (double) 0.05F, 0.25D));
 		}
 	}
 }

@@ -47,15 +47,15 @@ public class BathWaterBlock extends TempusModElements.ModElement {
 	private ForgeFlowingFluid.Properties fluidproperties = null;
 	public BathWaterBlock(TempusModElements instance) {
 		super(instance, 2);
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FluidRegisterHandler());
 	}
-
-	@SubscribeEvent
-	public void registerFluids(RegistryEvent.Register<Fluid> event) {
-		event.getRegistry().register(still);
-		event.getRegistry().register(flowing);
+	private static class FluidRegisterHandler {
+		@SubscribeEvent
+		public void registerFluids(RegistryEvent.Register<Fluid> event) {
+			event.getRegistry().register(still);
+			event.getRegistry().register(flowing);
+		}
 	}
-
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void clientLoad(FMLClientSetupEvent event) {

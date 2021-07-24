@@ -5,8 +5,6 @@ import tempussmpmods3.procedures.InfusionStationUpdateTickProcedure;
 
 import tempussmpmods3.item.TemporiumSwordItem;
 import tempussmpmods3.item.TemporiumItem;
-import tempussmpmods3.item.SwordNetheriteItem;
-import tempussmpmods3.item.ItemNetheriteIngotItem;
 import tempussmpmods3.item.EndionSwordItem;
 import tempussmpmods3.item.EndionNuggetItem;
 
@@ -28,11 +26,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.PacketBuffer;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.inventory.container.Slot;
 import net.minecraft.inventory.container.ContainerType;
@@ -41,16 +38,11 @@ import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.gui.widget.button.Button;
-import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
 
 @TempusModElements.ModElement.Tag
 public class InfusionGui extends TempusModElements.ModElement {
@@ -63,17 +55,17 @@ public class InfusionGui extends TempusModElements.ModElement {
 		elements.addNetworkMessage(GUISlotChangedMessage.class, GUISlotChangedMessage::buffer, GUISlotChangedMessage::new,
 				GUISlotChangedMessage::handler);
 		containerType = new ContainerType<>(new GuiContainerModFactory());
-		FMLJavaModLoadingContext.get().getModEventBus().register(this);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new ContainerRegisterHandler());
 	}
-
+	private static class ContainerRegisterHandler {
+		@SubscribeEvent
+		public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
+			event.getRegistry().register(containerType.setRegistryName("infusion"));
+		}
+	}
 	@OnlyIn(Dist.CLIENT)
 	public void initElements() {
-		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, GuiWindow::new));
-	}
-
-	@SubscribeEvent
-	public void registerContainer(RegistryEvent.Register<ContainerType<?>> event) {
-		event.getRegistry().register(containerType.setRegistryName("infusion"));
+		DeferredWorkQueue.runLater(() -> ScreenManager.registerFactory(containerType, InfusionGuiWindow::new));
 	}
 	public static class GuiContainerModFactory implements IContainerFactory {
 		public GuiContainerMod create(int id, PlayerInventory inv, PacketBuffer extraData) {
@@ -82,9 +74,9 @@ public class InfusionGui extends TempusModElements.ModElement {
 	}
 
 	public static class GuiContainerMod extends Container implements Supplier<Map<Integer, Slot>> {
-		private World world;
-		private PlayerEntity entity;
-		private int x, y, z;
+		World world;
+		PlayerEntity entity;
+		int x, y, z;
 		private IItemHandler internal;
 		private Map<Integer, Slot> customSlots = new HashMap<>();
 		private boolean bound = false;
@@ -145,7 +137,7 @@ public class InfusionGui extends TempusModElements.ModElement {
 			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 79, 97) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(ItemNetheriteIngotItem.block, (int) (1)).getItem() == stack.getItem());
+					return (new ItemStack(Items.NETHERITE_INGOT, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 106, 88) {
@@ -163,7 +155,7 @@ public class InfusionGui extends TempusModElements.ModElement {
 			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 79, 43) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
-					return (new ItemStack(SwordNetheriteItem.block, (int) (1)).getItem() == stack.getItem());
+					return (new ItemStack(Items.NETHERITE_SWORD, (int) (1)).getItem() == stack.getItem());
 				}
 			}));
 			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 106, 52) {
@@ -326,102 +318,10 @@ public class InfusionGui extends TempusModElements.ModElement {
 		}
 
 		private void slotChanged(int slotid, int ctype, int meta) {
-			if (this.world != null && this.world.isRemote) {
+			if (this.world != null && this.world.isRemote()) {
 				TempusMod.PACKET_HANDLER.sendToServer(new GUISlotChangedMessage(slotid, x, y, z, ctype, meta));
 				handleSlotAction(entity, slotid, ctype, meta, x, y, z);
 			}
-		}
-	}
-
-	@OnlyIn(Dist.CLIENT)
-	public static class GuiWindow extends ContainerScreen<GuiContainerMod> {
-		private World world;
-		private int x, y, z;
-		private PlayerEntity entity;
-		public GuiWindow(GuiContainerMod container, PlayerInventory inventory, ITextComponent text) {
-			super(container, inventory, text);
-			this.world = container.world;
-			this.x = container.x;
-			this.y = container.y;
-			this.z = container.z;
-			this.entity = container.entity;
-			this.xSize = 176;
-			this.ySize = 200;
-		}
-		private static final ResourceLocation texture = new ResourceLocation("tempus:textures/infusion.png");
-		@Override
-		public void render(int mouseX, int mouseY, float partialTicks) {
-			this.renderBackground();
-			super.render(mouseX, mouseY, partialTicks);
-			this.renderHoveredToolTip(mouseX, mouseY);
-		}
-
-		@Override
-		protected void drawGuiContainerBackgroundLayer(float partialTicks, int gx, int gy) {
-			RenderSystem.color4f(1, 1, 1, 1);
-			RenderSystem.enableBlend();
-			RenderSystem.defaultBlendFunc();
-			Minecraft.getInstance().getTextureManager().bindTexture(texture);
-			int k = (this.width - this.xSize) / 2;
-			int l = (this.height - this.ySize) / 2;
-			this.blit(k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/tempsword.png"));
-			this.blit(this.guiLeft + 51, this.guiTop + 51, 0, 0, 18, 18, 18, 18);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/endisword.png"));
-			this.blit(this.guiLeft + 105, this.guiTop + 51, 0, 0, 18, 18, 18, 18);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/nethsword.png"));
-			this.blit(this.guiLeft + 78, this.guiTop + 42, 0, 0, 18, 18, 18, 18);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/neth.png"));
-			this.blit(this.guiLeft + 78, this.guiTop + 96, 0, 0, 18, 18, 18, 18);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/temp.png"));
-			this.blit(this.guiLeft + 51, this.guiTop + 87, 0, 0, 18, 18, 18, 18);
-			Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("tempus:textures/endi.png"));
-			this.blit(this.guiLeft + 105, this.guiTop + 87, 0, 0, 18, 18, 18, 18);
-			RenderSystem.disableBlend();
-		}
-
-		@Override
-		public boolean keyPressed(int key, int b, int c) {
-			if (key == 256) {
-				this.minecraft.player.closeScreen();
-				return true;
-			}
-			return super.keyPressed(key, b, c);
-		}
-
-		@Override
-		public void tick() {
-			super.tick();
-		}
-
-		@Override
-		protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-			this.font.drawString("Note: You'll need 1 of each sword", 3, 13, -16777216);
-			this.font.drawString("and 4 of each material", 24, 24, -16777216);
-		}
-
-		@Override
-		public void removed() {
-			super.removed();
-			Minecraft.getInstance().keyboardListener.enableRepeatEvents(false);
-		}
-
-		@Override
-		public void init(Minecraft minecraft, int width, int height) {
-			super.init(minecraft, width, height);
-			minecraft.keyboardListener.enableRepeatEvents(true);
-			this.addButton(new Button(this.guiLeft + 11, this.guiTop + 68, 30, 20, "Infuse", e -> {
-				if (true) {
-					TempusMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(0, x, y, z));
-					handleButtonAction(entity, 0, x, y, z);
-				}
-			}));
-			this.addButton(new Button(this.guiLeft + 133, this.guiTop + 68, 30, 20, "Infuse", e -> {
-				if (true) {
-					TempusMod.PACKET_HANDLER.sendToServer(new ButtonPressedMessage(1, x, y, z));
-					handleButtonAction(entity, 1, x, y, z);
-				}
-			}));
 		}
 	}
 
@@ -506,7 +406,7 @@ public class InfusionGui extends TempusModElements.ModElement {
 			context.setPacketHandled(true);
 		}
 	}
-	private static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
+	static void handleButtonAction(PlayerEntity entity, int buttonID, int x, int y, int z) {
 		World world = entity.world;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))

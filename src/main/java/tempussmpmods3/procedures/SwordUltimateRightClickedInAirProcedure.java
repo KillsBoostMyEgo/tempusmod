@@ -8,6 +8,7 @@ import tempussmpmods3.TempusMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.SoundCategory;
@@ -74,7 +75,7 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				UltimateSwordNetheriteAbilityProcedure.executeProcedure($_dependencies);
+				NetheriteAbilityProcedure.executeProcedure($_dependencies);
 			}
 		} else if ((((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new TempusModVariables.PlayerVariables())).ultSwordAbility) == 2)) {
@@ -85,12 +86,12 @@ public class SwordUltimateRightClickedInAirProcedure extends TempusModElements.M
 				EndoriumAbilityProcedure.executeProcedure($_dependencies);
 			}
 		}
-		if (!world.getWorld().isRemote) {
-			world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+		if (world instanceof World && !world.isRemote()) {
+			((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.pling")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1);
 		} else {
-			world.getWorld().playSound(x, y, z,
+			((World) world).playSound(x, y, z,
 					(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.pling")),
 					SoundCategory.NEUTRAL, (float) 1, (float) 1, false);
 		}

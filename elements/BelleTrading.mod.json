@@ -11,6 +11,30 @@
     "doesPauseGame": false,
     "components": [
       {
+        "type": "button",
+        "data": {
+          "text": "Buy",
+          "onClick": {
+            "name": "BelleBathTrade"
+          },
+          "width": 30,
+          "height": 20,
+          "name": "Buy",
+          "x": 231,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "holierbible.png",
+          "use1Xscale": true,
+          "name": "holierbible.png",
+          "x": 141,
+          "y": 116
+        }
+      },
+      {
         "type": "label",
         "data": {
           "text": "Belle Delphine Store",
@@ -24,30 +48,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "bellebathwater.png",
-          "use1Xscale": false,
-          "name": "bellebathwater.png",
-          "x": 141,
-          "y": 53
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "Buy",
-          "onClick": {
-            "name": "BelleBathTrade"
-          },
-          "width": 30,
-          "height": 20,
-          "name": "Buy",
-          "x": 159,
-          "y": 122
-        }
-      },
-      {
         "type": "button",
         "data": {
           "text": "Buy",
@@ -57,8 +57,8 @@
           "width": 30,
           "height": 20,
           "name": "Buy",
-          "x": 158,
-          "y": 172
+          "x": 231,
+          "y": 143
         }
       },
       {
@@ -77,11 +77,11 @@
       {
         "type": "image",
         "data": {
-          "image": "holierbible.png",
-          "use1Xscale": true,
-          "name": "holierbible.png",
-          "x": 213,
-          "y": 116
+          "image": "bellebathwater.png",
+          "use1Xscale": false,
+          "name": "bellebathwater.png",
+          "x": 159,
+          "y": 53
         }
       }
     ]

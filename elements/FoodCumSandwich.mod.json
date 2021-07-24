@@ -5,11 +5,13 @@
     "renderType": 0,
     "texture": "cummy",
     "customModelName": "Normal",
-    "name": "Food Cum Sandwich",
+    "name": "Mayo Sandwich",
     "rarity": "UNCOMMON",
-    "specialInfo": [],
+    "specialInfo": [
+      "Clark's special surprise"
+    ],
     "creativeTab": {
-      "value": "FOOD"
+      "value": "CUSTOM:Tempus"
     },
     "stackSize": 64,
     "nutritionalValue": 8,

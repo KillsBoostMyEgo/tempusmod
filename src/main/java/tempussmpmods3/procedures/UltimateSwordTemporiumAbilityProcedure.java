@@ -5,10 +5,11 @@ import tempussmpmods3.TempusModElements;
 import tempussmpmods3.TempusMod;
 
 import net.minecraft.world.server.ServerWorld;
+import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.Vec2f;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.util.math.vector.Vector2f;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
@@ -63,7 +64,7 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 			if (entity instanceof PlayerEntity)
 				((PlayerEntity) entity).addExperienceLevel(-((int) 1.5));
 		}
-		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is slowing, but yours increases!"), (true));
 		}
 		if (((Entity) world
@@ -83,12 +84,12 @@ public class UltimateSwordTemporiumAbilityProcedure extends TempusModElements.Mo
 						}
 					}.compareDistOf(x, y, z)).findFirst().orElse(null)))
 							.addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 60, (int) 2, (false), (false)));
-		if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
-			world.getWorld().getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vec3d(x, y, z), Vec2f.ZERO,
-					(ServerWorld) world, 4, "", new StringTextComponent(""), world.getWorld().getServer(), null).withFeedbackDisabled(),
+		if (world instanceof ServerWorld) {
+			((World) world).getServer().getCommandManager().handleCommand(new CommandSource(ICommandSource.DUMMY, new Vector3d(x, y, z),
+					Vector2f.ZERO, (ServerWorld) world, 4, "", new StringTextComponent(""), ((World) world).getServer(), null).withFeedbackDisabled(),
 					"effect clear @p");
 		}
-		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Time is getting slow.."), (true));
 		}
 		if (entity instanceof LivingEntity)

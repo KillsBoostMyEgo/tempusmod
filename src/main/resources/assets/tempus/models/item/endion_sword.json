@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "tempus:items/endersword"
+    "layer0": "tempus:items/endion"
   }
 }

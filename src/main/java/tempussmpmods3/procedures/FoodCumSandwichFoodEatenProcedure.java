@@ -32,7 +32,7 @@ public class FoodCumSandwichFoodEatenProcedure extends TempusModElements.ModElem
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(DiseasePotion.potion, (int) 60, (int) 1, (false), (true)));
 		if (entity instanceof LivingEntity)
 			((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 120, (int) 2, (false), (true)));
-		if (entity instanceof PlayerEntity && !entity.world.isRemote) {
+		if (entity instanceof PlayerEntity && !entity.world.isRemote()) {
 			((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("You Feel Gooey.... Ew"), (true));
 		}
 	}

@@ -81,6 +81,7 @@ public class BibleItem extends TempusModElements.ModElement {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
 					BibleLightningProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
@@ -100,6 +101,7 @@ public class BibleItem extends TempusModElements.ModElement {
 				{
 					Map<String, Object> $_dependencies = new HashMap<>();
 					$_dependencies.put("entity", entity);
+					$_dependencies.put("world", world);
 					BibleLightningProcedure.executeProcedure($_dependencies);
 				}
 				return retval;
