@@ -107,7 +107,7 @@ public class PickItem extends TempusModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Endion MultiTool");
+						return new StringTextComponent("Endion Multitool");
 					}
 
 					@Override

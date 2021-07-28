@@ -6,7 +6,10 @@
     "texture": "ultimate_sword",
     "customModelName": "Normal",
     "name": "Ultima Tempus",
-    "specialInfo": [],
+    "specialInfo": [
+      "A combination of the three elements",
+      "only craftable using an infusion station"
+    ],
     "creativeTab": {
       "value": "CUSTOM:Tempus"
     },
@@ -16,7 +19,7 @@
     "attackSpeed": 2.0,
     "enchantability": 24,
     "damageVsEntity": 30.0,
-    "usageCount": 3000,
+    "usageCount": 8192,
     "blocksAffected": [],
     "hasGlow": false,
     "repairItems": [],

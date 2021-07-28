@@ -1,5 +1,7 @@
 package tempussmpmods3.procedures;
 
+import tempussmpmods3.item.SwordUltimateItem;
+
 import tempussmpmods3.TempusModVariables;
 
 import tempussmpmods3.TempusModElements;
@@ -7,7 +9,9 @@ import tempussmpmods3.TempusModElements;
 import tempussmpmods3.TempusMod;
 
 import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.item.ItemStack;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 
 import java.util.Map;
@@ -47,28 +51,32 @@ public class ZAWARUDOPotionOnPotionActiveTickProcedure extends TempusModElements
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		for (int index0 = 0; index0 < (int) (5); index0++) {
-			{
-				Entity _ent = entity;
-				_ent.setPositionAndUpdate(
-						((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new TempusModVariables.PlayerVariables())).warudox),
-						((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new TempusModVariables.PlayerVariables())).warudoy),
-						((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-								.orElse(new TempusModVariables.PlayerVariables())).warudoz));
-				if (_ent instanceof ServerPlayerEntity) {
-					((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+		if ((((entity instanceof PlayerEntity)
+				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(SwordUltimateItem.block, (int) (1)))
+				: false) == (false))) {
+			for (int index0 = 0; index0 < (int) (5); index0++) {
+				{
+					Entity _ent = entity;
+					_ent.setPositionAndUpdate(
 							((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new TempusModVariables.PlayerVariables())).warudox),
 							((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 									.orElse(new TempusModVariables.PlayerVariables())).warudoy),
 							((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-									.orElse(new TempusModVariables.PlayerVariables())).warudoz),
-							_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+									.orElse(new TempusModVariables.PlayerVariables())).warudoz));
+					if (_ent instanceof ServerPlayerEntity) {
+						((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+								((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new TempusModVariables.PlayerVariables())).warudox),
+								((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new TempusModVariables.PlayerVariables())).warudoy),
+								((entity.getCapability(TempusModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new TempusModVariables.PlayerVariables())).warudoz),
+								_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+					}
 				}
+				entity.setMotionMultiplier(null, new Vector3d(0.25D, (double) 0.05F, 0.25D));
 			}
-			entity.setMotionMultiplier(null, new Vector3d(0.25D, (double) 0.05F, 0.25D));
 		}
 	}
 }
