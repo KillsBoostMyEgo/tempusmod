@@ -1090,6 +1090,32 @@
           }
         ]
       }
+    },
+    {
+      "name": "RangedFurballBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ranged_furball_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EntityKitty",
+      "type": "mob",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_kitty"
     }
   ],
   "variable_elements": [
@@ -1275,8 +1301,8 @@
     "en_us": {
       "block.tempus.block_temporium_block": "Temporium Block",
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_multitool": "Endion MultiTool",
       "item.tempus.endion_boots_helmet": "Endion Boots Helmet",
+      "item.tempus.endion_multitool": "Endion MultiTool",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
@@ -1285,8 +1311,8 @@
       "block.tempus.block_a_ncient_debris": "Block Ancient Debris",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "itemGroup.tabtempus": "Tempus",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
+      "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
       "key.tempus.ult_switch_ability": "Ult Switch Ability",
@@ -1297,6 +1323,7 @@
       "item.tempus.belle_spawn_egg": "Belle Delphine Spawn Egg",
       "item.tempus.temporium_armor_boots": "Temporium Boots",
       "subtitles.owclark": "",
+      "item.tempus.entity_kitty_spawn_egg": "OceIot Spawn Egg",
       "item.minecraft.tipped_arrow.effect.zawarudo_potion": "Arrow of ZAWARUDO",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
       "item.tempus.endion_boots_boots": "Endion Boots",
@@ -1330,6 +1357,7 @@
       "item.minecraft.splash_potion.effect.zawarudo_potion": "Splash ZAWARUDO",
       "item.tempus.sword_ultimate": "Ultima Tempus",
       "key.mcreator.temporium_armor_transform": "Temporium Armor Transform",
+      "entity.tempus.entity_kitty": "OceIot",
       "key.tempus.temporium_armor_transform": "Temporium Armor Transform",
       "item.tempus.food_cum_sandwich": "Mayo Sandwich",
       "block.tempus.block_endion": "Block Endion",
