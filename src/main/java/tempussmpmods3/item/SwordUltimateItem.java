@@ -10,6 +10,8 @@ import tempussmpmods3.TempusModElements;
 import net.minecraftforge.registries.ObjectHolder;
 
 import net.minecraft.world.World;
+import net.minecraft.util.text.StringTextComponent;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
@@ -22,8 +24,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.item.IItemTier;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.client.util.ITooltipFlag;
 
 import java.util.Map;
+import java.util.List;
 import java.util.HashMap;
 
 @TempusModElements.ModElement.Tag
@@ -38,7 +42,7 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 	public void initElements() {
 		elements.items.add(() -> new SwordItem(new IItemTier() {
 			public int getMaxUses() {
-				return 3000;
+				return 8192;
 			}
 
 			public float getEfficiency() {
@@ -61,6 +65,13 @@ public class SwordUltimateItem extends TempusModElements.ModElement {
 				return Ingredient.EMPTY;
 			}
 		}, 3, -2f, new Item.Properties().group(TempusItemGroup.tab).isImmuneToFire()) {
+			@Override
+			public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
+				super.addInformation(itemstack, world, list, flag);
+				list.add(new StringTextComponent("A combination of the three elements"));
+				list.add(new StringTextComponent("only craftable using an infusion station"));
+			}
+
 			@Override
 			public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity entity, Hand hand) {
 				ActionResult<ItemStack> retval = super.onItemRightClick(world, entity, hand);

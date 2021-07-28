@@ -1001,39 +1001,6 @@
       "registry_name": "block_endion"
     },
     {
-      "name": "Transformshitbackp",
-      "type": "procedure",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "transformshitbackp",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "InfusionCrafting",
       "type": "recipe",
       "sortid": 122,
@@ -1163,12 +1130,6 @@
       "value": ""
     },
     {
-      "name": "itemtype",
-      "type": "itemstack",
-      "scope": "map",
-      "value": ""
-    },
-    {
       "name": "abilityTimerSec",
       "type": "number",
       "scope": "player_lifetime",
@@ -1197,6 +1158,60 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "600.0"
+    },
+    {
+      "name": "slot5",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot4",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot3",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot2",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot1",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot9",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot8",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot7",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "slot6",
+      "type": "itemstack",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [

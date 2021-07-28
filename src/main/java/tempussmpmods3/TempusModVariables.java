@@ -14,11 +14,6 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.CapabilityInject;
 import net.minecraftforge.common.capabilities.Capability;
 
-import net.minecraft.world.storage.WorldSavedData;
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IServerWorld;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Direction;
 import net.minecraft.network.PacketBuffer;
@@ -34,8 +29,6 @@ import java.util.function.Supplier;
 
 public class TempusModVariables {
 	public TempusModVariables(TempusModElements elements) {
-		elements.addNetworkMessage(WorldSavedDataSyncMessage.class, WorldSavedDataSyncMessage::buffer, WorldSavedDataSyncMessage::new,
-				WorldSavedDataSyncMessage::handler);
 		elements.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new,
 				PlayerVariablesSyncMessage::handler);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::init);
@@ -43,135 +36,6 @@ public class TempusModVariables {
 
 	private void init(FMLCommonSetupEvent event) {
 		CapabilityManager.INSTANCE.register(PlayerVariables.class, new PlayerVariablesStorage(), PlayerVariables::new);
-	}
-
-	@SubscribeEvent
-	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-		if (!event.getPlayer().world.isRemote()) {
-			WorldSavedData mapdata = MapVariables.get(event.getPlayer().world);
-			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
-			if (mapdata != null)
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new WorldSavedDataSyncMessage(0, mapdata));
-			if (worlddata != null)
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new WorldSavedDataSyncMessage(1, worlddata));
-		}
-	}
-
-	@SubscribeEvent
-	public void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-		if (!event.getPlayer().world.isRemote()) {
-			WorldSavedData worlddata = WorldVariables.get(event.getPlayer().world);
-			if (worlddata != null)
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) event.getPlayer()),
-						new WorldSavedDataSyncMessage(1, worlddata));
-		}
-	}
-	public static class WorldVariables extends WorldSavedData {
-		public static final String DATA_NAME = "tempus_worldvars";
-		public WorldVariables() {
-			super(DATA_NAME);
-		}
-
-		public WorldVariables(String s) {
-			super(s);
-		}
-
-		@Override
-		public void read(CompoundNBT nbt) {
-		}
-
-		@Override
-		public CompoundNBT write(CompoundNBT nbt) {
-			return nbt;
-		}
-
-		public void syncData(IWorld world) {
-			this.markDirty();
-			if (world instanceof World && !world.isRemote())
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(((World) world)::getDimensionKey),
-						new WorldSavedDataSyncMessage(1, this));
-		}
-		static WorldVariables clientSide = new WorldVariables();
-		public static WorldVariables get(IWorld world) {
-			if (world instanceof ServerWorld) {
-				return ((ServerWorld) world).getSavedData().getOrCreate(WorldVariables::new, DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class MapVariables extends WorldSavedData {
-		public static final String DATA_NAME = "tempus_mapvars";
-		public ItemStack itemtype = ItemStack.EMPTY;
-		public MapVariables() {
-			super(DATA_NAME);
-		}
-
-		public MapVariables(String s) {
-			super(s);
-		}
-
-		@Override
-		public void read(CompoundNBT nbt) {
-			itemtype = ItemStack.read(nbt.getCompound("itemtype"));
-		}
-
-		@Override
-		public CompoundNBT write(CompoundNBT nbt) {
-			nbt.put("itemtype", itemtype.write(new CompoundNBT()));
-			return nbt;
-		}
-
-		public void syncData(IWorld world) {
-			this.markDirty();
-			if (world instanceof World && !world.isRemote())
-				TempusMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new WorldSavedDataSyncMessage(0, this));
-		}
-		static MapVariables clientSide = new MapVariables();
-		public static MapVariables get(IWorld world) {
-			if (world instanceof IServerWorld) {
-				return ((IServerWorld) world).getWorld().getServer().getWorld(World.OVERWORLD).getSavedData().getOrCreate(MapVariables::new,
-						DATA_NAME);
-			} else {
-				return clientSide;
-			}
-		}
-	}
-
-	public static class WorldSavedDataSyncMessage {
-		public int type;
-		public WorldSavedData data;
-		public WorldSavedDataSyncMessage(PacketBuffer buffer) {
-			this.type = buffer.readInt();
-			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-			this.data.read(buffer.readCompoundTag());
-		}
-
-		public WorldSavedDataSyncMessage(int type, WorldSavedData data) {
-			this.type = type;
-			this.data = data;
-		}
-
-		public static void buffer(WorldSavedDataSyncMessage message, PacketBuffer buffer) {
-			buffer.writeInt(message.type);
-			buffer.writeCompoundTag(message.data.write(new CompoundNBT()));
-		}
-
-		public static void handler(WorldSavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
-					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
-					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
-		}
 	}
 	@CapabilityInject(PlayerVariables.class)
 	public static Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = null;
@@ -215,6 +79,15 @@ public class TempusModVariables {
 			nbt.putDouble("warudoy", instance.warudoy);
 			nbt.putDouble("warudoz", instance.warudoz);
 			nbt.putDouble("EndionTimer", instance.EndionTimer);
+			nbt.put("slot5", instance.slot5.write(new CompoundNBT()));
+			nbt.put("slot4", instance.slot4.write(new CompoundNBT()));
+			nbt.put("slot3", instance.slot3.write(new CompoundNBT()));
+			nbt.put("slot2", instance.slot2.write(new CompoundNBT()));
+			nbt.put("slot1", instance.slot1.write(new CompoundNBT()));
+			nbt.put("slot9", instance.slot9.write(new CompoundNBT()));
+			nbt.put("slot8", instance.slot8.write(new CompoundNBT()));
+			nbt.put("slot7", instance.slot7.write(new CompoundNBT()));
+			nbt.put("slot6", instance.slot6.write(new CompoundNBT()));
 			return nbt;
 		}
 
@@ -232,6 +105,15 @@ public class TempusModVariables {
 			instance.warudoy = nbt.getDouble("warudoy");
 			instance.warudoz = nbt.getDouble("warudoz");
 			instance.EndionTimer = nbt.getDouble("EndionTimer");
+			instance.slot5 = ItemStack.read(nbt.getCompound("slot5"));
+			instance.slot4 = ItemStack.read(nbt.getCompound("slot4"));
+			instance.slot3 = ItemStack.read(nbt.getCompound("slot3"));
+			instance.slot2 = ItemStack.read(nbt.getCompound("slot2"));
+			instance.slot1 = ItemStack.read(nbt.getCompound("slot1"));
+			instance.slot9 = ItemStack.read(nbt.getCompound("slot9"));
+			instance.slot8 = ItemStack.read(nbt.getCompound("slot8"));
+			instance.slot7 = ItemStack.read(nbt.getCompound("slot7"));
+			instance.slot6 = ItemStack.read(nbt.getCompound("slot6"));
 		}
 	}
 
@@ -247,6 +129,15 @@ public class TempusModVariables {
 		public double warudoy = 0;
 		public double warudoz = 0.0;
 		public double EndionTimer = 600.0;
+		public ItemStack slot5 = ItemStack.EMPTY;
+		public ItemStack slot4 = ItemStack.EMPTY;
+		public ItemStack slot3 = ItemStack.EMPTY;
+		public ItemStack slot2 = ItemStack.EMPTY;
+		public ItemStack slot1 = ItemStack.EMPTY;
+		public ItemStack slot9 = ItemStack.EMPTY;
+		public ItemStack slot8 = ItemStack.EMPTY;
+		public ItemStack slot7 = ItemStack.EMPTY;
+		public ItemStack slot6 = ItemStack.EMPTY;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				TempusMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity), new PlayerVariablesSyncMessage(this));
@@ -280,6 +171,15 @@ public class TempusModVariables {
 		PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 		clone.ultSwordAbility = original.ultSwordAbility;
 		clone.ultimateswordability = original.ultimateswordability;
+		clone.slot5 = original.slot5;
+		clone.slot4 = original.slot4;
+		clone.slot3 = original.slot3;
+		clone.slot2 = original.slot2;
+		clone.slot1 = original.slot1;
+		clone.slot9 = original.slot9;
+		clone.slot8 = original.slot8;
+		clone.slot7 = original.slot7;
+		clone.slot6 = original.slot6;
 		if (!event.isWasDeath()) {
 			clone.helmet = original.helmet;
 			clone.chestplate = original.chestplate;
@@ -324,6 +224,15 @@ public class TempusModVariables {
 					variables.warudoy = message.data.warudoy;
 					variables.warudoz = message.data.warudoz;
 					variables.EndionTimer = message.data.EndionTimer;
+					variables.slot5 = message.data.slot5;
+					variables.slot4 = message.data.slot4;
+					variables.slot3 = message.data.slot3;
+					variables.slot2 = message.data.slot2;
+					variables.slot1 = message.data.slot1;
+					variables.slot9 = message.data.slot9;
+					variables.slot8 = message.data.slot8;
+					variables.slot7 = message.data.slot7;
+					variables.slot6 = message.data.slot6;
 				}
 			});
 			context.setPacketHandled(true);
