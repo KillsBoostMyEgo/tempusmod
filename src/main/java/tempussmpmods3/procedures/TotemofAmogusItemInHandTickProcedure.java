@@ -1,33 +1,11 @@
 package tempussmpmods3.procedures;
 
-import tempussmpmods3.item.TotemofAmogusItem;
-
-import tempussmpmods3.TempusModElements;
-
-import tempussmpmods3.TempusMod;
-
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.Minecraft;
-
-import java.util.Map;
-import java.util.HashMap;
-
 @TempusModElements.ModElement.Tag
 public class TotemofAmogusItemInHandTickProcedure extends TempusModElements.ModElement {
+
 	public TotemofAmogusItemInHandTickProcedure(TempusModElements instance) {
 		super(instance, 129);
+
 		MinecraftForge.EVENT_BUS.register(this);
 	}
 
@@ -42,8 +20,10 @@ public class TotemofAmogusItemInHandTickProcedure extends TempusModElements.ModE
 				TempusMod.LOGGER.warn("Failed to load dependency world for procedure TotemofAmogusItemInHandTick!");
 			return;
 		}
+
 		Entity entity = (Entity) dependencies.get("entity");
 		IWorld world = (IWorld) dependencies.get("world");
+
 		if ((((entity instanceof PlayerEntity)
 				? ((PlayerEntity) entity).inventory.hasItemStack(new ItemStack(TotemofAmogusItem.block, (int) (1)))
 				: false) && (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHealth() : -1) == 0))) {
@@ -72,6 +52,7 @@ public class TotemofAmogusItemInHandTickProcedure extends TempusModElements.ModE
 				Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(TotemofAmogusItem.block, (int) (1)));
 			}
 		}
+
 	}
 
 	@SubscribeEvent
@@ -94,4 +75,5 @@ public class TotemofAmogusItemInHandTickProcedure extends TempusModElements.ModE
 			this.executeProcedure(dependencies);
 		}
 	}
+
 }

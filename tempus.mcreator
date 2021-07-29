@@ -1129,6 +1129,32 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "pyttestor"
+    },
+    {
+      "name": "RangedFurballBulletHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ranged_furball_bullet_hits_living_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EntityKitty",
+      "type": "mob",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "entity_kitty"
     }
   ],
   "variable_elements": [
@@ -1357,7 +1383,6 @@
       "subtitles.owclark": "",
       "item.minecraft.tipped_arrow.effect.zawarudo_potion": "Arrow of ZAWARUDO",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
-      "entity.tempus.pyttestor": "Pyttestor",
       "item.tempus.endion_boots_boots": "Endion Boots",
       "item.tempus.endion_nugget": "Endion Nugget",
       "entity.tempus.chicken": "Chicken",
@@ -1381,7 +1406,6 @@
       "item.minecraft.lingering_potion.effect.zawarudo_potion": "Lingering ZAWARUDO",
       "subtitles.helloclark": "",
       "item.tempus.endion_boots_chestplate": "Endion Boots Body",
-      "item.tempus.pyttestor_spawn_egg": "Pyttestor Spawn Egg",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.belle": "Belle Delphine Spawn Egg",

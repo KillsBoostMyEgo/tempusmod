@@ -4,16 +4,16 @@ package tempussmpmods3.entity;
 import net.minecraft.block.material.Material;
 
 @TempusModElements.ModElement.Tag
-public class PyttestorEntity extends TempusModElements.ModElement {
+public class EntityKittyEntity extends TempusModElements.ModElement {
 
-	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.CREATURE)
+	public static EntityType entity = (EntityType.Builder.<CustomEntity>create(CustomEntity::new, EntityClassification.MONSTER)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CustomEntity::new)
-			.size(0.6f, 1.8f)).build("pyttestor").setRegistryName("pyttestor");
+			.size(0.6f, 1.8f)).build("entity_kitty").setRegistryName("entity_kitty");
 
-	public PyttestorEntity(TempusModElements instance) {
+	public EntityKittyEntity(TempusModElements instance) {
 		super(instance, 129);
 
-		FMLJavaModLoadingContext.get().getModEventBus().register(new PyttestorRenderer.ModelRegisterHandler());
+		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityKittyRenderer.ModelRegisterHandler());
 		FMLJavaModLoadingContext.get().getModEventBus().register(new EntityAttributesRegisterHandler());
 
 		MinecraftForge.EVENT_BUS.register(this);
@@ -23,21 +23,20 @@ public class PyttestorEntity extends TempusModElements.ModElement {
 	public void initElements() {
 		elements.entities.add(() -> entity);
 
-		elements.items
-				.add(() -> new SpawnEggItem(entity, -1, -1, new Item.Properties().group(ItemGroup.MISC)).setRegistryName("pyttestor_spawn_egg"));
+		elements.items.add(() -> new SpawnEggItem(entity, -13312, -52480, new Item.Properties().group(ItemGroup.MISC))
+				.setRegistryName("entity_kitty_spawn_egg"));
 	}
 
 	@SubscribeEvent
 	public void addFeatureToBiomes(BiomeLoadingEvent event) {
 
-		event.getSpawns().getSpawner(EntityClassification.CREATURE).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
+		event.getSpawns().getSpawner(EntityClassification.MONSTER).add(new MobSpawnInfo.Spawners(entity, 20, 4, 4));
 	}
 
 	@Override
 	public void init(FMLCommonSetupEvent event) {
 		EntitySpawnPlacementRegistry.register(entity, EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos,
-						random) -> (world.getBlockState(pos.down()).getMaterial() == Material.ORGANIC && world.getLightSubtracted(pos, 0) > 8));
+				MonsterEntity::canMonsterSpawn);
 
 	}
 
@@ -56,7 +55,7 @@ public class PyttestorEntity extends TempusModElements.ModElement {
 
 	}
 
-	public static class CustomEntity extends CreatureEntity {
+	public static class CustomEntity extends MonsterEntity {
 
 		public CustomEntity(FMLPlayMessages.SpawnEntity packet, World world) {
 			this(entity, world);
@@ -66,9 +65,6 @@ public class PyttestorEntity extends TempusModElements.ModElement {
 			super(type, world);
 			experienceValue = 0;
 			setNoAI(false);
-
-			setCustomName(new StringTextComponent("Pyttestor"));
-			setCustomNameVisible(true);
 
 		}
 
@@ -94,19 +90,19 @@ public class PyttestorEntity extends TempusModElements.ModElement {
 			return CreatureAttribute.UNDEFINED;
 		}
 
-		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
-			super.dropSpecialItems(source, looting, recentlyHitIn);
-			this.entityDropItem(new ItemStack(TotemofAmogusItem.block, (int) (1)));
+		@Override
+		public net.minecraft.util.SoundEvent getAmbientSound() {
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cat.purreow"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getHurtSound(DamageSource ds) {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tempus:pyttehit"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cat.hiss"));
 		}
 
 		@Override
 		public net.minecraft.util.SoundEvent getDeathSound() {
-			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tempus:pyttedeath"));
+			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cat.death"));
 		}
 
 	}
