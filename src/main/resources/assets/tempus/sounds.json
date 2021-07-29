@@ -62,5 +62,23 @@
         "stream": false
       }
     ]
+  },
+  "pyttedeath": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "tempus:whatthefuck",
+        "stream": false
+      }
+    ]
+  },
+  "pyttehit": {
+    "category": "master",
+    "sounds": [
+      {
+        "name": "tempus:hit",
+        "stream": false
+      }
+    ]
   }
 }

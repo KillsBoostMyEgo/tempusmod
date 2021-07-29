@@ -54,6 +54,8 @@ public class TempusModElements {
 		sounds.put(new ResourceLocation("tempus", "owclark"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "owclark")));
 		sounds.put(new ResourceLocation("tempus", "helloclark"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "helloclark")));
 		sounds.put(new ResourceLocation("tempus", "clarkdie"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "clarkdie")));
+		sounds.put(new ResourceLocation("tempus", "pyttedeath"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "pyttedeath")));
+		sounds.put(new ResourceLocation("tempus", "pyttehit"), new net.minecraft.util.SoundEvent(new ResourceLocation("tempus", "pyttehit")));
 		try {
 			ModFileScanData modFileInfo = ModList.get().getModFileById("tempus").getFile().getScanResult();
 			Set<ModFileScanData.AnnotationData> annotations = modFileInfo.getAnnotations();

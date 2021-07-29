@@ -1090,6 +1090,45 @@
           }
         ]
       }
+    },
+    {
+      "name": "TotemofAmogus",
+      "type": "item",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totemof_amogus"
+    },
+    {
+      "name": "TotemofAmogusItemInHandTick",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "totemof_amogus_item_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Pyttestor",
+      "type": "mob",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "pyttestor"
     }
   ],
   "variable_elements": [
@@ -1269,14 +1308,32 @@
       ],
       "category": "master",
       "subtitle": ""
+    },
+    {
+      "name": "pyttedeath",
+      "files": [
+        "whatthefuck"
+      ],
+      "category": "master",
+      "subtitle": ""
+    },
+    {
+      "name": "pyttehit",
+      "files": [
+        "hit"
+      ],
+      "category": "master",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
       "block.tempus.block_temporium_block": "Temporium Block",
+      "subtitles.pyttedeath": "",
       "block.tempus.block_magical_lantern": "Magic Lantern",
-      "item.tempus.endion_boots_helmet": "Endion Boots Helmet",
       "item.tempus.endion_multitool": "Endion Multitool",
+      "item.tempus.endion_boots_helmet": "Endion Boots Helmet",
+      "item.tempus.totemof_amogus": "Totem of Amogus",
       "block.tempus.diamond_lantern": "Diamond Lantern",
       "item.tempus.despacito.desc": "Luis Fonsi - Despacito",
       "item.tempus.temporium_sword": "Temporium Sword",
@@ -1285,8 +1342,9 @@
       "block.tempus.block_a_ncient_debris": "Block Ancient Debris",
       "item.tempus.bible": "Bible",
       "item.tempus.item_temporium": "Powdered Temporium",
-      "itemGroup.tabtempus": "Tempus",
+      "subtitles.pyttehit": "",
       "item.tempus.temporium_armor_chestplate": "Temporium Chestplate",
+      "itemGroup.tabtempus": "Tempus",
       "subtitles.belleregular": "",
       "item.tempus.temporium_armor_helmet": "Temporium Helmet",
       "key.tempus.ult_switch_ability": "Ult Switch Ability",
@@ -1299,6 +1357,7 @@
       "subtitles.owclark": "",
       "item.minecraft.tipped_arrow.effect.zawarudo_potion": "Arrow of ZAWARUDO",
       "item.minecraft.splash_potion.effect.disease": "Splash Disease",
+      "entity.tempus.pyttestor": "Pyttestor",
       "item.tempus.endion_boots_boots": "Endion Boots",
       "item.tempus.endion_nugget": "Endion Nugget",
       "entity.tempus.chicken": "Chicken",
@@ -1322,6 +1381,7 @@
       "item.minecraft.lingering_potion.effect.zawarudo_potion": "Lingering ZAWARUDO",
       "subtitles.helloclark": "",
       "item.tempus.endion_boots_chestplate": "Endion Boots Body",
+      "item.tempus.pyttestor_spawn_egg": "Pyttestor Spawn Egg",
       "item.minecraft.potion.effect.disease": "Disease",
       "key.mcreator.ult_switch_ability": "Ult Switch Ability",
       "item.tempus.belle": "Belle Delphine Spawn Egg",
